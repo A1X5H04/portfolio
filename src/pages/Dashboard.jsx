@@ -22,7 +22,7 @@ function Dashboard() {
         <h1 className="text-3xl font-extrabold">Dashboard</h1>
         <p>I don't know what to put here</p>
       </div>
-      <div className="my-10 inline-grid lg:grid-cols-2 sm:grid-flow-row gap-4 ">
+      <div className="my-10 md:grid md:grid-cols-2 flex flex-col gap-4 ">
         <div className="border rounded-lg border-gray-700">
           <div className="flex p-5 items-center justify-between border-b border-gray-700 bg-gray-1000">
             <div>
