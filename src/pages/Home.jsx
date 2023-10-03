@@ -17,12 +17,9 @@ export default function Home() {
         </p>
       </div>
       <div>
-        <div className="mt-8 mb-6 flex items-center justify-between">
+        <div className="mt-8 mb-6 ">
           <h1 className="text-3xl font-extrabold mb-4">Projects</h1>
-            <div className="border border-gray-700 p-1 rounded-md bg-gray-900 bg-opacity-40 ">
-                <button className="p-1 bg-white text-black rounded mr-1"><GithubLogo size={20} /></button>
-                <button className="p-1 rounded ml-1"><GitlabLogoSimple size={20} /></button>
-            </div>
+            
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
           <ProjectTile
