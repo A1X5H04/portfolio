@@ -1,7 +1,7 @@
 import { ArrowSquareOut, Star, GitFork } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
 
-const dummyArray = ["nextjs", "typescript", "react", "tailwindcss"];    
+const dummyArray = ["javascript", "react", "tailwindcss"];    
 
 export default function ProjectTile({ title, description, link  }) {
   return (
@@ -9,7 +9,9 @@ export default function ProjectTile({ title, description, link  }) {
       <div className="mb-8">
         <div className="flex justify-between mb-1">
         <h3 className="font-extrabold ">{title}</h3>
+        <a href={link}>
         <ArrowSquareOut size={20}/>
+        </a>
         </div>
         <p className="text-sm text-gray-500">{description}</p>
         <div className="my-2">
@@ -20,8 +22,8 @@ export default function ProjectTile({ title, description, link  }) {
       </div>
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-          <p className="text-sm">Typescript</p>
+          <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+          <p className="text-sm">Javascript</p>
         </div>
         <div className="flex gap-2">
             <div className="inline-flex items-center gap-1 text-gray-400">
