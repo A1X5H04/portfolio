@@ -4,10 +4,10 @@ import Header from "./Header";
 function Layout() {
   return (
     <>
-      <div className="px-9">
         <Header />
+        <div className="px-8">
         <Outlet />
-      </div>
+        </div>
     </>
   );
 }

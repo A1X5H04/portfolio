@@ -4,7 +4,7 @@ import { GithubLogo, Sun } from "@phosphor-icons/react";
 
 function Header() {
   return (
-    <header className="py-5 px-2 sticky top-0 backdrop-blur-md bg-black bg-opacity-50 flex justify-between">
+    <header className="w-full py-5 px-8 sticky top-0 backdrop-blur-lg bg-black bg-opacity-50 flex justify-between border-b border-gray-900">
       <div className="flex gap-8">
         <p className="font-bold">A1X5H04</p>
         <nav className="mx-5">

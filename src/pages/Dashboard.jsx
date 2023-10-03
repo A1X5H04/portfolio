@@ -1,5 +1,8 @@
-import { ArrowSquareOut } from "@phosphor-icons/react";
+import { ArrowSquareOut, ChartBar } from "@phosphor-icons/react";
 import React from "react";
+
+
+
 
 const aboutArray = [
   "👋 Hi I am Alish.",
@@ -12,6 +15,7 @@ const aboutArray = [
 ];
 
 function Dashboard() {
+  
   return (
     <>
       <div className="mt-8 mb-4">
@@ -250,7 +254,7 @@ function Dashboard() {
             </a>
           </div>
           <div className="flex flex-col items-center">
-          <img className="w-[450px]" src="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=495057ff&currStreakNum=495057ff&sideNums=495057ff&currStreakLabel=ffffff&sideLabels=495057ff&dates=495057ff&currStreakLabel=495057ff&sideLabels=495057ff&dates=495057ff" />
+          <img className="w-[450px]" src="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=fb8c00ff&currStreakNum=f8f9faff&sideNums=dee2e6ff&currStreakLabel=f8f9faff&sideLabels=dee2e6ff&dates=495057ff" />
           </div>
         </div>
         <div className="border rounded-lg border-gray-800 col-span-2">
@@ -258,14 +262,20 @@ function Dashboard() {
             <h1 className="font-bold text-xl">Waka Time Stats</h1>
             <a
               className="text-gray-700 hover:text-gray-400"
-              href="https://github.com/denvercoder1/github-readme-streak-stats"
+              href="https://wakatime.com/@a1x5h04"
               target="_blank"
             >
               <ArrowSquareOut size={20} />
             </a>
           </div>
-          <div className="flex flex-col items-center">
-          <img className="w-[450px]" src="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=495057ff&currStreakNum=495057ff&sideNums=495057ff&currStreakLabel=ffffff&sideLabels=495057ff&dates=495057ff&currStreakLabel=495057ff&sideLabels=495057ff&dates=495057ff" />
+          <div className="p-10 flex flex-col items-center">
+                <div className="grid place-items-center">
+                  <div className="border border-gray-700 p-4  rounded-md">
+                  <ChartBar size={32} />
+                  </div>
+                  <h4 className="font-semibold my-4 text-center">Not Available</h4>
+                  <p className="w-64 text-center text-gray-600">Current statistics are not available because it is yet to be implemented. Please try later.</p>
+                </div>
           </div>
         </div>
       </div>

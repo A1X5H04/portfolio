@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
           <ProjectTile
-            title="dictionary-app"
+            title="a1x5h04.github.io"
             description="Lorem ipsum dolor sit amet. asdfas. asdfasd."
             link="https://google.com"
           />
