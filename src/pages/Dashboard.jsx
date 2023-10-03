@@ -18,9 +18,9 @@ function Dashboard() {
   
   return (
     <>
-      <div className="mt-8 mb-4">
-        <h1 className="text-3xl font-extrabold">Dashboard</h1>
-        <p>I don't know what to put here</p>
+      <div className="mt-10 mb-5">
+      <h1 className="text-3xl font-extrabold my-1">Dashboard</h1>
+        <p className="text-gray-500">I don't know what to put here</p>
       </div>
       <div className="my-10 md:grid md:grid-cols-2 flex flex-col gap-4 ">
         <div className="border rounded-lg border-gray-700">

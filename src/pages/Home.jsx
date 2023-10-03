@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
+import { projects } from "../data/home"
 import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
 
 export default function Home() {
@@ -18,37 +19,32 @@ export default function Home() {
       </div>
       <div>
         <div className="mt-8 mb-6 ">
-          <h1 className="text-3xl font-extrabold mb-4">Projects</h1>    
-        </div>
-        <div className="mt-8">
-        <p className="font-semibold mb-4">Pinned</p>
-        <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
-          <ProjectTile
-            title="a1x5h04.github.io"
-            description="Personal website hosted on github pages"
-            link="https://a1x5h04.github.io"
-          />
-          <ProjectTile
-            title="quizzapp"
-            description="Lorem ipsum dolor sit amet. asdfas. asefdd."
-            link="https://google.com"
-          />
-        </div>
-        </div>
-        <div className="mt-8">
-        <p className="font-semibold mb-4">All</p>
-        <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
-          <ProjectTile
-            title="a1x5h04.github.io"
-            description="Lorem ipsum dolor sit amet. asdfas. asdfasd."
-            link="https://google.com"
-          />
-          <ProjectTile
-            title="quizzapp"
-            description="Lorem ipsum dolor sit amet. asdfas. asefdd."
-            link="https://google.com"
-          />
-        </div>
+          <h1 className="text-3xl font-extrabold mb-4">Projects</h1>
+
+          <div className="mt-8">
+            <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
+              {projects.map(item => {
+                return (
+                  <ProjectTile
+                    title={item.title}
+                    description={item.description}
+                    link={item.link}
+                    tags={item.tags}
+                    language={item.language}
+                    />
+                  )
+              })}
+            </div>
+            <button
+              onClick={() =>
+                (window.location.href = 
+                  "https://github.com/A1X5H04?tab=repositories")
+              }
+              className="w-full my-4 hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
+            >
+              Show More
+            </button>
+          </div>
         </div>
       </div>
     </div>

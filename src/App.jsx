@@ -2,14 +2,14 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from "./components/Layout"
 import Home from "./pages/Home"
 import Dashboard from "./pages/Dashboard"
-import Contact from "./pages/Contact"
+import Social from "./pages/Social"
 
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route element={<Layout />}>
     <Route path="/" element={<Home />} />
     <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route path="/social" element={<Social />} />
   </Route>
 )
 )

@@ -40,7 +40,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="contact">
+              <NavLink to="social">
                 {({ isActive }) => (
                   <span
                     className={`${
@@ -49,7 +49,7 @@ function Header() {
                         : "text-gray-400"
                     } duration-100`}
                   >
-                    Contact
+                    Social
                   </span>
                 )}
               </NavLink>
