@@ -21,3 +21,5 @@ You can check out the live version of my portfolio website at [here](https://www
 ## License
 
 This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code as long as you provide attribution and include the original license in your own project.
+
+**Heavily Inspired By [Rohi's Website](https://noel.rohi.dev/)**
