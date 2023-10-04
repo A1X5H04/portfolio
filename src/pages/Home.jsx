@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
-import { projects } from "../data/home";
+import { projects } from "../data";
 import ThemeContext from "../ThemeContext";
 import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
 
