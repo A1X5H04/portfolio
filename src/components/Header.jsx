@@ -62,7 +62,7 @@ function Header() {
         </nav>
       </div>
       <div className="flex gap-4">
-        <button className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
+        <button onClick={() => window.location.href = "https://github.com/a1x5h04/a1x5h04.github.io"} className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
           <GithubLogo size={20} />
         </button>
         <button  className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
