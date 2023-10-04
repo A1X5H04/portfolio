@@ -22,6 +22,7 @@
 body {
   max-width: 1024px;
   margin: 0 auto;
+  min-height: 100vh;
   color: white;
   background-color: black;
   border-right: 1px dashed #212529ff;
