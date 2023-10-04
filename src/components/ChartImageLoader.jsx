@@ -1,7 +1,7 @@
-import { FileX } from "@phosphor-icons/react";
+import { ChartBar } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
 
-const ImageLoader = ({ imageUrl, ...props }) => {
+const ChartImageLoader = ({ imageUrl, ...props }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   console.log("ImageLoader", imageUrl);
@@ -37,15 +37,15 @@ const ImageLoader = ({ imageUrl, ...props }) => {
   return <img className={props.className} src={imageUrl} alt="Loaded" />;
 };
 
-export default ImageLoader;
+export default ChartImageLoader;
 
 function ErrorElement() {
   return (
     <div className="grid place-items-center p-10 border-b w-full border-gray-900">
       <div className="border border-gray-700 p-4  rounded-md">
-        <FileX size={24} />
+        <ChartBar size={24} />
       </div>
-      <h4 className="font-semibold my-4 text-center">Failed To Load Image</h4>
+      <h4 className="font-semibold my-4 text-center">Failed To Load Chart</h4>
     </div>
   );
 }
@@ -56,7 +56,7 @@ function LoadingElement() {
       <div role="status">
         <svg
           aria-hidden="true"
-          class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-800 fill-black dark:fill-white"
+          className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-800 fill-black dark:fill-white"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ function LoadingElement() {
             fill="currentFill"
           />
         </svg>
-        <span class="sr-only">Loading...</span>
+        <span className="sr-only">Loading...</span>
       </div>
     </div>
   );
