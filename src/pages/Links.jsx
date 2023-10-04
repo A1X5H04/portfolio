@@ -1,11 +1,11 @@
 import { PaperPlaneRight } from "@phosphor-icons/react";
 import React from "react";
 
- function Social() {
+ function Links() {
   return (
     <div className="mt-10 mb-5">
       <div>
-        <h1 className="text-3xl font-extrabold my-1">Social</h1>
+        <h1 className="text-3xl font-extrabold my-1">Links</h1>
         <p className="text-gray-500">I don't know what to put here</p>
       </div>
       <div className="my-10">
@@ -24,4 +24,4 @@ import React from "react";
 }
 
 
-export default Social;
+export default Links;

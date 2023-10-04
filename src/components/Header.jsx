@@ -1,11 +1,12 @@
 import React from "react";
+import ThemeContext from "../ThemeContext";
 import { NavLink } from "react-router-dom";
-import { GithubLogo, List, Sun } from "@phosphor-icons/react";
+import { GithubLogo, List, Moon, Sun } from "@phosphor-icons/react";
 
 
 function Header() {
   const [showNav, setShowNav] = React.useState(false);
-
+  const {theme} = React.useContext(ThemeContext);
   return (
     <header className="w-full z-10 py-5 px-8 sticky top-0 backdrop-blur-lg bg-black bg-opacity-50 flex justify-between border-b border-gray-900">
       <div className="flex gap-8">
@@ -43,7 +44,7 @@ function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="social">
+              <NavLink to="links">
                 {({ isActive }) => (
                   <span
                     className={`${
@@ -52,7 +53,7 @@ function Header() {
                         : "text-gray-400"
                     } duration-100`}
                   >
-                    Social
+                    Links
                   </span>
                 )}
               </NavLink>
@@ -64,8 +65,8 @@ function Header() {
         <button className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
           <GithubLogo size={20} />
         </button>
-        <button className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
-          <Sun size={20} />
+        <button  className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
+          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <div className="relative">
         <button onClick={() => setShowNav(prev => !prev)} className="sm:hidden p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">

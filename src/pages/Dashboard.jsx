@@ -1,5 +1,6 @@
 import { ArrowSquareOut, ChartBar } from "@phosphor-icons/react";
 import React from "react";
+import ImageLoader from "../components/ImageLoader";
 
 
 
@@ -59,14 +60,8 @@ function Dashboard() {
             </a>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff"
-              className="border-b border-gray-900"
-            />
-            <img
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&text_color=495057ff&card_width=480"
-              className="border-b border-gray-900"
-            />
+            <ImageLoader className="border-b border-gray-900" imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff" />
+            <ImageLoader className="border-b border-gray-900" imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&text_color=495057ff&card_width=480" />
             <p className="px-6 py-4 w-full font-bold text-lg">
               Languages Learned
             </p>
@@ -254,7 +249,7 @@ function Dashboard() {
             </a>
           </div>
           <div className="flex flex-col items-center">
-          <img className="w-[450px]" src="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=fb8c00ff&currStreakNum=f8f9faff&sideNums=dee2e6ff&currStreakLabel=f8f9faff&sideLabels=dee2e6ff&dates=495057ff" />
+            <ImageLoader imageUrl="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=fb8c00ff&currStreakNum=f8f9faff&sideNums=dee2e6ff&currStreakLabel=f8f9faff&sideLabels=dee2e6ff&dates=495057ff" />
           </div>
         </div>
         <div className="border rounded-lg border-gray-800 col-span-2">
@@ -271,7 +266,7 @@ function Dashboard() {
           <div className="p-10 flex flex-col items-center">
                 <div className="grid place-items-center">
                   <div className="border border-gray-700 p-4  rounded-md">
-                  <ChartBar size={32} />
+                  <ChartBar size={24} />
                   </div>
                   <h4 className="font-semibold my-4 text-center">Not Available</h4>
                   <p className="w-64 text-center text-gray-600">Current statistics are not available because it is yet to be implemented. Please try later.</p>

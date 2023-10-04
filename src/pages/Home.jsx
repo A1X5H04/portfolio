@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
 import { projects } from "../data/home";
+import ThemeContext from "../ThemeContext";
 import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
 
 // function handleMove(e) {
@@ -19,22 +20,24 @@ import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
 // }
 
 
+
 export default function Home() {
+
   return (
     <div className="w-full ">
-      <div className="my-5 pt-10 border-b border-gray-900 text-center">
-        <div className="border-t border-b border-b-gray-900 border-dashed py-2 border-gray-900">
+      <div className="my-5 pt-10 border-b border-gray-800 text-center">
+        <div className="border-t border-b border-b-gray-800 border-dashed py-2 border-gray-900">
         <h3 className="lg:text-lg sm:text-sm min-w-min text-gray-200 font-mono">
           Hi, I am{" "}
           <span className="bg-white text-black p-1 rounded-sm">Alish Baig</span>
         </h3>
         </div>
-        <div className="my-2 border-t border-b border-gray-1000 border-dashed">
+        <div className="my-2 border-t border-b border-gray-900 border-dashed">
         <h1 className="font-extrabold  h-full py-2 mx-3 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
           Frontend Developer
         </h1>
         </div>
-        <div className="border-t border-dashed border-gray-900">
+        <div className="border-t border-dashed border-gray-800">
         <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
           I am a software developer with a passion for building innovative and
           user-friendly solutions.I am skilled in a variety
