@@ -254,7 +254,7 @@ function Dashboard() {
         </div>
         <div className="border rounded-lg border-gray-800 col-span-2">
           <div className="flex p-5 items-center justify-between border-b border-gray-900 bg-gray-1000">
-            <h1 className="font-bold text-xl">Waka Time Stats</h1>
+            <h1 className="font-bold text-xl">Github Contribution Graph</h1>
             <a
               className="text-gray-700 hover:text-gray-400"
               href="https://wakatime.com/@a1x5h04"
@@ -263,14 +263,9 @@ function Dashboard() {
               <ArrowSquareOut size={20} />
             </a>
           </div>
-          <div className="p-10 flex flex-col items-center">
-                <div className="grid place-items-center">
-                  <div className="border border-gray-700 p-4  rounded-md">
-                  <ChartBar size={24} />
-                  </div>
-                  <h4 className="font-semibold my-4 text-center">Not Available</h4>
-                  <p className="w-64 text-center text-gray-600">Current statistics are not available because it is yet to be implemented. Please try later.</p>
-                </div>
+          <div className="p-4 flex flex-col items-center">
+            <ImageLoader imageUrl="https://github-readme-activity-graph.vercel.app/graph?username=a1x5h04&theme=github-compact&hide_border=true" />
+
           </div>
         </div>
       </div>
@@ -279,3 +274,11 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+{/* <div className="grid place-items-center">
+<div className="border border-gray-700 p-4  rounded-md">
+<ChartBar size={24} />
+</div>
+<h4 className="font-semibold my-4 text-center">Not Available</h4>
+<p className="w-64 text-center text-gray-600">Current statistics are not available because it is yet to be implemented. Please try later.</p>
+</div> */}
