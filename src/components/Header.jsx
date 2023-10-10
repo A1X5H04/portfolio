@@ -119,7 +119,7 @@ function NavDialog() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="social">
+              <NavLink to="links">
                 {({ isActive }) => (
                   <span
                     className={`${
@@ -128,7 +128,7 @@ function NavDialog() {
                         : "text-gray-400"
                     } duration-100`}
                   >
-                    Social
+                    Links
                   </span>
                 )}
               </NavLink>
