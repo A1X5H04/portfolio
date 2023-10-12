@@ -10,6 +10,7 @@ import React from "react";
 import GridPattern from "../components/GridPattern";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
+import { Fade } from "react-awesome-reveal";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -29,8 +30,10 @@ function Links() {
           )}
         />
         <div>
-          <h1 className="text-3xl font-extrabold my-1">Links</h1>
-          <p className="text-gray-500">Contact and Social Links</p>
+          <Fade direction="up" triggerOnce cascade damping={0.2}>
+            <h1 className="text-3xl font-extrabold my-1">Links</h1>
+            <p className="text-gray-500">Contact and Social Links</p>
+          </Fade>
         </div>
         <div className="my-5 grid place-items-center">
           <div className="mb-5 flex gap-3">
@@ -38,37 +41,61 @@ function Links() {
               href="mailto:alishbaig2004@gmail.com"
               className="hover:-translate-y-1 duration-150"
             >
-              <EnvelopeOpen size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <EnvelopeOpen
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
             <a
               href="https://github.com/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <GithubLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <GithubLogo
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/alishbaig/"
               className="hover:-translate-y-1 duration-150"
             >
-              <LinkedinLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <LinkedinLogo
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
             <a
               href="https://telegram.me/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <TelegramLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <TelegramLogo
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
             <a
               href="https://www.instagram.com/a1x5h04/"
               className="hover:-translate-y-1 duration-150"
             >
-              <InstagramLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <InstagramLogo
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
             <a
               href="https://discordapp.com/users/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <DiscordLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
+              <DiscordLogo
+                size={22}
+                weight="duotone"
+                className="text-slate-700 dark:text-gray-300"
+              />
             </a>
           </div>
         </div>
