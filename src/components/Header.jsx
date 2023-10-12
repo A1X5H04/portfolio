@@ -22,7 +22,7 @@ const toggleTheme = () => {
 }
 
   return (
-    <header className="w-full z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
+    <header className="w-full z-10 sticky top-0 backdrop-blur-lg  bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
       <div className="flex justify-between py-5 px-8">
       <div className="flex gap-8">
         <p className="font-bold">A1X5H04</p>
