@@ -81,7 +81,10 @@ export default function Home() {
           "[mask-image:linear-gradient(to_bottom,white,transparent,transparent)] ",
           )}
       />
-          <h1 className="text-3xl text-center font-extrabold mb-4">Projects</h1>
+                 <div className="text-center">
+          <h1 className="text-3xl font-extrabold my-1">Projects</h1>
+          <p className="text-gray-500">Some of my Hobby Projects</p>
+        </div>
         <div className="mt-8 px-5">
           <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
             {projects.map((item) => {
