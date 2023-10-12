@@ -24,7 +24,7 @@ function Dashboard() {
         <p className="text-gray-500 pb-2">About me, Statistics, Languages etc.</p>
       </div>
       <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4 ">
-        <div className="border rounded-lg border-gray-700 row-span-2">
+        <div className="border rounded-lg hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out row-span-2">
         <div className="flex p-5 items-center justify-between border-b border-gray-1000">
 <div>
   <h1 className="font-bold text-xl">About Me</h1>
@@ -49,7 +49,7 @@ function Dashboard() {
           </div>
         </div>
         
-        <div className="border rounded-lg border-gray-800 row-span-3">
+        <div className="border rounded-lg hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out row-span-3">
 
           <div className="flex flex-col items-center">
             <ChartImageLoader className="border-b border-gray-900" imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff" />
@@ -66,12 +66,12 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="border rounded-lg border-gray-800">
-          <div className="flex flex-col items-center">
+        <div className="border grid place-items-center rounded-lg hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out">
+          <div className="mx-2">
             <ChartImageLoader imageUrl="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=fb8c00ff&currStreakNum=f8f9faff&sideNums=dee2e6ff&currStreakLabel=f8f9faff&sideLabels=dee2e6ff&dates=495057ff" />
           </div>
         </div>
-        <div className="border rounded-lg border-gray-800 col-span-2">
+        <div className="border rounded-lg hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out col-span-2">
 
           <div className="p-4 flex flex-col items-center">
             <ChartImageLoader imageUrl="https://github-readme-activity-graph.vercel.app/graph?username=a1x5h04&theme=github-compact&hide_border=true" />

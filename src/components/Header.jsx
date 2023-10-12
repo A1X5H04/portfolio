@@ -1,14 +1,25 @@
 import React from "react";
-import ThemeContext from "../ThemeContext";
 import { NavLink } from "react-router-dom";
 import { GithubLogo, List, Moon, Sun } from "@phosphor-icons/react";
 
 
+const htmlElm = document.querySelector("html");
+const theme = localStorage.getItem("theme") || "dark";
+const toggleTheme = () => {
+  if (htmlElm.classList.contains("dark")) {
+    htmlElm.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    htmlElm.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+}
+
 function Header() {
   const [showNav, setShowNav] = React.useState(false);
-  const {theme} = React.useContext(ThemeContext);
   return (
-    <header className="w-full z-10 py-5 px-8 sticky top-0 backdrop-blur-lg bg-black bg-opacity-50 flex justify-between border-b border-gray-900">
+    <header className="w-full z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-50 border-b border-gray-900">
+      <div className="flex justify-between py-5 px-8">
       <div className="flex gap-8">
         <p className="font-bold">A1X5H04</p>
         <nav className="hidden sm:block mx-5">
@@ -65,7 +76,7 @@ function Header() {
         <button onClick={() => window.location.href = "https://github.com/a1x5h04/a1x5h04.github.io"} className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
           <GithubLogo size={20} />
         </button>
-        <button  className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
+        <button onClick={toggleTheme}  className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
           {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <div className="relative">
@@ -74,6 +85,7 @@ function Header() {
         </button>
         {showNav && <NavDialog />}
         </div>
+      </div>
       </div>
     </header>
   );

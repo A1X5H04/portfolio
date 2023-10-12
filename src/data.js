@@ -11,7 +11,7 @@ export const projects = [
         description:"Personal website hosted on github pages",
         tags:['reactjs','api','javascript', 'figma'],
         language:{text:"Javascript" , color:"#facc15"},
-        link:"https://a1x5h04.github.io"
+        link:"https://a1x5h04-quizzapp.netlify.app"
     },
     {
         title:"watchflick",

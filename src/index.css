@@ -27,6 +27,7 @@ body {
   background-color: black;
   border-right: 1px dashed #212529ff;
   border-left: 1px dashed #212529ff;
+  transition: all 500ms ease-in-out;
 }
 
 /* .card:hover::before {
@@ -67,4 +68,8 @@ body {
   50% {
     background-position: 100% 50%;
   }
+}
+
+.split-text {
+  transform: translate(2px);
 }

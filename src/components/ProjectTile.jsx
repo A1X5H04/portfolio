@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ProjectTile({ title, description, link, tags, language  }) {
   return (
-    <div className="relative border border-gray-800 bg-gray-1000 rounded-md p-5">
+    <div className="relative border hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out rounded-md p-5">
       <div className="mb-8">
         <div className="flex justify-between mb-1">
         <h3 className="font-extrabold ">{title}</h3>
@@ -26,12 +26,12 @@ export default function ProjectTile({ title, description, link, tags, language  
         <div className="flex gap-2">
             <div className="inline-flex items-center gap-1 text-gray-400">
             <Star size={18} />
-            <p className="text-sm">20</p>
+            <p className="text-sm">0</p>
             </div>
             
             <div className="inline-flex items-center gap-1 text-gray-400">
             <GitFork size={18} />
-            <p className="text-sm">1</p>
+            <p className="text-sm">0</p>
             </div>
         </div>
       </div>

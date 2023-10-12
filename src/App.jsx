@@ -5,7 +5,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import ThemeContext from "./ThemeContext";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
@@ -22,11 +21,8 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  const [theme, setTheme] = React.useState("dark");
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
       <RouterProvider router={router} />
-    </ThemeContext.Provider>
   );
 }
 
