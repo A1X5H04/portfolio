@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ProjectTile({ title, description, link, tags, language  }) {
   return (
-    <div className="relative border hover:bg-gradient-to-t from-gray-1000 to-transparent hover:border-gray-800 border-gray-900 duration-200 ease-in-out rounded-md p-5">
+    <div className="relative border hover:bg-gradient-to-t dark:from-gray-1000 from-slate-100 to-transparent dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 duration-200 ease-in-out rounded-md p-5">
       <div className="mb-8">
         <div className="flex justify-between mb-1">
         <h3 className="font-extrabold ">{title}</h3>
@@ -11,10 +11,10 @@ export default function ProjectTile({ title, description, link, tags, language  
         <ArrowSquareOut size={20}/>
         </a>
         </div>
-        <p className="text-sm text-gray-500">{description}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-500">{description}</p>
         <div className="my-2 flex flex-wrap gap-2">
             {tags.map((item) => (
-                <span className="bg-white font-medium text-black rounded-full px-2 py-1 text-xs">{item}</span>
+                <span className="bg-black dark:bg-white font-medium text-white dark:text-black rounded-full px-2 py-1 text-xs">{item}</span>
             ))}
         </div>
       </div>
@@ -24,12 +24,12 @@ export default function ProjectTile({ title, description, link, tags, language  
           <p className="text-sm">{language.text}</p>
         </div>
         <div className="flex gap-2">
-            <div className="inline-flex items-center gap-1 text-gray-400">
+            <div className="inline-flex items-center gap-1 text-gray-900 dark:text-gray-400">
             <Star size={18} />
             <p className="text-sm">0</p>
             </div>
             
-            <div className="inline-flex items-center gap-1 text-gray-400">
+            <div className="inline-flex items-center gap-1 text-gray-900 dark:text-gray-400">
             <GitFork size={18} />
             <p className="text-sm">0</p>
             </div>

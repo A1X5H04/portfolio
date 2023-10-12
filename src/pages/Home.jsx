@@ -28,28 +28,28 @@ import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      <div className="relative border-b border-gray-800 text-center">
-          <div className="absolute top-8 -left-6 lg:top-10 lg:left-[7.4rem] w-12 h-12 -rotate-90 border border-gray-800 border-dashed rounded-full"></div>
-          <div className="absolute top-[10.5rem] sm:top-[7.2rem] -right-5 lg:top-36 lg:right-[7.4rem] w-12 h-12 -rotate-90 border border-gray-800 border-dashed rounded-full"></div>
-        <div className="border-b mt-7  border-b-gray-800 border-dashed overflow-hidden">
+      <div className="relative border-b border-slate-400 dark:border-gray-800 text-center">
+          <div className="absolute top-8 -left-6 lg:top-10 lg:left-[7.4rem] w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+          <div className="absolute top-[10.5rem] sm:top-[7.2rem] -right-5 lg:top-36 lg:right-[7.4rem] w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+        <div className="border-b mt-7  border-b-slate-400 dark:border-b-gray-800 border-dashed overflow-hidden">
           
-          <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-200 font-mono">
+          <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
             Hi, I am{" "}
-            <span className="bg-white text-black p-1 rounded-sm">
+            <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded">
               Alish Baig
             </span>
           </h3>
         </div>
-        <div className="flex my-2 border-t overflow-hidden border-b border-gray-900 border-dashed">
-        <div className="flex-1 border-r border-dashed border-gray-900 ">
+        <div className="flex my-2 border-t overflow-hidden border-b border-slate-300 dark:border-gray-900 border-dashed">
+        <div className="flex-1 border-r border-dashed border-slate-400 dark:border-gray-800 ">
         </div>
           <h1 className="font-extrabold h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
             <span className="split-text">FrontEnd</span> Developer
           </h1>
-        <div className="flex-1 border-l border-dashed border-gray-900" >
+        <div className="flex-1 border-l border-dashed border-slate-400 dark:border-gray-800" >
         </div>
         </div>
-        <div className="border-t border-dashed border-gray-800">
+        <div className="border-t border-dashed border-slate-400 dark:border-gray-800 ">
           <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
             I am a software developer with a passion for building innovative and
             user-friendly solutions.I am skilled in a variety of programming
@@ -57,10 +57,10 @@ export default function Home() {
             Node.js, and Git.
           </p>
         </div>
-        <div className="w-full m-auto border-t border-dashed border-gray-800">
-        <div className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-gray-800">
-          <a href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing" target="_blank" className="bg-white px-3 py-1.5 text-black rounded-md font-semibold hover:bg-slate-200 cursor-pointer">Download CV</a>
-          <a href="https://github.com/a1x5h04" className="border border-gray-700 px-3 py-1.5 rounded-md font-semibold hover:border-gray-600 cursor-pointer">Github</a>
+        <div className="w-full m-auto border-t border-dashed border-slate-400 dark:border-gray-800">
+        <div className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-slate-400 dark:border-gray-800">
+          <a href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing" target="_blank" className="bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 dark:hover:bg-slate-200 cursor-pointer">Download CV</a>
+          <a href="https://github.com/a1x5h04" className="border border-slate-400 dark:border-gray-700 px-3 py-1.5 rounded-md font-semibold hover:border-gray-600 cursor-pointer">Github</a>
         </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export default function Home() {
               (window.location.href =
                 "https://github.com/A1X5H04?tab=repositories")
             }
-            className="w-full my-4 hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
+            className="w-full my-4 hover:bg-slate-100 dark:hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
           >
             Show More
           </button>

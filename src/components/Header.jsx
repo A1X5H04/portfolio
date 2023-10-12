@@ -3,22 +3,26 @@ import { NavLink } from "react-router-dom";
 import { GithubLogo, List, Moon, Sun } from "@phosphor-icons/react";
 
 
-const htmlElm = document.querySelector("html");
+function Header() {
+  const [themeIcon, setThemeIcon] = React.useState("dark");
+  const [showNav, setShowNav] = React.useState(false);
+
+  const htmlElm = document.querySelector("html");
 const theme = localStorage.getItem("theme") || "dark";
 const toggleTheme = () => {
   if (htmlElm.classList.contains("dark")) {
     htmlElm.classList.remove("dark");
+    setThemeIcon("light");
     localStorage.setItem("theme", "light");
   } else {
     htmlElm.classList.add("dark");
+    setThemeIcon("dark");
     localStorage.setItem("theme", "dark");
   }
 }
 
-function Header() {
-  const [showNav, setShowNav] = React.useState(false);
   return (
-    <header className="w-full z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-50 border-b border-gray-900">
+    <header className="w-full z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
       <div className="flex justify-between py-5 px-8">
       <div className="flex gap-8">
         <p className="font-bold">A1X5H04</p>
@@ -30,8 +34,8 @@ function Header() {
                   <span
                     className={`${
                       isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
+                        ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                        : "text-slate-400 dark:text-gray-400"
                     } duration-100`}
                   >
                     Home
@@ -45,8 +49,8 @@ function Header() {
                   <span
                     className={`${
                       isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
+                        ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                        : "text-slate-400 dark:text-gray-400"
                     } duration-100`}
                   >
                     Dashboard
@@ -60,8 +64,8 @@ function Header() {
                   <span
                     className={`${
                       isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
+                        ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                        : "text-slate-400 dark:text-gray-400"
                     } duration-100`}
                   >
                     Links
@@ -73,14 +77,14 @@ function Header() {
         </nav>
       </div>
       <div className="flex gap-4">
-        <button onClick={() => window.location.href = "https://github.com/a1x5h04/a1x5h04.github.io"} className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
+        <button onClick={() => window.location.href = "https://github.com/a1x5h04/a1x5h04.github.io"} className="p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md">
           <GithubLogo size={20} />
         </button>
-        <button onClick={toggleTheme}  className="p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
-          {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+        <button onClick={toggleTheme}  className="p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md">
+          {themeIcon === "dark" ? <Sun size={20} /> : <Moon size={20} />}
         </button>
         <div className="relative">
-        <button onClick={() => setShowNav(prev => !prev)} className="sm:hidden p-1 border border-transparent hover:border-gray-700 duration-300 rounded-md">
+        <button onClick={() => setShowNav(prev => !prev)} className="sm:hidden p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md">
           <List size={20} />
         </button>
         {showNav && <NavDialog />}
@@ -103,13 +107,13 @@ function NavDialog() {
             <li>
               <NavLink to="/">
                 {({ isActive }) => (
-                  <span
-                    className={`${
-                      isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
-                    } duration-100`}
-                  >
+              <span
+              className={`${
+                isActive
+                  ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                  : "text-slate-400 dark:text-gray-400"
+              } duration-100`}
+            >
                     Home
                   </span>
                 )}
@@ -118,13 +122,13 @@ function NavDialog() {
             <li>
               <NavLink to="dashboard">
                 {({ isActive }) => (
-                  <span
-                    className={`${
-                      isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
-                    } duration-100`}
-                  >
+              <span
+              className={`${
+                isActive
+                  ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                  : "text-slate-400 dark:text-gray-400"
+              } duration-100`}
+            >
                     Dashboard
                   </span>
                 )}
@@ -133,13 +137,13 @@ function NavDialog() {
             <li>
               <NavLink to="links">
                 {({ isActive }) => (
-                  <span
-                    className={`${
-                      isActive
-                        ? "border-b-2 border-gray-100 text-gray-300 font-bold "
-                        : "text-gray-400"
-                    } duration-100`}
-                  >
+              <span
+              className={`${
+                isActive
+                  ? "border-b-2 border-slate-900 dark:border-gray-100 text-slate-600 dark:text-gray-300 font-bold "
+                  : "text-slate-400 dark:text-gray-400"
+              } duration-100`}
+            >
                     Links
                   </span>
                 )}

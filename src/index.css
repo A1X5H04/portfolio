@@ -19,16 +19,28 @@
 } */
 
 
+html {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+html.dark {
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
 body {
   max-width: 1024px;
   margin: 0 auto;
   min-height: 100vh;
-  color: white;
-  background-color: black;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   border-right: 1px dashed #212529ff;
   border-left: 1px dashed #212529ff;
-  transition: all 500ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
+
+
 
 /* .card:hover::before {
   opacity: 0.8;
