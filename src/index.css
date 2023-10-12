@@ -22,11 +22,13 @@
 html {
   --bg-color: #fff;
   --text-color: #000;
+  --border-color: #94a3b8;
 }
 
 html.dark {
   --bg-color: #000;
   --text-color: #fff;
+  --border-color: #343a40ff;
 }
 
 body {
@@ -35,8 +37,8 @@ body {
   min-height: 100vh;
   color: var(--text-color);
   background-color: var(--bg-color);
-  border-right: 1px dashed #212529ff;
-  border-left: 1px dashed #212529ff;
+  border-right: 1px dashed var(--border-color);
+  border-left: 1px dashed var(--border-color);
   transition: all 200ms ease-in-out;
 }
 
