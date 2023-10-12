@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectTile from "../components/ProjectTile";
 import { projects } from "../data";
 import GridPattern from "../components/GridPattern";
@@ -10,34 +10,13 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-// function handleMove(e) {
-//   const { currentTarget: target  } = e;
 
-//   const rect = target.getBoundingClientRect();
-//   const x = e.clientX - rect.left;
-//   const y = e.clientY - rect.top;
-
-//   target.style.setProperty('--mouse-x', `${x}px`);
-//   target.style.setProperty('--mouse-y', `${y}px`);
-// };
-
-// for(const card of document.querySelectorAll('.card')) {
-//   card.onmousemove = (e) => handleMove(e);
-// }
-
-// const splitText = document.querySelector('.split-text');
-// const splitTextLetters = splitText.textContent.split('');
-// splitText.textContent = '';
-// for(let i = 0; i < splitTextLetters.length; i++) {
-//   splitText.innerHTML += `<span>${splitTextLetters[i]}</span>`;
-// }
 
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      <div className="relative border-b border-slate-400 dark:border-gray-800 text-center">
-        <div className="absolute top-8 -left-6 lg:top-10 lg:left-[7.4rem] w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
-        <div className="absolute top-[10.5rem] sm:top-[7.2rem] -right-5 lg:top-36 lg:right-[7.4rem] w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+      <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
+       
         <div className="border-b mt-7  border-b-slate-400 dark:border-b-gray-800 border-dashed overflow-hidden">
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
@@ -48,13 +27,20 @@ export default function Home() {
             </h3>
           </Fade>
         </div>
-        <div className="flex my-2 border-t overflow-hidden border-b border-slate-300 dark:border-gray-900 border-dashed">
+        <div  className="flex my-2 border-t border-b border-slate-300 dark:border-gray-900 border-dashed">
           <div className="flex-1 border-r border-dashed border-slate-400 dark:border-gray-800 "></div>
+            <div className="relative">
+
+            <div className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+        <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+              <div className="overflow-hidden">
           <Slide direction="up" triggerOnce>
             <h1 className="font-extrabold h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-              <span className="split-text">FrontEnd</span> Developer
+              <span className="split-text">Frontend</span> Developer
             </h1>
           </Slide>
+              </div>
+            </div>
           <div className="flex-1 border-l border-dashed border-slate-400 dark:border-gray-800"></div>
         </div>
         <div className="overflow-hidden border-t border-dashed border-slate-400 dark:border-gray-800 ">
@@ -69,7 +55,7 @@ export default function Home() {
         </div>
         <div className="w-full m-auto border-t border-dashed border-slate-400 dark:border-gray-800">
           <div className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-slate-400 dark:border-gray-800">
-            <Slide direction="up" cascade damping={0.1}>
+            <Slide direction="up" triggerOnce>
               <a
                 href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing"
                 target="_blank"
@@ -154,9 +140,17 @@ export default function Home() {
 </div>
 </div> */
 
-/* <div className="w-full m-auto border-t border-dashed border-gray-800">
-        <div className="inline-flex gap-5 p-5 border-l border-r border-dashed border-gray-800">
-          <button className="bg-white px-3 py-1.5 text-black rounded-md font-semibold hover:bg-slate-200">Download CV</button>
-          <button className="border border-gray-700 px-3 py-1.5 rounded-md font-semibold hover:border-gray-600">Github</button>
-        </div>
-        </div> */
+        // function handleMove(e) {
+        //   const { currentTarget: target  } = e;
+        
+        //   const rect = target.getBoundingClientRect();
+        //   const x = e.clientX - rect.left;
+        //   const y = e.clientY - rect.top;
+        
+        //   target.style.setProperty('--mouse-x', `${x}px`);
+        //   target.style.setProperty('--mouse-y', `${y}px`);
+        // };
+        
+        // for(const card of document.querySelectorAll('.card')) {
+        //   card.onmousemove = (e) => handleMove(e);
+        // }
