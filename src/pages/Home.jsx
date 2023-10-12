@@ -1,7 +1,14 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
 import { projects } from "../data";
-import { GithubLogo, GitlabLogoSimple } from "@phosphor-icons/react";
+import GridPattern from "../components/GridPattern";
+import { twMerge } from "tailwind-merge";
+import { clsx } from "clsx";
+
+
+function cn(...inputs) {
+    return twMerge(clsx(inputs));
+  }
 
 // function handleMove(e) {
 //   const { currentTarget: target  } = e;
@@ -64,8 +71,17 @@ export default function Home() {
         </div>
         </div>
       </div>
-      <div className="pt-8 mb-6 ">
-        <h1 className="text-3xl text-center font-extrabold mb-4">Projects</h1>
+      <div className="relative pt-8 mb-6 ">
+        <GridPattern
+        width={30}
+        height={30}
+        x={-1}
+        y={-1}
+        className={cn(
+          "[mask-image:linear-gradient(to_bottom,white,transparent,transparent)] ",
+          )}
+      />
+          <h1 className="text-3xl text-center font-extrabold mb-4">Projects</h1>
         <div className="mt-8 px-5">
           <div className="grid md:grid-cols-2 gap-4 grid-cols-1 ">
             {projects.map((item) => {

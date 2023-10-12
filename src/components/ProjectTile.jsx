@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ProjectTile({ title, description, link, tags, language  }) {
   return (
-    <div className="relative border hover:bg-gradient-to-t dark:from-gray-1000 from-slate-100 to-transparent dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 duration-200 ease-in-out rounded-md p-5">
+    <div className="relative border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 duration-200 ease-in-out rounded-md p-5">
       <div className="mb-8">
         <div className="flex justify-between mb-1">
         <h3 className="font-extrabold ">{title}</h3>
