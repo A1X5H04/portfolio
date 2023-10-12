@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ProjectTile from "../components/ProjectTile";
 import { projects } from "../data";
 import GridPattern from "../components/GridPattern";
@@ -11,12 +11,11 @@ function cn(...inputs) {
 }
 
 
-
 export default function Home() {
+  
   return (
     <div className="w-full overflow-hidden">
       <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
-       
         <div className="border-b mt-7  border-b-slate-400 dark:border-b-gray-800 border-dashed overflow-hidden">
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
@@ -27,20 +26,19 @@ export default function Home() {
             </h3>
           </Fade>
         </div>
-        <div  className="flex my-2 border-t border-b border-slate-300 dark:border-gray-900 border-dashed">
+        <div className="flex my-2 border-t border-b border-slate-300 dark:border-gray-900 border-dashed">
           <div className="flex-1 border-r border-dashed border-slate-400 dark:border-gray-800 "></div>
-            <div className="relative">
-
+          <div className="relative">
             <div className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
-        <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
-              <div className="overflow-hidden">
-          <Slide direction="up" triggerOnce>
-            <h1 className="font-extrabold h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-              <span className="split-text">Frontend</span> Developer
-            </h1>
-          </Slide>
-              </div>
+            <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+            <div className="overflow-hidden">
+              <Slide direction="up" triggerOnce>
+                <h1 className="font-extrabold  h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+                  <span>Frontend</span> Developer
+                </h1>
+              </Slide>
             </div>
+          </div>
           <div className="flex-1 border-l border-dashed border-slate-400 dark:border-gray-800"></div>
         </div>
         <div className="overflow-hidden border-t border-dashed border-slate-400 dark:border-gray-800 ">
@@ -140,17 +138,17 @@ export default function Home() {
 </div>
 </div> */
 
-        // function handleMove(e) {
-        //   const { currentTarget: target  } = e;
-        
-        //   const rect = target.getBoundingClientRect();
-        //   const x = e.clientX - rect.left;
-        //   const y = e.clientY - rect.top;
-        
-        //   target.style.setProperty('--mouse-x', `${x}px`);
-        //   target.style.setProperty('--mouse-y', `${y}px`);
-        // };
-        
-        // for(const card of document.querySelectorAll('.card')) {
-        //   card.onmousemove = (e) => handleMove(e);
-        // }
+// function handleMove(e) {
+//   const { currentTarget: target  } = e;
+
+//   const rect = target.getBoundingClientRect();
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;
+
+//   target.style.setProperty('--mouse-x', `${x}px`);
+//   target.style.setProperty('--mouse-y', `${y}px`);
+// };
+
+// for(const card of document.querySelectorAll('.card')) {
+//   card.onmousemove = (e) => handleMove(e);
+// }

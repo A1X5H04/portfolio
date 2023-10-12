@@ -40,7 +40,7 @@ function Dashboard() {
           </p>
         </Fade>
       </div>
-      <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4 ">
+      <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4">
         <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 duration-200 ease-in-out row-span-2">
           <div className="flex p-5 items-center justify-between border-b border-slate-100 dark:border-gray-1000">
             <div>
