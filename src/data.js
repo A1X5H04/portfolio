@@ -15,7 +15,7 @@ export const projects = [
     },
     {
         title:"watchflick",
-        description:"A Movie/Anime Streaming App Made With React, Ionic and Tailwind CSS",
+        description:"A Movie Streaming App Made With React, Ionic and Tailwind CSS",
         tags:['ionic','reactjs','watchlist', 'tailwindcss', 'streaming-web'],
         language:{text:"Javascript", color:"#facc15"},
         link:"https://watchflick.netlify.app"
