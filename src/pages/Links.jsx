@@ -38,65 +38,65 @@ function Links() {
               href="mailto:alishbaig2004@gmail.com"
               className="hover:-translate-y-1 duration-150"
             >
-              <EnvelopeOpen size={22} weight="duotone" />
+              <EnvelopeOpen size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
             <a
               href="https://github.com/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <GithubLogo size={22} weight="duotone" />
+              <GithubLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
             <a
               href="https://www.linkedin.com/in/alishbaig/"
               className="hover:-translate-y-1 duration-150"
             >
-              <LinkedinLogo size={22} weight="duotone" />
+              <LinkedinLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
             <a
               href="https://telegram.me/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <TelegramLogo size={22} weight="duotone" />
+              <TelegramLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
             <a
               href="https://www.instagram.com/a1x5h04/"
               className="hover:-translate-y-1 duration-150"
             >
-              <InstagramLogo size={22} weight="duotone" />
+              <InstagramLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
             <a
               href="https://discordapp.com/users/a1x5h04"
               className="hover:-translate-y-1 duration-150"
             >
-              <DiscordLogo size={22} weight="duotone" />
+              <DiscordLogo size={22} weight="duotone" className="text-slate-700 dark:text-gray-300" />
             </a>
           </div>
         </div>
         <div className="w-full px-5">
           <div className="flex items-center">
-            <span className="border-t border-gray-900 flex-1"></span>
-            <p className="uppercase text-sm mx-5 font-normal text-gray-500">
+            <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
+            <p className="uppercase text-sm mx-5 font-normal text-slate-400 dark:text-gray-600">
               or contact via form
             </p>
-            <span className="border-t border-gray-900 flex-1"></span>
+            <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
           </div>
           <form className="lg:w-[600px] my-6 flex flex-col gap-5 m-auto">
             <input
               type="text"
               placeholder="Name"
-              className="bg-transparent border p-1 indent-2 rounded-md border-gray-800 placeholder:text-gray-600 focus:outline-none focus:ring-1 ring-white"
+              className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <input
               type="email"
               placeholder="Email"
-              className="bg-transparent border p-1 indent-2 rounded-md border-gray-800 placeholder:text-gray-600 focus:outline-none focus:ring-1 ring-white"
+              className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <textarea
               rows={10}
               placeholder="Message"
-              className="bg-transparent border p-1 indent-2 rounded-md border-gray-800 placeholder:text-gray-600 focus:outline-none focus:ring-1 ring-white"
+              className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             ></textarea>
-            <button className="flex items-center justify-center gap-2 hover:shadow-md shadow-white cursor-pointer  bg-white text-black font-bold py-1 px-2 rounded-md">
+            <button className="bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 hover:bg-gradient-to-b from-black to-gray-900 dark:from-white dark:to-slate-200 duration-150 cursor-pointer">
               Send
             </button>
           </form>

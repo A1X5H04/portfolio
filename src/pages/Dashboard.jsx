@@ -68,10 +68,10 @@ function Dashboard() {
         <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 duration-200 ease-in-out row-span-3">
 
           <div className="flex flex-col items-center">
-            <ChartImageLoader className="border-b border-gray-900" imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff" />
-            <ChartImageLoader className="border-b border-gray-900" imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&text_color=495057ff&card_width=480" />
+            <ChartImageLoader className="border-b border-slate-100 dark:border-gray-1000" imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff" />
+            <ChartImageLoader className="border-b border-slate-100 dark:border-gray-1000" imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&text_color=495057ff&card_width=480" />
             <p className="px-6 py-4 w-full font-bold text-lg">
-              Languages Learned
+              Languages Known
             </p>
             <div className="px-6 pb-5 w-full flex gap-3 flex-wrap">
               {
