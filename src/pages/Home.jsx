@@ -33,8 +33,8 @@ export default function Home() {
             <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
             <div className="overflow-hidden">
               <Slide direction="up" triggerOnce>
-                <h1 className="font-extrabold  h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-                  <span>Frontend</span> Developer
+                <h1 className="font-extrabold tracking-widest h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+                  Frontend Developer
                 </h1>
               </Slide>
             </div>
