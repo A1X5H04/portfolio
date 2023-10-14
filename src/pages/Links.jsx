@@ -148,7 +148,7 @@ function Links() {
             />
             <textarea
               rows={10}
-              placeholder="message"
+              placeholder="Message"
               name="message"
               className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             ></textarea>
