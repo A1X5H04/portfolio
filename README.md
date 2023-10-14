@@ -19,4 +19,4 @@ You can check out the live version of my portfolio website at [here](https://www
 - **Responsive Design:** Ensures an optimal viewing experience on various devices.
 
 
-**Heavily Inspired By [Rohi's Website](https://noel.rohi.dev/)**
+**Inspired By [Rohi's Website](https://noel.rohi.dev/)**
