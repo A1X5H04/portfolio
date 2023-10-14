@@ -10,13 +10,14 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-
 export default function Home() {
-  
   return (
     <div className="w-full overflow-hidden">
       <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
-        <div style={{animationDelay: "500ms"}} className="border-b mt-7  border-b-transparent dark:border-b-transparent border-dashed pulse-border overflow-hidden">
+        <div
+          style={{ animationDelay: "800ms" }}
+          className="border-b mt-7  border-b-transparent dark:border-b-transparent border-dashed pulse-border overflow-hidden"
+        >
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
               Hi, I am{" "}
@@ -26,23 +27,41 @@ export default function Home() {
             </h3>
           </Fade>
         </div>
-        <div style={{animationDelay: "400ms"}} className="flex my-2 border-t border-b border-transparent dark:border-transparent pulse-border-inner border-dashed">
-          <div className="flex-1 border-r border-dashed border-transparent dark:border-transparent pulse-border "></div>
-          <div className="relative">
-            <div style={{animationDelay: "300ms"}} className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"></div>
-            <div style={{animationDelay: "300ms"}} className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"></div>
+        <div
+          style={{ animationDelay: "750ms" }}
+          className="relative flex my-2 border-t border-b border-transparent dark:border-transparent pulse-border-inner border-dashed"
+        >
+          <div
+            style={{ animationDelay: "750ms" }}
+            className="flex-1 border-r border-dashed border-transparent dark:border-transparent pulse-border"
+          />
+          <div className="sm:relative">
+            <div
+              style={{ animationDelay: "700ms" }}
+              className="absolute -top-8 -left-6  sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"
+            />
+            <div
+              style={{ animationDelay: "700ms" }}
+              className="absolute -bottom-8 -right-6 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"
+            />
             <div className="overflow-hidden">
-                <h1 className="font-extrabold inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-              <Slide cascade damping={0.2} direction="up" triggerOnce>
-                <span>Frontend</span>
-                   <span>Developer</span>
-              </Slide>
-                </h1>
+              <h1 className="font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+                <Slide cascade damping={0.2} direction="up" triggerOnce>
+                  <span>Frontend</span>
+                  <span>Developer</span>
+                </Slide>
+              </h1>
             </div>
           </div>
-          <div style={{animationDelay: "200ms"}} className="flex-1 border-l border-dashed border-transparent dark:border-transparent pulse-border"></div>
+          <div
+            style={{ animationDelay: "500ms" }}
+            className="flex-1 border-l border-dashed border-transparent dark:border-transparent pulse-border"
+          />
         </div>
-        <div style={{animationDelay: "200ms"}} className="overflow-hidden border-t border-dashed border-transparent dark:border-transparent pulse-border ">
+        <div
+          style={{ animationDelay: "500ms" }}
+          className="overflow-hidden border-t border-dashed border-transparent dark:border-transparent pulse-border "
+        >
           <Slide direction="up" triggerOnce>
             <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
               I am a software developer with a passion for building innovative
@@ -52,8 +71,14 @@ export default function Home() {
             </p>
           </Slide>
         </div>
-        <div style={{animationDelay: "100ms"}} className="w-full m-auto border-t border-dashed border-transparent dark:border-transparent pulse-border">
-          <div style={{animationDelay: "100ms"}}  className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-transparent dark:border-transparent pulse-border">
+        <div
+          style={{ animationDelay: "250ms" }}
+          className="w-full m-auto border-t border-dashed border-transparent dark:border-transparent pulse-border"
+        >
+          <div
+            style={{ animationDelay: "250ms" }}
+            className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-transparent dark:border-transparent pulse-border"
+          >
             <Slide direction="up" triggerOnce>
               <a
                 href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing"
@@ -116,7 +141,6 @@ export default function Home() {
     </div>
   );
 }
-
 
 // Backup Code
 /* <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
