@@ -22,10 +22,10 @@
 html {
   --bg-color: #fff;
   --text-color: #000;
-  --border-animated-color: #707b8d;
-  --border-animated-color-inner: #a0a8b3;
-  --border-color: #94a3b8;
-  --border-color-inner: #cbd5e1;
+  --border-animated-color: #7e899b;
+  --border-animated-color-inner: #acb4be;
+  --border-color: #c1cad6;
+  --border-color-inner: #dfe7f1;
 }
 
 html.dark {
