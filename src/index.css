@@ -22,13 +22,19 @@
 html {
   --bg-color: #fff;
   --text-color: #000;
+  --border-animated-color: #94a3b8;
+  --border-animated-color: #aebccf;
   --border-color: #94a3b8;
+  --border-color-inner: #cbd5e1;
 }
 
 html.dark {
   --bg-color: #000;
   --text-color: #fff;
+  --border-animated-color: #6c757dff;
+  --border-animated-color-inner: #40464b;
   --border-color: #343a40ff;
+  --border-color-inner: #212529ff; 
 }
 
 body {
@@ -74,6 +80,17 @@ body {
   animation: bg-span 15s ease infinite;
 }
 
+.pulse-border {
+  -webkit-animation: border-pulse 1s ease-in forwards 250ms;
+  -moz-animation: border-pulse 1s ease-in forwards 250ms;
+  animation: border-pulse 1s ease-in forwards 250ms;
+}
+
+.pulse-border-inner {
+  -webkit-animation: border-pulse-inner 1s ease-in forwards 250ms;
+  -moz-animation: border-pulse-inner 1s ease-in forwards 250ms;
+  animation: border-pulse-inner 1s ease-in forwards 250ms;
+}
 
 @keyframes bg-span {
   0%,
@@ -82,5 +99,29 @@ body {
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes border-pulse {
+  0% {
+    border-color: var(--bg-color)
+  }
+  50% {
+    border-color: var(--border-animated-color);
+  }
+  100% {
+    border-color: var(--border-color);
+  }
+}
+
+@keyframes border-pulse-inner {
+  0% {
+    border-color: var(--bg-color)
+  }
+  50% {
+    border-color: var(--border-animated-color-inner);
+  }
+  100% {
+    border-color: var(--border-color-inner);
   }
 }

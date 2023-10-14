@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="w-full overflow-hidden">
       <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
-        <div className="border-b mt-7  border-b-slate-400 dark:border-b-gray-800 border-dashed overflow-hidden">
+        <div style={{animationDelay: "500ms"}} className="border-b mt-7  border-b-transparent dark:border-b-transparent border-dashed pulse-border overflow-hidden">
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
               Hi, I am{" "}
@@ -26,22 +26,23 @@ export default function Home() {
             </h3>
           </Fade>
         </div>
-        <div className="flex my-2 border-t border-b border-slate-300 dark:border-gray-900 border-dashed">
-          <div className="flex-1 border-r border-dashed border-slate-400 dark:border-gray-800 "></div>
+        <div style={{animationDelay: "400ms"}} className="flex my-2 border-t border-b border-transparent dark:border-transparent pulse-border-inner border-dashed">
+          <div className="flex-1 border-r border-dashed border-transparent dark:border-transparent pulse-border "></div>
           <div className="relative">
-            <div className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
-            <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+            <div style={{animationDelay: "300ms"}} className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"></div>
+            <div style={{animationDelay: "300ms"}} className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"></div>
             <div className="overflow-hidden">
-              <Slide direction="up" triggerOnce>
-                <h1 className="font-extrabold tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-                  Frontend Developer
-                </h1>
+                <h1 className="font-extrabold inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+              <Slide cascade damping={0.2} direction="up" triggerOnce>
+                <span>Frontend</span>
+                   <span>Developer</span>
               </Slide>
+                </h1>
             </div>
           </div>
-          <div className="flex-1 border-l border-dashed border-slate-400 dark:border-gray-800"></div>
+          <div style={{animationDelay: "200ms"}} className="flex-1 border-l border-dashed border-transparent dark:border-transparent pulse-border"></div>
         </div>
-        <div className="overflow-hidden border-t border-dashed border-slate-400 dark:border-gray-800 ">
+        <div style={{animationDelay: "200ms"}} className="overflow-hidden border-t border-dashed border-transparent dark:border-transparent pulse-border ">
           <Slide direction="up" triggerOnce>
             <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
               I am a software developer with a passion for building innovative
@@ -51,8 +52,8 @@ export default function Home() {
             </p>
           </Slide>
         </div>
-        <div className="w-full m-auto border-t border-dashed border-slate-400 dark:border-gray-800">
-          <div className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-slate-400 dark:border-gray-800">
+        <div style={{animationDelay: "100ms"}} className="w-full m-auto border-t border-dashed border-transparent dark:border-transparent pulse-border">
+          <div style={{animationDelay: "100ms"}}  className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-transparent dark:border-transparent pulse-border">
             <Slide direction="up" triggerOnce>
               <a
                 href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing"
@@ -116,25 +117,63 @@ export default function Home() {
   );
 }
 
-/* <div className="my-5 pt-10 border-b border-gray-800 text-center">
-<div className="border-b border-b-gray-800 border-dashed py-2">
-<h3 className="lg:text-lg sm:text-sm min-w-min text-gray-200 font-mono">
-  Hi, I am{" "}
-  <span className="bg-white text-black p-1 rounded-sm">Alish Baig</span>
-</h3>
+
+// Backup Code
+/* <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
+<div className="border-b mt-7  border-b-slate-400 dark:border-b-transparent border-dashed pulse-border overflow-hidden">
+  <Fade direction="up" triggerOnce>
+    <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
+      Hi, I am{" "}
+      <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded">
+        Alish Baig
+      </span>
+    </h3>
+  </Fade>
 </div>
-<div className="my-2 border-t overflow-hidden border-b border-gray-900 border-dashed">  
-<h1 className="font-extrabold h-full py-2 mx-3 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-  <span className="split-text">FrontEnd</span> Developer
-</h1>
+<div className="flex my-2 border-t border-b border-slate-300 dark:border-gray-900 border-dashed">
+  <div className="flex-1 border-r border-dashed border-slate-400 dark:border-gray-800 "></div>
+  <div className="relative">
+    <div className="absolute -top-8 -left-5 sm:-top-7 sm:-left-6 lg:-top-7 lg:-left-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+    <div className="absolute -bottom-8 -right-5 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-slate-400 dark:border-gray-800 border-dashed rounded-full"></div>
+    <div className="overflow-hidden">
+        <h1 className="font-extrabold inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+      <Slide cascade damping={0.2} direction="up" triggerOnce>
+        <span>Frontend</span>
+           <span>Developer</span>
+      </Slide>
+        </h1>
+    </div>
+  </div>
+  <div className="flex-1 border-l border-dashed border-slate-400 dark:border-gray-800"></div>
 </div>
-<div className="border-t border-dashed border-gray-800">
-<p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
-  I am a software developer with a passion for building innovative and
-  user-friendly solutions.I am skilled in a variety
-  of programming languages and technologies, including JavaScript,
-  React, Next.js, Node.js, and Git.
-</p>
+<div className="overflow-hidden border-t border-dashed border-slate-400 dark:border-gray-800 ">
+  <Slide direction="up" triggerOnce>
+    <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
+      I am a software developer with a passion for building innovative
+      and user-friendly solutions.I am skilled in a variety of
+      programming languages and technologies, including JavaScript,
+      React, Next.js, Node.js, and Git.
+    </p>
+  </Slide>
+</div>
+<div className="w-full m-auto border-t border-dashed border-slate-400 dark:border-gray-800">
+  <div className="inline-flex gap-5 px-16 py-12 border-l border-r border-dashed border-slate-400 dark:border-gray-800">
+    <Slide direction="up" triggerOnce>
+      <a
+        href="https://drive.google.com/file/d/1ouF2OfuCZ-OmDYS5hZanj5fRoTlTCv0v/view?usp=sharing"
+        target="_blank"
+        className="bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 dark:hover:bg-slate-200 cursor-pointer"
+      >
+        Download CV
+      </a>
+      <a
+        href="https://github.com/a1x5h04"
+        className="border border-slate-400 dark:border-gray-700 px-3 py-1.5 rounded-md font-semibold hover:border-gray-600 cursor-pointer"
+      >
+        Github
+      </a>
+    </Slide>
+  </div>
 </div>
 </div> */
 

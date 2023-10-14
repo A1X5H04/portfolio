@@ -16,6 +16,7 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+
 function Links() {
   return (
     <div className="relative">
@@ -110,12 +111,14 @@ function Links() {
           <form className="lg:w-[600px] my-6 flex flex-col gap-5 m-auto">
             <input
               type="text"
+              required
               placeholder="Name"
               className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <input
               type="email"
               placeholder="Email"
+              required
               className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <textarea
