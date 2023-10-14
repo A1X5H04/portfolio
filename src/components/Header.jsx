@@ -86,7 +86,7 @@ function Header() {
             <GithubLogo size={20} />
           </button>
           <button
-            onClick={toggleTheme}
+            onClick={() => toggleTheme()}
             className="p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md"
           >
             {themeIcon === "dark" ? <Sun size={20} /> : <Moon size={20} />}
