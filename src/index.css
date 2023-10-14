@@ -22,8 +22,8 @@
 html {
   --bg-color: #fff;
   --text-color: #000;
-  --border-animated-color: #94a3b8;
-  --border-animated-color: #aebccf;
+  --border-animated-color: #707b8d;
+  --border-animated-color-inner: #a0a8b3;
   --border-color: #94a3b8;
   --border-color-inner: #cbd5e1;
 }
