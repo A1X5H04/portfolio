@@ -45,7 +45,7 @@ export default function Home() {
               className="absolute -bottom-8 -right-6 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"
             />
             <div className="overflow-hidden">
-                <h1 className="font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+                <h1 className="bg-black dark:bg-white font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 text-transparent lg:text-7xl text-5xl bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
               <Slide cascade damping={0.2} direction="up" triggerOnce>
                 <span>Frontend</span>
                    <span>Developer</span>
