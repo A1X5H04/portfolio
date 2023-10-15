@@ -28,13 +28,6 @@ function Header() {
 
   return (
     <header className="w-full z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
-      <div className="w-full inline-flex items-center gap-3 justify-center text-center py-1 animate-pulse uppercase text-sm">
-        <MegaphoneSimple size={20} />
-        <h1 className="font-mono">
-          This Portfolio will be migrated to{" "}
-          <span className="font-bold text-base">Next.Js</span> soon...
-        </h1>
-      </div>
       <div className="relative flex justify-between py-5 px-8">
         <div className="flex gap-8">
           <p className="font-bold">A1X5H04</p>
