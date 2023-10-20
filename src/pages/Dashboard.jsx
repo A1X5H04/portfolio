@@ -1,26 +1,32 @@
 import React from "react";
-import { languages } from "../data";
 import ChartImageLoader from "../components/ChartImageLoader";
 import GridPattern from "../components/GridPattern";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade } from "react-awesome-reveal";
+import { getLanguages, getAbout } from "../api";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-const aboutArray = [
-  "👋 Hi I am Alish.",
-  "🖥️  See my portfolio at A1X5H04.github.com",
-  "👨‍💻  I'm currently working on contributing to Open Source projects.",
-  "✉️  You can reach me at alishbaig2004@gmail.com",
-  "🧠  I'm currently learning Android Development",
-  "🤝 I'm open to collaborating on anything?",
-  "⚡ Fun fact: I like phonk music",
-];
-
 function Dashboard() {
+
+  const [languagesArray, setLanguagesArray] = React.useState([]);
+  const [aboutArray, setAboutArray] = React.useState([]);
+
+  React.useEffect(() => {
+    const data = async () => {
+      const languages = await getLanguages();
+      setLanguagesArray(languages);
+      const about = await getAbout();
+      setAboutArray(about);
+      console.log(about);
+    }
+    data();
+  }, []);
+
+
   return (
     <div className="relative">
       <div className="pt-10 mb-5 text-center">
@@ -57,7 +63,7 @@ function Dashboard() {
           </div>
           <div className="p-5">
             <ul className="list-disc ml-3">
-              {aboutArray.map((item) => (
+              {aboutArray?.map((item) => (
                 <li className="my-2 font-medium">
                   <p className="text-sm">{item}</p>
                 </li>
@@ -80,7 +86,7 @@ function Dashboard() {
               Languages Known
             </p>
             <div className="px-6 pb-5 w-full flex gap-3 flex-wrap">
-              {languages.map((item) => (
+              {languagesArray?.map((item) => (
                 <a
                   className="hover:opacity-75 duration-300"
                   href={item.link}

@@ -1,16 +1,28 @@
 import React from "react";
 import ProjectTile from "../components/ProjectTile";
-import { projects } from "../data";
 import GridPattern from "../components/GridPattern";
 import { twMerge } from "tailwind-merge";
+import { getProjectRepo } from "../api";
 import { clsx } from "clsx";
-import { Fade, Flip, Hinge, Slide, Zoom } from "react-awesome-reveal";
+import { Bounce, Fade, Flip, Hinge, JackInTheBox, Roll, Rotate, Slide, Zoom } from "react-awesome-reveal";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+
 export default function Home() {
+  const [projectArray, setProjectArray] = React.useState([]);
+
+  React.useEffect(() => {
+    const data = async () => {
+      const projects = await getProjectRepo();
+      setProjectArray(projects);
+    }
+    data();
+  }, []);
+
+
   return (
     <div className="w-full overflow-hidden">
       <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
@@ -47,7 +59,7 @@ export default function Home() {
             <div className="overflow-hidden">
               <Slide direction="up" triggerOnce>
                 <h1 className="font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
-                Frontend Developer
+                  Frontend Developer
                 </h1>
               </Slide>
             </div>
@@ -113,7 +125,7 @@ export default function Home() {
         </div>
         <div className="mt-8 px-5">
           <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
-            {projects.map((item) => {
+            {projectArray?.map((item) => {
               return (
                 <ProjectTile
                   title={item.title}
@@ -127,8 +139,8 @@ export default function Home() {
           </div>
           <button
             onClick={() =>
-              (window.location.href =
-                "https://github.com/A1X5H04?tab=repositories")
+            (window.location.href =
+              "https://github.com/A1X5H04?tab=repositories")
             }
             className="w-full my-4 hover:bg-slate-100 dark:hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
           >
