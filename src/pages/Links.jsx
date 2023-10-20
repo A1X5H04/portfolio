@@ -151,6 +151,7 @@ function Links() {
               rows={10}
               placeholder="Message"
               name="message"
+              required
               className="bg-white dark:bg-black border px-3 py-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             ></textarea>
             <button className="grid place-items-center bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 hover:bg-gradient-to-b from-black to-gray-900 dark:from-white dark:to-slate-200 duration-150 cursor-pointer">
