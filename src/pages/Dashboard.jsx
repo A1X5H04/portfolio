@@ -1,7 +1,7 @@
 import React from "react";
-import { DataContext } from "../App";
 import ChartImageLoader from "../components/ChartImageLoader";
 import GridPattern from "../components/GridPattern";
+import { useOutletContext } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade } from "react-awesome-reveal";
@@ -12,18 +12,18 @@ function cn(...inputs) {
 }
 
 function Dashboard() {
-  const {languagesData, aboutData} = React.useContext(DataContext);
+  const { languageData, aboutData } = useOutletContext();
   const [languagesArray, setLanguagesArray] = React.useState([]);
   const [aboutArray, setAboutArray] = React.useState([]);
 
   React.useEffect(() => {
-    languagesData.then((data) => {
+    languageData.then((data) => {
       setLanguagesArray(data);
     });
     aboutData.then((data) => {
       setAboutArray(data);
     });
-  }, [languagesData, aboutData]);
+  }, [languageData, aboutData]);
 
   return (
     <div className="relative">

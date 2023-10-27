@@ -1,5 +1,5 @@
 import React from "react";
-import { DataContext } from "../App";
+import { useOutletContext } from "react-router-dom";
 import GridPattern from "../components/GridPattern";
 import ProjectTile from "../components/ProjectTile";
 import { twMerge } from "tailwind-merge";
@@ -10,12 +10,9 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-
-
-
 export default function Home() {
+  const { projectData } = useOutletContext();
   const [projectArray, setProjectArray] = React.useState([]);
-  const {projectData} = React.useContext(DataContext);
 
   React.useEffect(() => {
     projectData.then((data) => {
