@@ -1,6 +1,6 @@
-export async function getProjectRepo() {
+export async function getPinnedGHRepo() {
     try {
-        const res = await fetch('https://api.npoint.io/8a1ae503884eede2a37f/projects_repo/');
+        const res = await fetch('https://gh-pinned-repos.egoist.dev/?username=a1x5h04');
         const data = await res.json();
         return data;
     } catch (err) {
