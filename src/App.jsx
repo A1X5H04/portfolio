@@ -1,14 +1,23 @@
-import React from "react";
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import {createContext} from "react";
+import Links from "./pages/Links";
+import { getAbout, getLanguages, getPinnedGHRepo } from "./api";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import Links from "./pages/Links";
+
+const data = {
+    project: getPinnedGHRepo(),
+    languages: getLanguages(),
+    about: getAbout(),
+}
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,12 +27,13 @@ const router = createBrowserRouter(
       <Route path="/links" element={<Links />} />
     </Route>
   )
-);
-
-function App() {
-  return (
+  );
+  
+  function App() {
+    return (
       <RouterProvider router={router} />
   );
 }
 
+export const DataContext = createContext({projectData: data.project, languagesData: data.languages, aboutData: data.about});
 export default App;

@@ -1,31 +1,29 @@
 import React from "react";
+import { DataContext } from "../App";
 import ChartImageLoader from "../components/ChartImageLoader";
 import GridPattern from "../components/GridPattern";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade } from "react-awesome-reveal";
-import { getLanguages, getAbout } from "../api";
+
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
 function Dashboard() {
-
+  const {languagesData, aboutData} = React.useContext(DataContext);
   const [languagesArray, setLanguagesArray] = React.useState([]);
   const [aboutArray, setAboutArray] = React.useState([]);
 
   React.useEffect(() => {
-    const data = async () => {
-      const languages = await getLanguages();
-      setLanguagesArray(languages);
-      const about = await getAbout();
-      setAboutArray(about);
-      console.log(about);
-    }
-    data();
-  }, []);
-
+    languagesData.then((data) => {
+      setLanguagesArray(data);
+    });
+    aboutData.then((data) => {
+      setAboutArray(data);
+    });
+  }, [languagesData, aboutData]);
 
   return (
     <div className="relative">
