@@ -5,7 +5,6 @@ import LoadingSpinner from "./LoadingSpinner";
 const ChartImageLoader = ({ imageUrl, ...props }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  console.log("ImageLoader", imageUrl);
   useEffect(() => {
     const img = new Image();
 
