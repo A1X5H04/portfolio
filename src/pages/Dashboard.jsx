@@ -72,18 +72,20 @@ function Dashboard() {
 
         <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out row-span-3">
           <div className="flex flex-col items-center">
+          <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">Github Statistics</p>
             <ChartImageLoader
               className="border-b border-slate-100 dark:border-gray-1000"
-              imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&show_icons=true&text_color=495057ff"
+              imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&hide_title=true&show_icons=true&text_color=6c757dff&card_width=480"
             />
+            <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">Top Languages</p>
             <ChartImageLoader
               className="border-b border-slate-100 dark:border-gray-1000"
-              imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&hide_border=true&title_color=ffffff&text_color=495057ff&card_width=480"
+              imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&layout=compact&hide_border=true&hide_title=true&title_color=ffffff&text_color=495057ff&card_width=480"
             />
-            <p className="px-6 py-4 w-full font-bold text-lg">
+            <p className="lg:px-6 px-4 py-5 w-full font-bold text-lg">
               Languages Known
             </p>
-            <div className="px-6 pb-5 w-full flex gap-3 flex-wrap">
+            <div className="lg:px-6 px-4 pb-5 lg:pt-3 w-full flex gap-3 flex-wrap">
               {languagesArray?.map((item) => (
                 <a
                   className="hover:opacity-75 duration-300"
@@ -94,8 +96,7 @@ function Dashboard() {
                 >
                   <img
                     src={item.imgSrc}
-                    width="36"
-                    height="36"
+                    className="lg:w-10 lg:h-10 w-8 h-8"
                     alt={item.imgAltText}
                   />
                 </a>
