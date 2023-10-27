@@ -10,6 +10,40 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+function generateRandomTailwindGradients() {
+  let randomGradients = 'bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]';
+  const gradientColors = [
+    'from-[#12c2e9] via-[#c471ed] to-[#f64f59]',
+    'from-[#C6FFDD] via-[#FBD786] to-[#f64f59]',
+    'from-[#7F7FD5] via-[#86A8E7] to-[#91EAE4]',
+    'from-[#8A2387] via-[#E94057] to-[#F27121]',
+    'from-[#59C173] via-[#a17fe0] to-[#F27121]',
+    'from-[#00F260] via-[#96c93d] to-[#0575E6]',
+    'from-[#f7ff00] to-[#db36a4]',
+    'from-[#5614B0] to-[#DBD65C]',
+  ];
+
+  const gradientTypes = [
+    'bg-gradient-to-tr',
+    'bg-gradient-to-tl',
+    'bg-gradient-to-br',
+    'bg-gradient-to-bl',
+    'bg-gradient-to-r',
+    'bg-gradient-to-l', 
+  ];
+
+  const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];
+  const randomType = gradientTypes[Math.floor(Math.random() * gradientTypes.length)];
+  randomGradients = `${randomType} ${randomColor}`;
+
+  return randomGradients;
+}
+
+// Example usage:
+const randomGradients = generateRandomTailwindGradients();
+console.log(randomGradients);
+
+
 export default function Home() {
   const { projectData } = useOutletContext();
   const [projectArray, setProjectArray] = React.useState([]);
@@ -55,7 +89,7 @@ export default function Home() {
             />
             <div className="overflow-hidden">
               <Slide direction="up" triggerOnce>
-                <h1 className="font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#8A2387] via-[#E94057] to-[#F27121] background-animate">
+                <h1 className={`font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent ${randomGradients} bg-clip-text background-animate`}>
                   Frontend Developer
                 </h1>
               </Slide>
