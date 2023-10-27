@@ -4,20 +4,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import {createContext} from "react";
 import Links from "./pages/Links";
-import { getAbout, getLanguages, getPinnedGHRepo } from "./api";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-
-const data = {
-    project: getPinnedGHRepo(),
-    languages: getLanguages(),
-    about: getAbout(),
-}
-
-
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,5 +25,4 @@ const router = createBrowserRouter(
   );
 }
 
-export const DataContext = createContext({projectData: data.project, languagesData: data.languages, aboutData: data.about});
 export default App;
