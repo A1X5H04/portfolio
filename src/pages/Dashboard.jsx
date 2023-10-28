@@ -26,7 +26,7 @@ function Dashboard() {
   }, [languageData, aboutData]);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <div className="pt-10 mb-5 text-center">
         <GridPattern
           width={30}

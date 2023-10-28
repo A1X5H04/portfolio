@@ -5,6 +5,7 @@ import ProjectTile from "../components/ProjectTile";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade, Slide } from "react-awesome-reveal";
+import DotPattern from "../components/DotPattern";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -68,7 +69,7 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className=" border-b border-slate-400 dark:border-gray-800 text-center">
+      <div className="bg-dot-pattern pt-2 border-b border-slate-400 dark:border-gray-800 text-center">
         <div
           style={{ animationDelay: "800ms" }}
           className="border-b mt-7  border-b-transparent dark:border-b-transparent border-dashed pulse-border overflow-hidden"
@@ -101,9 +102,11 @@ export default function Home() {
             />
             <div className="overflow-hidden">
               <Slide direction="up" triggerOnce>
-                <h1 className={`font-extrabold sm:inline-flex gap-3 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent ${randomGradients} bg-clip-text background-animate`}>
-                  Frontend Developer
-                </h1>
+                <div className={`${randomGradients} bg-clip-text animate-bg-span`}>
+                  <h1 className="font-extrabold sm:inline-flex gap-5 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent">
+                    <span>Frontend</span> Developer
+                  </h1>
+                </div>
               </Slide>
             </div>
           </div>
@@ -119,9 +122,9 @@ export default function Home() {
           <Slide direction="up" triggerOnce>
             <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
               I am a software developer with a passion for building innovative
-              and user-friendly solutions.I am skilled in a variety of
-              programming languages and technologies, including JavaScript,
-              React, Next.js, Node.js, and Git.
+              and user-friendly solutions. <br /> I am skilled in a variety of
+              programming languages and technologies, including <span className="font-semibold">JavaScript</span>,
+              <span className="font-semibold">&nbsp;React</span>, <span className="font-semibold">&nbsp;Next.JS</span>,<span className="font-semibold">&nbsp;Linux&nbsp;</span>and<span className="font-semibold">&nbsp;Git</span>.
             </p>
           </Slide>
         </div>
@@ -150,7 +153,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative pt-8 mb-6 ">
+      <div className="relative pt-8 mb-6">
         <GridPattern
           width={30}
           height={30}

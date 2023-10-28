@@ -49,6 +49,17 @@ body {
 }
 
 
+.bg-dot-pattern {
+  --dot-bg: var(--bg-color);
+  --dot-color: var(--border-animated-color-inner);
+  --dot-size: 1px;
+  --dot-space: 23px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+
 
 /* .card:hover::before {
   opacity: 0.8;
@@ -73,8 +84,7 @@ body {
 } */
 
 
-.background-animate {
-  background-size: 300%;
+.animate-bg-span {
   -webkit-animation: bg-span 15s ease infinite;
   -moz-animation: bg-span 15s ease infinite;
   animation: bg-span 15s ease infinite;
@@ -93,12 +103,16 @@ body {
 }
 
 @keyframes bg-span {
+
   0%,
   100% {
     background-position: 0% 50%;
+    background-size: 200%;
   }
+
   50% {
     background-position: 100% 50%;
+    background-size: 800%;
   }
 }
 
