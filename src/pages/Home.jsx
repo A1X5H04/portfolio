@@ -11,25 +11,39 @@ function cn(...inputs) {
 }
 
 function generateRandomTailwindGradients() {
-  let randomGradients = 'bg-gradient-to-r from-[#4158D0] via-[#C850C0] to-[#FFCC70]';
-  const gradientColors = [
-    'from-[#12c2e9] via-[#c471ed] to-[#f64f59]',
-    'from-[#C6FFDD] via-[#FBD786] to-[#f64f59]',
-    'from-[#7F7FD5] via-[#86A8E7] to-[#91EAE4]',
-    'from-[#8A2387] via-[#E94057] to-[#F27121]',
-    'from-[#59C173] via-[#a17fe0] to-[#F27121]',
-    'from-[#00F260] via-[#96c93d] to-[#0575E6]',
-    'from-[#f7ff00] to-[#db36a4]',
-    'from-[#5614B0] to-[#DBD65C]',
-  ];
-
+  let randomGradients = 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500';
+  const gradientColors = ['from-pink-500 via-red-500 to-yellow-500', 'from-green-300 via-blue-500 to-purple-600', 'from-pink-300 via-purple-300 to-indigo-400',
+    'from-gray-700 via-gray-900 to-black',
+    'from-indigo-200 via-red-200 to-yellow-100',
+    'from-yellow-100 via-yellow-300 to-yellow-500',
+    'from-yellow-200 via-green-200 to-green-500',
+    'from-gray-200 via-gray-400 to-gray-600',
+    'from-green-200 via-green-300 to-blue-500',
+    'from-green-300 via-yellow-300 to-pink-300',
+    'from-sky-400 via-rose-400 to-lime-400',
+    'from-fuchsia-500 via-red-600 to-orange-400',
+    'from-rose-400 via-fuchsia-500 to-indigo-500',
+    'from-sky-500 via-orange-200 to-yellow-600',
+    'from-amber-200 via-violet-600 to-sky-900',
+    'from-amber-700 via-orange-300 to-rose-800',
+    'from-gray-300 via-fuchsia-600 to-orange-600',
+  ]
   const gradientTypes = [
     'bg-gradient-to-tr',
     'bg-gradient-to-tl',
     'bg-gradient-to-br',
     'bg-gradient-to-bl',
-    'bg-gradient-to-r',
-    'bg-gradient-to-l', 
+    'bg-[conic-gradient(var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
+
   ];
 
   const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];

@@ -74,7 +74,7 @@ body {
 
 
 .background-animate {
-  background-size: 400%;
+  background-size: 250%;
   -webkit-animation: bg-span 15s ease infinite;
   -moz-animation: bg-span 15s ease infinite;
   animation: bg-span 15s ease infinite;
