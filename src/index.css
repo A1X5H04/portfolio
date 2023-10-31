@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-} */
+}
 
 
 html {
@@ -48,46 +44,10 @@ body {
   transition: all 200ms ease-in-out;
 }
 
-
-.bg-dot-pattern {
-  --dot-bg: var(--bg-color);
-  --dot-color: var(--border-animated-color-inner);
-  --dot-size: 1px;
-  --dot-space: 23px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
-}
-
-
-/* .card:hover::before {
-  opacity: 0.8;
-}
-
-.card::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.1),
-    transparent 40%
-  );
-  border-radius: inherit;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
-  width: 100%;
-  z-index: 2;
-} */
-
-
 .animate-bg-span {
-  -webkit-animation: bg-span 15s ease infinite;
-  -moz-animation: bg-span 15s ease infinite;
-  animation: bg-span 15s ease infinite;
+  -webkit-animation: bg-span 15s ease infinite alternate;
+  -moz-animation: bg-span 15s ease infinite alternate;
+  animation: bg-span 15s ease infinite alternate;
 }
 
 .pulse-border {
@@ -103,7 +63,6 @@ body {
 }
 
 @keyframes bg-span {
-
   0%,
   100% {
     background-position: 0% 50%;
@@ -111,8 +70,8 @@ body {
   }
 
   50% {
-    background-position: 100% 50%;
-    background-size: 800%;
+   background-position: 100% 50%;
+    background-size: 400%;
   }
 }
 
