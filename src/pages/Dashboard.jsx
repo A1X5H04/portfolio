@@ -5,6 +5,7 @@ import { useOutletContext } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade } from "react-awesome-reveal";
+import { CardSpotlightEffect } from "../components/CardSpotlightEffect";
 
 
 function cn(...inputs) {
@@ -45,7 +46,7 @@ function Dashboard() {
         </Fade>
       </div>
       <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4">
-        <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000  duration-200 ease-in-out row-span-2">
+        <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000  duration-200 ease-in-out row-span-2">
           <div className="flex p-5 items-center justify-between border-b border-slate-100 dark:border-gray-1000">
             <div>
               <h1 className="font-bold text-xl">About Me</h1>
@@ -68,9 +69,9 @@ function Dashboard() {
               ))}
             </ul>
           </div>
-        </div>
+        </CardSpotlightEffect>
 
-        <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out row-span-3">
+      <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out row-span-3">
           <div className="flex flex-col items-center">
           <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">Github Statistics</p>
             <ChartImageLoader
@@ -103,17 +104,17 @@ function Dashboard() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="border grid place-items-center rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out">
+        </CardSpotlightEffect>
+        <CardSpotlightEffect className="border grid place-items-center rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out">
           <div className="mx-2">
             <ChartImageLoader imageUrl="https://github-readme-streak-stats.herokuapp.com/?user=A1X5H04&theme=transparent&hide_border=true&background=00000000&stroke=495057ff&ring=495057ff&fire=fb8c00ff&currStreakNum=adb5bdff&sideNums=adb5bdff&currStreakLabel=6c757dff&sideLabels=6c757dff&dates=343a40ff" />
           </div>
-        </div>
-        <div className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out col-span-2">
+        </CardSpotlightEffect>
+        <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out col-span-2">
           <div className="p-4 flex flex-col items-center">
             <ChartImageLoader imageUrl="https://github-readme-activity-graph.vercel.app/graph?username=a1x5h04&theme=github-compact&hide_border=true" />
           </div>
-        </div>
+        </CardSpotlightEffect>
       </div>
     </div>
   );

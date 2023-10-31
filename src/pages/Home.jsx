@@ -2,47 +2,60 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import GridPattern from "../components/GridPattern";
 import ProjectTile from "../components/ProjectTile";
-import { twMerge } from "tailwind-merge";
-import { clsx } from "clsx";
 import { Fade, Slide } from "react-awesome-reveal";
 import DotPattern from "../components/DotPattern";
+import { twMerge } from "tailwind-merge";
+import { clsx } from "clsx";
+
+
+
+
+const headingTextArray = [
+  "Flutter Developer",
+  "React Developer",
+  "Next.JS Developer",
+  "Comp Sci Student",
+  "OSS Contributor",
+  "Linux Enthusiast",
+  "Frontend Developer",
+];
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+function getRandomText() {
+  const randomIndex = Math.floor(Math.random() * headingTextArray.length);
+  return headingTextArray[randomIndex];
+}
+
 function generateRandomTailwindGradients() {
   let randomGradients = 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500';
-  const gradientColors = ['from-pink-500 via-red-500 to-yellow-500', 'from-green-300 via-blue-500 to-purple-600', 'from-pink-300 via-purple-300 to-indigo-400',
-    'from-gray-700 via-gray-900 to-black',
-    'from-indigo-200 via-red-200 to-yellow-100',
-    'from-yellow-100 via-yellow-300 to-yellow-500',
-    'from-yellow-200 via-green-200 to-green-500',
-    'from-gray-200 via-gray-400 to-gray-600',
-    'from-green-200 via-green-300 to-blue-500',
-    'from-green-300 via-yellow-300 to-pink-300',
-    'from-sky-400 via-rose-400 to-lime-400',
+  const gradientColors = [
+    'from-pink-500 via-red-500 to-yellow-500',
+    'from-green-300 via-blue-500 to-purple-600',
+    'from-pink-300 via-purple-300 to-indigo-400',
+    'from-red-200 via-red-300 to-yellow-200',
+    'from-yellow-500 via-purple-500 to-blue-500',
     'from-fuchsia-500 via-red-600 to-orange-400',
-    'from-rose-400 via-fuchsia-500 to-indigo-500',
-    'from-sky-500 via-orange-200 to-yellow-600',
-    'from-amber-200 via-violet-600 to-sky-900',
+    'from-gray-900 via-purple-900 to-violet-600',
     'from-amber-700 via-orange-300 to-rose-800',
+    'from-amber-200 via-violet-600 to-sky-900',
     'from-gray-300 via-fuchsia-600 to-orange-600',
+    'from-yellow-200 via-red-500 to-fuchsia-500',
+    'from-rose-400 via-fuchsia-500 to-indigo-500',
+    'from-indigo-200 via-red-200 to-yellow-100'
   ]
+
   const gradientTypes = [
     'bg-gradient-to-tr',
     'bg-gradient-to-tl',
     'bg-gradient-to-br',
     'bg-gradient-to-bl',
-    'bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))]',
     'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
     'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
     'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
     'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
-
   ];
 
   const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];
@@ -52,14 +65,19 @@ function generateRandomTailwindGradients() {
   return randomGradients;
 }
 
-// Example usage:
-const randomGradients = generateRandomTailwindGradients();
-console.log(randomGradients);
+const headingStyle = {
+  filter: "url(#filter)",
+  animationDelay: "700ms",
+  clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+}
 
 
 export default function Home() {
+  const [currentText, setCurrentText] = React.useState('Frontend Developer');
   const { projectData } = useOutletContext();
   const [projectArray, setProjectArray] = React.useState([]);
+
+
 
   React.useEffect(() => {
     projectData.then((data) => {
@@ -69,14 +87,19 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className="bg-dot-pattern pt-2 border-b border-slate-400 dark:border-gray-800 text-center">
+      <div className="relative pt-2 border-b border-slate-300 dark:border-gray-800 text-center">
+        <DotPattern
+          width={24}
+          height={24}
+          cr={1}
+        />
         <div
           style={{ animationDelay: "800ms" }}
           className="border-b mt-7  border-b-transparent dark:border-b-transparent border-dashed pulse-border overflow-hidden"
         >
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
-              Hi, I am{" "}
+              Hi, I am&nbsp;
               <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded">
                 Alish Baig
               </span>
@@ -102,9 +125,9 @@ export default function Home() {
             />
             <div className="overflow-hidden">
               <Slide direction="up" triggerOnce>
-                <div className={`${randomGradients} bg-clip-text animate-bg-span`}>
+                <div style={headingStyle} className={`${generateRandomTailwindGradients()} bg-clip-text animate-bg-span`}>
                   <h1 className="font-extrabold sm:inline-flex gap-5 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent">
-                    <span>Frontend</span> Developer
+                    {getRandomText()}
                   </h1>
                 </div>
               </Slide>
@@ -157,10 +180,8 @@ export default function Home() {
         <GridPattern
           width={30}
           height={30}
-          x={-1}
-          y={-1}
           className={cn(
-            "[mask-image:linear-gradient(to_bottom,white,transparent,transparent)] "
+            "[mask-image:linear-gradient(to_bottom,white,transparent,transparent)]",
           )}
         />
         <div className="text-center">
@@ -178,6 +199,7 @@ export default function Home() {
                   description={item.description}
                   link={item.link}
                   language={item.language}
+                  website={item.website}
                   languageColor={item.languageColor}
                   stars={item.stars}
                   forks={item.forks}
@@ -193,6 +215,40 @@ export default function Home() {
           </a>
         </div>
       </div>
+      <svg className="absolute h-1 w-1 overflow-hidden">
+        <defs>
+          <filter id="filter">
+            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.475" numOctaves="12" result="NOISE">
+              <animate attributeName="seed" dur="5s" values="10;20;30;40;50;60;70;80;90;100" repeatCount="indefinite" />
+              {/* <animate attributeName="baseFrequency" dur="5s" values=" 2; 1.5; 1;" repeatCount="1" /> */}
+            </feTurbulence>
+            <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0.15">
+              <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
+            </feGaussianBlur>
+            <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="3.5" xChannelSelector="R" yChannelSelector="R" result="DISPLACED">
+            </feDisplacementMap>
+          </filter>
+        </defs>
+      </svg>
     </div>
   );
 }
+
+
+
+
+/* 
+    'bg-gradient-to-tr',
+    'bg-gradient-to-tl',
+    'bg-gradient-to-br',
+    'bg-gradient-to-bl',
+    'bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))]',
+    'bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
+    'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
+     */
+
