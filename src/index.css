@@ -44,6 +44,12 @@ body {
   transition: all 200ms ease-in-out;
 }
 
+.text-stroke {
+  -webkit-text-stroke: 31px transparent;
+  text-stroke: 3px transparent;
+  -webkit-text-fill-color: #40464b;
+}
+
 .animate-bg-span {
   -webkit-animation: bg-span 15s ease infinite alternate;
   -moz-animation: bg-span 15s ease infinite alternate;

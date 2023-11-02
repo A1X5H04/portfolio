@@ -6,23 +6,24 @@ import { Fade, Slide } from "react-awesome-reveal";
 import DotPattern from "../components/DotPattern";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
+import LoadingSpinner from "../components/LoadingSpinner";
+import HeadingText from "../components/HeadingText";
 
-
-
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
+}
 
 const headingTextArray = [
   "Flutter Developer",
+  "Android Developer",
   "React Developer",
   "Next.JS Developer",
-  "Comp Sci Student",
+  "CS Student",
   "OSS Contributor",
   "Linux Enthusiast",
   "Frontend Developer",
 ];
 
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
 
 function getRandomText() {
   const randomIndex = Math.floor(Math.random() * headingTextArray.length);
@@ -32,30 +33,30 @@ function getRandomText() {
 function generateRandomTailwindGradients() {
   let randomGradients = 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500';
   const gradientColors = [
-    'from-pink-500 via-red-500 to-yellow-500',
-    'from-green-300 via-blue-500 to-purple-600',
-    'from-pink-300 via-purple-300 to-indigo-400',
-    'from-red-200 via-red-300 to-yellow-200',
-    'from-yellow-500 via-purple-500 to-blue-500',
-    'from-fuchsia-500 via-red-600 to-orange-400',
-    'from-gray-900 via-purple-900 to-violet-600',
-    'from-amber-700 via-orange-300 to-rose-800',
-    'from-amber-200 via-violet-600 to-sky-900',
-    'from-gray-300 via-fuchsia-600 to-orange-600',
-    'from-yellow-200 via-red-500 to-fuchsia-500',
-    'from-rose-400 via-fuchsia-500 to-indigo-500',
-    'from-indigo-200 via-red-200 to-yellow-100'
+      'from-pink-500 via-red-500 to-yellow-500',
+      'from-green-300 via-blue-500 to-purple-600',
+      'from-pink-300 via-purple-300 to-indigo-400',
+      'from-red-200 via-red-300 to-yellow-200',
+      'from-yellow-500 via-purple-500 to-blue-500',
+      'from-fuchsia-500 via-red-600 to-orange-400',
+      'from-gray-900 via-purple-900 to-violet-600',
+      'from-amber-700 via-orange-300 to-rose-800',
+      'from-amber-200 via-violet-600 to-sky-900',
+      'from-gray-300 via-fuchsia-600 to-orange-600',
+      'from-yellow-200 via-red-500 to-fuchsia-500',
+      'from-rose-400 via-fuchsia-500 to-indigo-500',
+      'from-indigo-200 via-red-200 to-yellow-100'
   ]
 
   const gradientTypes = [
-    'bg-gradient-to-tr',
-    'bg-gradient-to-tl',
-    'bg-gradient-to-br',
-    'bg-gradient-to-bl',
-    'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
+      'bg-gradient-to-tr',
+      'bg-gradient-to-tl',
+      'bg-gradient-to-br',
+      'bg-gradient-to-bl',
+      'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
+      'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
+      'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
+      'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
   ];
 
   const randomColor = gradientColors[Math.floor(Math.random() * gradientColors.length)];
@@ -66,24 +67,27 @@ function generateRandomTailwindGradients() {
 }
 
 const headingStyle = {
-  filter: "url(#filter)",
+  filter: "url(#glitch)",
   animationDelay: "700ms",
   clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 }
 
-
 export default function Home() {
-  const [currentText, setCurrentText] = React.useState('Frontend Developer');
   const { projectData } = useOutletContext();
   const [projectArray, setProjectArray] = React.useState([]);
 
-
+  console.log('Home Component Rendered');
 
   React.useEffect(() => {
     projectData.then((data) => {
       setProjectArray(data);
+    }).catch((err) => {
+      console.log(err);
     });
   }, [projectData]);
+
+
+
 
   return (
     <div className="w-full overflow-hidden">
@@ -123,13 +127,30 @@ export default function Home() {
               style={{ animationDelay: "700ms" }}
               className="absolute -bottom-8 -right-6 sm:-bottom-7 sm:-right-6 lg:-bottom-7 lg:-right-6 w-12 h-12 border border-transparent dark:border-transparent pulse-border border-dashed rounded-full"
             />
-            <div className="overflow-hidden">
+            <div className="overflow-hidden select-none cursor-default duration-200">
               <Slide direction="up" triggerOnce>
-                <div style={headingStyle} className={`${generateRandomTailwindGradients()} bg-clip-text animate-bg-span`}>
-                  <h1 className="font-extrabold sm:inline-flex gap-5 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent">
-                    {getRandomText()}
-                  </h1>
-                </div>
+              <div style={headingStyle} className={`${generateRandomTailwindGradients()} bg-clip-text animate-bg-span `}>
+        <h1 className="font-extrabold sm:inline-flex gap-5 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent">
+            {getRandomText()}
+        </h1>
+        
+     <svg className="absolute h-1 w-1 overflow-hidden">
+        <defs>
+          <filter id="glitch">
+            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0 1.475" numOctaves="12" result="NOISE">
+              <animate attributeName="seed" dur="20s" values="10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280" repeatCount="indefinite" />
+              {/* <animate attributeName="baseFrequency" dur="5s" values="0 11.475;0 1.5;0 11.20;" repeatCount="indefinite" /> */}
+            </feTurbulence>
+            <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0.15">
+              <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
+            </feGaussianBlur>
+            <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="5" xChannelSelector="L" yChannelSelector="R" result="DISPLACED">
+                <animate attributeName="scale" dur="15" values="5; 12; 10; 12; 5 " repeatCount="indefinite" />
+            </feDisplacementMap>
+          </filter>
+        </defs>
+      </svg> 
+    </div>
               </Slide>
             </div>
           </div>
@@ -191,22 +212,29 @@ export default function Home() {
           </Fade>
         </div>
         <div className="mt-8 px-5">
-          <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
-            {projectArray?.map((item) => {
-              return (
-                <ProjectTile
-                  title={item.repo}
-                  description={item.description}
-                  link={item.link}
-                  language={item.language}
-                  website={item.website}
-                  languageColor={item.languageColor}
-                  stars={item.stars}
-                  forks={item.forks}
-                />
-              );
-            })}
-          </div>
+          {projectArray.length === 0 ? (
+            <div className="w-full h-full flex justify-center items-center">
+              <LoadingSpinner />
+            </div>
+          ) : (
+            <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
+              {projectArray?.map((item) => {
+                return (
+                  <ProjectTile
+                    title={item.repo}
+                    description={item.description}
+                    link={item.link}
+                    language={item.language}
+                    website={item.website}
+                    languageColor={item.languageColor}
+                    stars={item.stars}
+                    forks={item.forks}
+                  />
+                );
+              })}
+            </div>
+          )}
+
           <a
             href="https://github.com/A1X5H04?tab=repositories"
             className="block w-full my-4 text-center hover:bg-slate-100 dark:hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
@@ -215,21 +243,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <svg className="absolute h-1 w-1 overflow-hidden">
-        <defs>
-          <filter id="filter">
-            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.475" numOctaves="12" result="NOISE">
-              <animate attributeName="seed" dur="5s" values="10;20;30;40;50;60;70;80;90;100" repeatCount="indefinite" />
-              {/* <animate attributeName="baseFrequency" dur="5s" values=" 2; 1.5; 1;" repeatCount="1" /> */}
-            </feTurbulence>
-            <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0.15">
-              <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
-            </feGaussianBlur>
-            <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="3.5" xChannelSelector="R" yChannelSelector="R" result="DISPLACED">
-            </feDisplacementMap>
-          </filter>
-        </defs>
-      </svg>
     </div>
   );
 }

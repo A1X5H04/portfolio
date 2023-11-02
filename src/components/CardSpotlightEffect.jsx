@@ -41,13 +41,13 @@ export const CardSpotlightEffect = ({children, className}) => {
         onBlur={handleBlur}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={` ${className} relative`}
+        className={` ${className} relative overflow-hidden`}
       >
         <div
           className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
           style={{
             opacity,
-            background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgb(108, 117, 125, 0.25), transparent 40%)`,
+            background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgb(108, 117, 125, 0.35), transparent 35%)`,
           }}
         />
         {children}

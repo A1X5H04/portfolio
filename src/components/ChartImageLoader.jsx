@@ -41,7 +41,7 @@ export default ChartImageLoader;
 
 function ErrorElement() {
   return (
-    <div className="grid place-items-center p-10 border-b w-full border-gray-900">
+    <div className="grid place-items-center p-10  w-full ">
       <div className="border border-gray-700 p-4  rounded-md">
         <ChartBar size={24} />
       </div>
