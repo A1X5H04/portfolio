@@ -1,16 +1,12 @@
 # My Portfolio Website
 
-**This Portfolio will soon be migrated to NEXT.JS**
+**This Portfolio will be migrated to NEXT.JS**
 
 Welcome to the GitHub repository for my personal portfolio website! This repository contains all the code and assets for my online portfolio, where I showcase my projects, skills, and experiences.
 
 ## About
 
 This portfolio website serves as a hub for sharing information about me, my work, and my passion for technology. Whether you're a potential employer, collaborator, or just curious to learn more about me, you'll find what you're looking for here.
-
-## Demo
-
-You can check out the live version of my portfolio website at [here](https://www.a1x5h04.github.io). Feel free to explore and see it in action!
 
 ## Features
 
