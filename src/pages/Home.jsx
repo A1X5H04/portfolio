@@ -1,13 +1,12 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import GridPattern from "../components/GridPattern";
 import ProjectTile from "../components/ProjectTile";
-import { Fade, Slide } from "react-awesome-reveal";
 import DotPattern from "../components/DotPattern";
+import { Fade, Slide } from "react-awesome-reveal";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
-import LoadingSpinner from "../components/LoadingSpinner";
-import HeadingText from "../components/HeadingText";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
