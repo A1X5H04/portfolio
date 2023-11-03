@@ -39,7 +39,7 @@ function Header() {
     <header className="w-full z-40 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
       <div className="relative flex justify-between py-5 px-8">
         <div className="flex gap-8">
-          <p style={{ filter: "url(#noisefilter)" }} className="font-bold">A1X5H04</p>
+          <p className="font-bold ">『A1X5H04』</p>
           <nav className="hidden sm:block mx-5">
             <ul className="flex gap-5 text-sm">
               <li>

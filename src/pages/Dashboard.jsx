@@ -61,7 +61,7 @@ function Dashboard() {
             </a>
           </div>
           <div className="p-5">
-            <ul className="list-disc ml-3">
+            <ul style={{listStyle: 'circle'}} className=" ml-3">
               {aboutArray?.map((item) => (
                 <li className="my-2 font-medium">
                   <p className="text-sm">{item}</p>
