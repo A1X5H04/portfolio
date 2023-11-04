@@ -6,9 +6,9 @@ export async function getPinnedGHRepo() {
         if (data.length > 0) {
             return data;
         } else {
-              const res = await fetch('https://api.npoint.io/8a1ae503884eede2a37f/project_repos');
-        const data = await res.json();
-        return data;
+            const res = await fetch('http://my-json-server.typicode.com/a1x5h04/a1x5h04/project_repos');
+            const data = await res.json();
+            return data;
         }
     } catch (err) {
         throw new Error("Failed to fetch Projects Data \n" + err)
@@ -17,7 +17,7 @@ export async function getPinnedGHRepo() {
 
 export async function getLanguages() {
     try {
-        const res = await fetch('https://api.npoint.io/8a1ae503884eede2a37f/languages/');
+        const res = await fetch('http://my-json-server.typicode.com/a1x5h04/a1x5h04/languages');
         const data = await res.json();
         return data;
     } catch (err) {
@@ -27,7 +27,7 @@ export async function getLanguages() {
 
 export async function getAbout() {
     try {
-        const res = await fetch('https://api.npoint.io/8a1ae503884eede2a37f/about_list/');
+        const res = await fetch('http://my-json-server.typicode.com/a1x5h04/a1x5h04/about_list');
         const data = await res.json();
         return data;
     } catch (err) {
