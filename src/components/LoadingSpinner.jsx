@@ -1,6 +1,6 @@
 export default function LoadingSpinner() {
     return (
-        <div className="p-10">
+        <div className="grid place-items-center p-4 w-full">
           <div role="status">
             <svg
               aria-hidden="true"

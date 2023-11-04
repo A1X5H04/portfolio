@@ -85,9 +85,6 @@ export default function Home() {
     });
   }, [projectData]);
 
-
-
-
   return (
     <div className="w-full overflow-hidden">
       <div className="relative pt-2 border-b border-slate-300 dark:border-gray-800 text-center">
@@ -212,9 +209,7 @@ export default function Home() {
         </div>
         <div className="mt-8 px-5">
           {projectArray.length === 0 ? (
-            <div className="w-full h-full flex justify-center items-center">
               <LoadingSpinner />
-            </div>
           ) : (
             <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
               {projectArray?.map((item) => {
