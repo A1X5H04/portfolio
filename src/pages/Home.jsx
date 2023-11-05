@@ -137,7 +137,7 @@ export default function Home() {
               <animate attributeName="seed" dur="20s" values="10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280" repeatCount="indefinite" />
               {/* <animate attributeName="baseFrequency" dur="5s" values="0 11.475;0 1.5;0 11.20;" repeatCount="indefinite" /> */}
             </feTurbulence>
-            <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0.15">
+            <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0">
               <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
             </feGaussianBlur>
             <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="5" xChannelSelector="L" yChannelSelector="R" result="DISPLACED">
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
         <div className="mt-8 px-5">
           {projectArray.length === 0 ? (
-              <LoadingSpinner />
+              <LoadingSpinner className="p-4" svgWidth={30} svgHeight={30} />
           ) : (
             <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
               {projectArray?.map((item) => {
@@ -240,22 +240,4 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
-/* 
-    'bg-gradient-to-tr',
-    'bg-gradient-to-tl',
-    'bg-gradient-to-br',
-    'bg-gradient-to-bl',
-    'bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))]',
-    'bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]',
-    'bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]'
-     */
 

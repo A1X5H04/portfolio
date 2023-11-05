@@ -18,8 +18,20 @@ export default {
         'gray-800': '#343a40ff',
         'gray-900': '#212529ff',
         'gray-1000': '#121212ff',
+      },
+      transitionProperty: {
+        'height': 'height',
+      },
+      animation: {
+        'fadein': 'fadeIn 0.5s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
     },
   },
-},
   plugins: [],
 }

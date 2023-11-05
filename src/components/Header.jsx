@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import {
-  GithubLogo,
   List,
   Moon,
+  Star,
   Sun,
 } from "@phosphor-icons/react";
+import { Fade } from "react-awesome-reveal";
 
 
 
@@ -36,11 +37,11 @@ function Header() {
   };
 
   return (
-    <header className="w-full z-40 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 duration-200">
-      <div className="relative flex justify-between py-5 px-8">
+    <header className={`w-full ${showNav ? "h-32 sm:h-20" : "h-20"} py-5 flex flex-col justify-between z-40 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 transition-height duration-500 ease-in-out`}>
+      <div className="relative flex items-center justify-between px-8">
         <div className="flex gap-8">
           <p className="font-bold ">『A1X5H04』</p>
-          <nav className="hidden sm:block mx-5">
+          <nav className="hidden sm:block">
             <ul className="flex gap-5 text-sm">
               <li>
                 <NavLink to="/">
@@ -95,7 +96,7 @@ function Header() {
             }
             className="p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md"
           >
-            <GithubLogo size={20} />
+            <Star size={20} />
           </button>
           <button
             onClick={() => toggleTheme()}
@@ -110,22 +111,21 @@ function Header() {
             >
               <List size={20} />
             </button>
-            {showNav && <NavDialog />}
           </div>
         </div>
       </div>
+      {showNav && <MobileNavbar /> }
     </header>
   );
 }
 
 export default Header;
 
-function NavDialog() {
+function MobileNavbar() {
   return (
-    <div className="absolute right-0 left-0 top-16 duration-200 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800">
-      <div className="p-3">
-        <nav className="mx-2">
+        <nav className="sm:hidden mb-2">
           <ul className="flex justify-evenly gap-5 text-sm">
+          <Fade triggerOnce cascade damping={0.2}>
             <li>
               <NavLink to="/">
                 {({ isActive }) => (
@@ -168,9 +168,8 @@ function NavDialog() {
                 )}
               </NavLink>
             </li>
+            </Fade>
           </ul>
         </nav>
-      </div>
-    </div>
   );
 }
