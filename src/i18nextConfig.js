@@ -328,6 +328,69 @@ i18n
           }
         },
       },
+      hi: {
+        translation: {
+          header: {
+            home: 'घर',
+            dashboard: 'डैशबोर्ड',
+            links: 'लिंक',
+          },
+          home: {
+            title: {
+              introduction: 'नमस्ते, मैं हूँ',
+              headings: {
+                web_designer: 'वेब डेवलपर',
+                android_developer: "एंड्रॉइड डेवलपर",
+                react_developer: "React डेवलपर",
+                nextjs_developer: "Next.JS डेवलपर",
+                cs_student: "सीएस छात्र",
+                oss_contributor: "ओएसएस योगदानकर्ता",
+                linux_enthusiast: "लिनक्स उत्साही",
+                frontend_developer: "अग्रणी डेवलपर",
+              },
+              subtitle: {
+                text: 'मैं अभिनव और उपयोगकर्ता के अनुकूल समाधान के निर्माण के लिए एक जुनून के साथ एक सॉफ्टवेयर डेवलपर हूँ। मैं कई प्रोग्रामिंग भाषाओं और प्रौद्योगिकियों में कुशल हूं, जिनमें शामिल हैं',
+                and: 'और',
+              },
+            },
+            buttons: {
+              download_cv: "सीवी डाउनलोड करें",
+              github: "गिथब",
+            },
+            project: {
+              title: "परियोजनाएं",
+              description: "मैंने कुछ परियोजनाओं को किया है",
+              show_more: "और देखो"
+            },
+          },
+          dashboard: {
+            title: 'डैशबोर्ड',
+            description: 'मेरे बारे में, सांख्यिकी, भाषा आदि।',
+            cards: {
+              headings: {
+                about_me: 'मेरे बारे में',
+                languages_used: 'फ्रेमवर्क/लैंग्वेज प्रयुक्त',
+                top_languages: 'शीर्ष भाषा',
+                github_stats: 'जिथब सांख्यिकी',
+
+              }
+            }
+          },
+          links: {
+            title: 'लिंक',
+            description: 'संपर्क और सामाजिक लिंक',
+            contact_via_form: 'या मुझे फॉर्म के माध्यम से संपर्क करें',
+            form_name: 'नाम',
+            form_email: 'ईमेल',
+            form_message: 'संदेश',
+            button: {
+              send: 'भेजें',
+              send_success: 'सफलतापूर्वक भेजें!',
+              send_failed: 'भेजने में विफल!'
+            }
+          }
+        },
+      },
       ar: {
         translation: {
           header: {
