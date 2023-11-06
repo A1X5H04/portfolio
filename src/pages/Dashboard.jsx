@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade } from "react-awesome-reveal";
 import { CardSpotlightEffect } from "../components/CardSpotlightEffect";
+import { useTranslation } from "react-i18next";
 
 
 function cn(...inputs) {
@@ -16,6 +17,7 @@ function Dashboard() {
   const { languageData, aboutData } = useOutletContext();
   const [languagesArray, setLanguagesArray] = React.useState([]);
   const [aboutArray, setAboutArray] = React.useState([]);
+  const { t } = useTranslation();
 
   React.useEffect(() => {
     languageData.then((data) => {
@@ -39,9 +41,9 @@ function Dashboard() {
           )}
         />
         <Fade direction="up" triggerOnce cascade damping={0.2}>
-          <h1 className="text-3xl font-extrabold my-1 py-1">Dashboard</h1>
+          <h1 className="text-3xl font-extrabold my-1 py-1">{t('dashboard.title')}</h1>
           <p className="text-gray-500 pb-2">
-            About me, Statistics, Languages etc.
+            {t('dashboard.description')}
           </p>
         </Fade>
       </div>
@@ -49,7 +51,7 @@ function Dashboard() {
         <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000  duration-200 ease-in-out row-span-2">
           <div className="flex p-5 items-center justify-between border-b border-slate-100 dark:border-gray-1000">
             <div>
-              <h1 className="font-bold text-xl">About Me</h1>
+              <h1 className="font-bold text-xl">{t('dashboard.cards.headings.about_me')}</h1>
               <p className="text-sm">A1X5H04</p>
             </div>
             <a href="https://github.com/a1x5h04">
@@ -73,18 +75,18 @@ function Dashboard() {
 
       <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out row-span-3">
           <div className="flex flex-col items-center">
-          <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">Github Statistics</p>
+          <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">{t('dashboard.cards.headings.github_stats')}</p>
             <ChartImageLoader
               className="border-b border-slate-100 dark:border-gray-1000"
               imageUrl="https://github-readme-stats.vercel.app/api?username=a1x5h04&theme=transparent&hide_border=true&hide_title=true&show_icons=true&text_color=6c757dff&card_width=480"
             />
-            <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">Top Languages</p>
+            <p className="lg:px-6 px-4 pt-5 w-full font-bold text-lg">{t('dashboard.cards.headings.top_languages')}</p>
             <ChartImageLoader
               className="border-b border-slate-100 dark:border-gray-1000"
               imageUrl="https://github-readme-stats.vercel.app/api/top-langs/?username=a1x5h04&theme=transparent&layout=compact&hide_border=true&hide_title=true&title_color=ffffff&text_color=495057ff&card_width=480"
             />
             <p className="lg:px-6 px-4 py-5 w-full font-bold text-lg">
-              Languages Known
+              {t('dashboard.cards.headings.languages_used')}
             </p>
             <div className="lg:px-6 px-4 pb-5 lg:pt-3 w-full flex gap-3 flex-wrap">
               {languagesArray?.map((item) => (

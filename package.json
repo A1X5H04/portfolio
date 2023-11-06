@@ -15,10 +15,12 @@
     "@phosphor-icons/react": "^2.0.13",
     "chart.js": "^4.4.0",
     "clsx": "^2.0.0",
+    "i18next": "^23.6.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^13.3.1",
     "react-router-dom": "^6.16.0",
     "tailwind-merge": "^1.14.0"
   },

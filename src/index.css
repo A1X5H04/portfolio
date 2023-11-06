@@ -44,6 +44,13 @@ body {
   transition: all 200ms ease-in-out;
 }
 
+.radiobtn:checked {
+  border: none;
+}
+.radiobtn:checked + .check-icon {
+  display: flex;
+}
+
 .text-stroke {
   -webkit-text-stroke: 31px transparent;
   text-stroke: 3px transparent;

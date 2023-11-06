@@ -12,6 +12,7 @@ import GridPattern from "../components/GridPattern";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 import { Fade, Slide } from "react-awesome-reveal";
+import { useTranslation } from "react-i18next";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 function cn(...inputs) {
@@ -21,8 +22,9 @@ function cn(...inputs) {
 
 function Links() {
   const formRef = React.useRef();
-  const [sendBtnText, setSendBtnText] = React.useState("Send");
+  const {t} = useTranslation();
   const [isSending, setIsSending] = React.useState(false);
+  const [sendBtnText, setSendBtnText] = React.useState(t('links.button.send'));
 
 
   const sendEmail = (e) => {
@@ -31,12 +33,12 @@ function Links() {
     emailjs.sendForm('service_cdwh5hx', 'template_ce80v7e', formRef.current, 'z-4prsUP8jeQn_cGG')
       .then((result) => {
         if (result.text === "OK") {
-          setSendBtnText("Send successfully!");
+          setSendBtnText(t('links.button.send_success'));
           setIsSending(false);
           formRef.current.reset();
         }
       }, (error) => {
-        setSendBtnText("Failed to send!");
+        setSendBtnText(t('links.button.send_failed'));
         setIsSending(false);
         console.log(error.text);
       });
@@ -44,7 +46,7 @@ function Links() {
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
-      setSendBtnText("Send");
+        setSendBtnText(t('links.button.send'));
     }, 1500);
 
     return () => {
@@ -66,8 +68,8 @@ function Links() {
         />
         <div>
           <Fade direction="up" triggerOnce cascade damping={0.2}>
-            <h1 className="text-3xl font-extrabold my-1">Links</h1>
-            <p className="text-gray-500">Contact and Social Links</p>
+            <h1 className="text-3xl font-extrabold my-1">{t('links.title')}</h1>
+            <p className="text-gray-500">{t('links.description')}</p>
           </Fade>
         </div>
         <div className="my-5 grid place-items-center">
@@ -138,7 +140,7 @@ function Links() {
           <div className="flex items-center">
             <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
             <p className="uppercase text-sm mx-5 font-normal text-slate-400 dark:text-gray-600">
-              or contact via form
+              {t('links.contact_via_form')}
             </p>
             <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
           </div>
@@ -146,23 +148,23 @@ function Links() {
             <input
               type="text"
               name="user_name"
-              placeholder="Name"
+              placeholder={t('links.form_name')}
               required
               className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <input
               type="email"
               name="user_email"
-              placeholder="Email"
+              placeholder={t('links.form_email')}
               required
               className="bg-white dark:bg-black border p-1 indent-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             />
             <textarea
               rows={10}
-              placeholder="Message"
+              placeholder={t('links.form_message')}
               name="message"
               required
-              className="bg-white dark:bg-black border px-3 py-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
+              className="bg-white resize-none dark:bg-black border px-3 py-2 rounded-md dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 focus:outline-none focus:ring-1 ring-black dark:ring-white"
             ></textarea>
             <button className="grid place-items-center bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 hover:bg-gradient-to-b from-black to-gray-900 dark:from-white dark:to-slate-200 duration-150 cursor-pointer overflow-hidden">
               <p className={sendBtnText === "Send" && "animate-fadein"}>

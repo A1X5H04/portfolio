@@ -4,29 +4,13 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import GridPattern from "../components/GridPattern";
 import ProjectTile from "../components/ProjectTile";
 import DotPattern from "../components/DotPattern";
+import { useTranslation } from "react-i18next";
 import { Fade, Slide } from "react-awesome-reveal";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
-}
-
-const headingTextArray = [
-  "Flutter Developer",
-  "Android Developer",
-  "React Developer",
-  "Next.JS Developer",
-  "CS Student",
-  "OSS Contributor",
-  "Linux Enthusiast",
-  "Frontend Developer",
-];
-
-
-function getRandomText() {
-  const randomIndex = Math.floor(Math.random() * headingTextArray.length);
-  return headingTextArray[randomIndex];
 }
 
 function generateRandomTailwindGradients() {
@@ -72,10 +56,26 @@ const headingStyle = {
 }
 
 export default function Home() {
+  const {t} = useTranslation(); 
   const { projectData } = useOutletContext();
   const [projectArray, setProjectArray] = React.useState([]);
 
-  console.log('Home Component Rendered');
+  const headingTextArray = [
+    t('home.title.headings.web_designer'),
+    t('home.title.headings.react_developer'),
+    t('home.title.headings.nextjs_developer'),
+    t('home.title.headings.cs_student'),
+    t('home.title.headings.android_developer'),
+    t('home.title.headings.oss_contributor'),
+    t('home.title.headings.linux_enthusiast'),
+    t('home.title.headings.frontend_developer'),
+  ];
+  
+  
+  function getRandomText() {
+    const randomIndex = Math.floor(Math.random() * headingTextArray.length);
+    return headingTextArray[randomIndex];
+  }
 
   React.useEffect(() => {
     projectData.then((data) => {
@@ -99,7 +99,7 @@ export default function Home() {
         >
           <Fade direction="up" triggerOnce>
             <h3 className=" lg:text-lg pt-4 pb-4 sm:text-sm min-w-min text-gray-800 dark:text-gray-200 font-mono">
-              Hi, I am&nbsp;
+              {t('home.title.introduction')}&nbsp;
               <span className="bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded">
                 Alish Baig
               </span>
@@ -161,10 +161,8 @@ export default function Home() {
         >
           <Slide direction="up" triggerOnce>
             <p className=" text-gray-500  lg:w-[720px] px-3 m-auto py-7">
-              I am a software developer with a passion for building innovative
-              and user-friendly solutions. <br /> I am skilled in a variety of
-              programming languages and technologies, including <span className="font-semibold">JavaScript</span>,
-              <span className="font-semibold">&nbsp;React</span>, <span className="font-semibold">&nbsp;Next.JS</span>,<span className="font-semibold">&nbsp;Linux&nbsp;</span>and<span className="font-semibold">&nbsp;Git</span>.
+              {t('home.title.subtitle.text')} <span className="font-semibold">JavaScript</span>,
+              <span className="font-semibold">&nbsp;React</span>, <span className="font-semibold">&nbsp;Next.JS</span>,<span className="font-semibold">&nbsp;Linux&nbsp;</span>{t('home.title.subtitle.and')}<span className="font-semibold">&nbsp;Git</span>.
             </p>
           </Slide>
         </div>
@@ -181,13 +179,13 @@ export default function Home() {
                 href="https://drive.google.com/uc?export=download&id=1GHO62v01Qutsa03e-PBYm-RHl9vBgGw-"
                 className="bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 dark:hover:bg-slate-200 cursor-pointer"
               >
-                Download CV
+                {t('home.buttons.download_cv')}
               </a>
               <a
                 href="https://github.com/a1x5h04"
                 className="border border-slate-400 dark:border-gray-700 px-3 py-1.5 rounded-md font-semibold hover:border-slate-500 dark:hover:border-gray-600 cursor-pointer"
               >
-                Github
+                {t('home.buttons.github')}
               </a>
             </Slide>
           </div>
@@ -203,8 +201,8 @@ export default function Home() {
         />
         <div className="text-center">
           <Fade direction="up" triggerOnce cascade damping={0.4}>
-            <h1 className="text-3xl font-extrabold my-1">Projects</h1>
-            <p className="text-gray-500">Some of my Hobby Projects</p>
+            <h1 className="text-3xl font-extrabold my-1">{t('home.project.title')}</h1>
+            <p className="text-gray-500">{t('home.project.description')}</p>
           </Fade>
         </div>
         <div className="mt-8 px-5">
@@ -233,7 +231,7 @@ export default function Home() {
             href="https://github.com/A1X5H04?tab=repositories"
             className="block w-full my-4 text-center hover:bg-slate-100 dark:hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
           >
-            Show More
+            {t('home.project.show_more')}
           </a>
         </div>
       </div>
