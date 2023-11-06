@@ -107,7 +107,7 @@ function Header() {
   };
 
   return (
-    <header className={`w-full ${showNav ? "h-32 sm:h-20" : "h-20"} py-6 flex flex-col justify-between z-40 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 transition-height duration-500 ease-in-out`}>
+    <header className={`w-full ${showNav ? "h-32 sm:h-20" : "h-20"} py-6 flex flex-col justify-between z-10 sticky top-0 backdrop-blur-lg bg-white dark:bg-black bg-opacity-75 dark:bg-opacity-50 border-b border-slate-300 dark:border-gray-800 transition-height duration-500 ease-in-out`}>
       <div className="flex items-center justify-between px-8">
         <div className="flex gap-8">
           <p className="font-bold ">『A1X5H04』</p>
@@ -171,7 +171,6 @@ function Header() {
           >
             {themeIcon === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <div className="">
             <button
               onClick={() => setShowNav((prev) => !prev)}
               className="sm:hidden p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md"
@@ -180,17 +179,16 @@ function Header() {
             </button>
             {showLangPicker && <LanguagePicker handleChange={handleLangSelectChange} selectedLanguage={language} />
             }
-          </div>
         </div>
       </div>
-      {showNav && <MobileNavbar />}
+      {showNav && <MobileNavbar t={t} />}
     </header>
   );
 }
 
-function MobileNavbar() {
+function MobileNavbar({t}) {
   return (
-    <nav className="sm:hidden">
+    <nav className="sm:hidden -z-10">
       <ul className="flex justify-evenly gap-5 text-sm">
         <Fade triggerOnce cascade damping={0.2}>
           <li>
@@ -244,7 +242,7 @@ function MobileNavbar() {
 function LanguagePicker(props) {
   return (
     <Fade duration={500}>
-      <div className="antialiased overflow-hidden overflow-y-scroll absolute top-10 -right-6 border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out rounded-md py-2 px-4">
+      <div className="antialiased z-20 overflow-hidden overflow-y-scroll absolute top-10 -right-6 border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out rounded-md py-2 px-4">
         <div role="radiogroup" className="w-44 h-60">
           {languages.map((lang) => (
             <div className="w-full inline-flex gap-2 justify-between items-center border-b border-slate-200 dark:border-gray-900 py-2">
