@@ -52,7 +52,6 @@ function generateRandomTailwindGradients() {
 const headingStyle = {
   filter: "url(#glitch)",
   animationDelay: "700ms",
-  clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
 }
 
 export default function Home() {
@@ -71,7 +70,14 @@ export default function Home() {
     t('home.title.headings.frontend_developer'),
   ];
   
-  
+  function generateRandomValues(maxValue, numberOfValues) {
+    let randomValues = [];
+    for (let i = 0; i < numberOfValues; i++) {
+      randomValues.push(Math.floor(Math.random() * maxValue));
+    }
+    return randomValues;
+  }
+
   function getRandomText() {
     const randomIndex = Math.floor(Math.random() * headingTextArray.length);
     return headingTextArray[randomIndex];
@@ -133,15 +139,15 @@ export default function Home() {
      <svg className="absolute h-1 w-1 overflow-hidden">
         <defs>
           <filter id="glitch">
-            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0 1.475" numOctaves="12" result="NOISE">
+            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0 1.1275" numOctaves="12" result="NOISE">
               <animate attributeName="seed" dur="20s" values="10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280" repeatCount="indefinite" />
-              {/* <animate attributeName="baseFrequency" dur="5s" values="0 11.475;0 1.5;0 11.20;" repeatCount="indefinite" /> */}
+              <animate attributeName="baseFrequency" dur="12s" values="0 0.1275; 0 0.0750; 0 0.5750; 0 .0150; 0 0.2750 0 0.1520; 0 0.1275;" repeatCount="indefinite" />
             </feTurbulence>
             <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0">
               <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
             </feGaussianBlur>
-            <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="5" xChannelSelector="L" yChannelSelector="R" result="DISPLACED">
-                <animate attributeName="scale" dur="15" values="5; 12; 10; 12; 5 " repeatCount="indefinite" />
+            <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="2" xChannelSelector="L" yChannelSelector="R" result="DISPLACED">
+                <animate attributeName="scale" dur="10s" values={generateRandomValues(12, 5).join(";").toString()} repeatCount="indefinite" />
             </feDisplacementMap>
           </filter>
         </defs>
