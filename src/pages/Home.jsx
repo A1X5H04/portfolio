@@ -139,9 +139,8 @@ export default function Home() {
      <svg className="absolute h-1 w-1 overflow-hidden">
         <defs>
           <filter id="glitch">
-            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0 1.1275" numOctaves="12" result="NOISE">
+            <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0 .3275" numOctaves="12" result="NOISE">
               <animate attributeName="seed" dur="20s" values="10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280" repeatCount="indefinite" />
-              <animate attributeName="baseFrequency" dur="12s" values="0 0.1275; 0 0.0750; 0 0.5750; 0 .0150; 0 0.2750 0 0.1520; 0 0.1275;" repeatCount="indefinite" />
             </feTurbulence>
             <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0">
               <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
