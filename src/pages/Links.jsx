@@ -68,7 +68,7 @@ function Links() {
         />
         <div>
           <Fade direction="up" triggerOnce cascade damping={0.2}>
-            <h1 className="text-3xl font-extrabold my-1">{t('links.title')}</h1>
+            <h3 className="text-3xl font-extrabold my-1">{t('links.title')}</h3>
             <p className="text-gray-500">{t('links.description')}</p>
           </Fade>
         </div>
@@ -139,9 +139,9 @@ function Links() {
         <div className="w-full px-5">
           <div className="flex items-center">
             <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
-            <p className="uppercase text-sm mx-5 font-normal text-slate-400 dark:text-gray-600">
+            <h5 className="uppercase text-sm mx-5 font-normal text-slate-400 dark:text-gray-600">
               {t('links.contact_via_form')}
-            </p>
+            </h5>
             <span className="border-t border-slate-200 dark:border-gray-900 flex-1"></span>
           </div>
           <form ref={formRef} onSubmit={sendEmail} className="lg:w-[600px] my-6 flex flex-col gap-5 m-auto">
