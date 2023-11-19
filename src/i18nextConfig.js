@@ -139,69 +139,6 @@ i18n
           }
         }
       },
-      de: {
-        translation: {
-          header: {
-            home: 'Heim',
-            dashboard: 'Armaturenbrett',
-            links: 'Liens',
-          },
-          home: {
-            title: {
-              introduction: 'Hallo, ich bin',
-              headings: {
-                web_designer: 'Web Designer',
-                android_developer: "Android Entwickler",
-                react_developer: "React Entwickler",
-                nextjs_developer: "Next.JS Entwickler",
-                cs_student: "CS Student",
-                oss_contributor: "OSS Beitrag",
-                linux_enthusiast: "Linux Enthusiast",
-                frontend_developer: "Frontend Entwickler",
-              },
-              subtitle: {
-                text: 'Ich bin Software-Entwickler mit einer Leidenschaft für den Aufbau innovativer und benutzerfreundlicher Lösungen. Ich bin in einer Vielzahl von Programmiersprachen und Technologien, einschließlich',
-                and: 'und',
-              },
-            },
-            buttons: {
-              download_cv: "CV herunterladen",
-              github: "Github",
-            },
-            project: {
-              title: "Projekte",
-              description: "Einige der Projekte, die ich getan habe",
-              show_more: "Mehr erfahren"
-            },
-          },
-          dashboard: {
-            title: 'Armaturenbrett',
-            description: 'Über mich, Statistiken, Sprachen usw.',
-            cards: {
-              headings: {
-                about_me: 'Über mich',
-                languages_used: 'Rahmen/Sprachen Verwendet',
-                top_languages: 'Top-Sprachen',
-                github_stats: 'Github Statistik',
-
-              }
-            }
-          },
-          links: {
-            title: 'Links',
-            description: 'Kontakt und soziale Links',
-            contact_via_form: 'oder kontaktieren Sie mich per Formular',
-            form_name: 'Name',
-            form_email: 'E-Mail',
-            form_message: 'Nachricht',
-            button: {
-              send: 'Schicken',
-              send_success: 'Senden Sie erfolgreich!',
-              send_failed: 'Senden fehlgeschlagen!'
-            }
-          }
-        }
-      },
       fr: {
         translation: {
           header: {
@@ -328,69 +265,6 @@ i18n
           }
         },
       },
-      hi: {
-        translation: {
-          header: {
-            home: 'घर',
-            dashboard: 'डैशबोर्ड',
-            links: 'लिंक',
-          },
-          home: {
-            title: {
-              introduction: 'नमस्ते, मैं हूँ',
-              headings: {
-                web_designer: 'वेब डेवलपर',
-                android_developer: "एंड्रॉइड डेवलपर",
-                react_developer: "React डेवलपर",
-                nextjs_developer: "Next.JS डेवलपर",
-                cs_student: "सीएस छात्र",
-                oss_contributor: "ओएसएस योगदानकर्ता",
-                linux_enthusiast: "लिनक्स उत्साही",
-                frontend_developer: "अग्रणी डेवलपर",
-              },
-              subtitle: {
-                text: 'मैं अभिनव और उपयोगकर्ता के अनुकूल समाधान के निर्माण के लिए एक जुनून के साथ एक सॉफ्टवेयर डेवलपर हूँ। मैं कई प्रोग्रामिंग भाषाओं और प्रौद्योगिकियों में कुशल हूं, जिनमें शामिल हैं',
-                and: 'और',
-              },
-            },
-            buttons: {
-              download_cv: "सीवी डाउनलोड करें",
-              github: "गिथब",
-            },
-            project: {
-              title: "परियोजनाएं",
-              description: "मैंने कुछ परियोजनाओं को किया है",
-              show_more: "और देखो"
-            },
-          },
-          dashboard: {
-            title: 'डैशबोर्ड',
-            description: 'मेरे बारे में, सांख्यिकी, भाषा आदि।',
-            cards: {
-              headings: {
-                about_me: 'मेरे बारे में',
-                languages_used: 'फ्रेमवर्क/लैंग्वेज प्रयुक्त',
-                top_languages: 'शीर्ष भाषा',
-                github_stats: 'जिथब सांख्यिकी',
-
-              }
-            }
-          },
-          links: {
-            title: 'लिंक',
-            description: 'संपर्क और सामाजिक लिंक',
-            contact_via_form: 'या मुझे फॉर्म के माध्यम से संपर्क करें',
-            form_name: 'नाम',
-            form_email: 'ईमेल',
-            form_message: 'संदेश',
-            button: {
-              send: 'भेजें',
-              send_success: 'सफलतापूर्वक भेजें!',
-              send_failed: 'भेजने में विफल!'
-            }
-          }
-        },
-      },
       ar: {
         translation: {
           header: {
@@ -450,69 +324,6 @@ i18n
               send: 'إرسال',
               send_success: 'أرسل بنجاح!',
               send_failed: 'فشل في إرسال!'
-            }
-          }
-        },
-      },
-      ru: {
-        translation: {
-          header: {
-            home: 'Домой',
-            dashboard: 'Dashboard',
-            links: 'Ссылки',
-          },
-          home: {
-            title: {
-              introduction: 'Привет, Я',
-              headings: {
-                web_designer: 'Сайт Дизайнер',
-                android_developer: "Android Разработчик",
-                react_developer: "React Разработчик",
-                nextjs_developer: "Next.JS Разработчик",
-                cs_student: "Компьютер Студент",
-                oss_contributor: "OSS Автор",
-                linux_enthusiast: "Линукс восторженный",
-                frontend_developer: "интерфейс Разработчик",
-              },
-              subtitle: {
-                text: 'Я разработчик программного обеспечения с страстью к созданию инновационных и удобных решений. Я умею в различных языках и технологиях программирования, в том числе',
-                and: 'и',
-              },
-            },
-            buttons: {
-              download_cv: "Скачать CV",
-              github: "Github",
-            },
-            project: {
-              title: "Проекты",
-              description: "Некоторые из проектов, которые я сделал",
-              show_more: "Показать больше"
-            },
-          },
-          dashboard: {
-            title: 'Dashboard',
-            description: 'О мне, статистике, языках и т.д.',
-            cards: {
-              headings: {
-                about_me: 'О мне',
-                languages_used: 'Основы/Язык Использовано',
-                top_languages: 'Высший язык',
-                github_stats: 'Github Статистика',
-
-              }
-            }
-          },
-          links: {
-            title: 'Ссылки',
-            description: 'Контакты и социальные связи',
-            contact_via_form: 'или связаться со мной по форме',
-            form_name: 'Имя',
-            form_email: 'Email',
-            form_message: 'Сообщение',
-            button: {
-              send: 'Отправить',
-              send_success: 'Отправляйтесь успешно!',
-              send_failed: 'Не удалось отправить!'
             }
           }
         },
