@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg font-bold;
+  }
+
+  h4 {
+    @apply text-base font-bold;
+  }
+
+  h5 {
+    @apply text-sm font-bold;
+  }
+
+  h6 {
+    @apply text-xs font-bold;
+  }
+  em {
+    @apply italic;
+  }
+
+  image {
+    @apply max-w-full bg-contain bg-center
+  }
+
+  blockquote {
+    @apply border-l-2 border-gray-400 pl-3 my-3
+  }
+
+  a {
+    @apply border-b border-transparent hover:opacity-75 duration-100 hover:border-current
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,12 +91,6 @@ body {
 }
 .radiobtn:checked + .check-icon {
   display: flex;
-}
-
-.text-stroke {
-  -webkit-text-stroke: 31px transparent;
-  text-stroke: 3px transparent;
-  -webkit-text-fill-color: #40464b;
 }
 
 .animate-bg-span {

@@ -145,7 +145,7 @@ export default function Home() {
                         <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0">
                           <animate attributeName="stdDeviation" dur="0.5s" values="5;2.5;0.15" repeatCount="1" />
                         </feGaussianBlur>
-                        <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="2" xChannelSelector="L" yChannelSelector="R" result="DISPLACED">
+                        <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="2" xChannelSelector="R" yChannelSelector="R" result="DISPLACED">
                           <animate attributeName="scale" dur="10s" values={generateRandomValues(12, 5).join(";").toString()} repeatCount="indefinite" />
                         </feDisplacementMap>
                       </filter>
