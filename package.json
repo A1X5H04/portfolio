@@ -14,12 +14,14 @@
     "@emotion/react": "^11.11.1",
     "@phosphor-icons/react": "^2.0.13",
     "clsx": "^2.0.0",
+    "html-react-parser": "^5.0.6",
     "i18next": "^23.6.0",
     "react": "^18.2.0",
     "react-awesome-reveal": "^4.2.5",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.3.1",
     "react-router-dom": "^6.16.0",
+    "snarkdown": "^2.0.0",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
