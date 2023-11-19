@@ -20,22 +20,12 @@ function Dashboard() {
   const [aboutArray, setAboutArray] = React.useState([]);
   const { t } = useTranslation();
 
-  const arrayAbout = [
-    "👋 Hi I am **Alish.**",
-    "🖥️ See <strikethrough> my </strikethrough> portfolio at A1X5H04.github.com",
-    "👨‍💻 I'm currently working on contributing to Open Source projects.",
-    "✉️ You can reach me at [alishbaig2004@gmail.com](mailto:alishbaig2004@gmail.com)",
-    "🧠 I'm currently learning _Next JS_",
-    "🤝 I'm open to collaborating on anything?",
-    "⚡ Fun fact: I like phonk music",
-  ];
-
   React.useEffect(() => {
     languageData.then((data) => {
       setLanguagesArray(data);
     });
     aboutData.then((data) => {
-      setAboutArray(arrayAbout);
+      setAboutArray(data);
     });
   }, [languageData, aboutData]);
 
