@@ -53,7 +53,6 @@ i18n
             description: 'About me, Statistics, Languages etc.',
             cards: {
               headings: {
-                about_me: 'About Me',
                 languages_used: 'Frameworks/Languages Used',
                 top_languages: 'Top Languages',
                 github_stats: 'Github Stats',
@@ -116,7 +115,6 @@ i18n
             description: '私、統計、言語などについて',
             cards: {
               headings: {
-                about_me: '私について',
                 languages_used: 'フレームワーク/言語 使用条件',
                 top_languages: 'トップ言語',
                 github_stats: 'Githubの統計',
@@ -179,7 +177,6 @@ i18n
             description: 'À propos de moi, Statistiques, Langues, etc.',
             cards: {
               headings: {
-                about_me: 'À propos de moi',
                 languages_used: 'Cadres/langues Utilisé',
                 top_languages: 'Langues principales',
                 github_stats: 'Statistiques Github',
@@ -242,7 +239,6 @@ i18n
             description: 'Sobre mí, Estadísticas, Idiomas, etc.',
             cards: {
               headings: {
-                about_me: 'Sobre mí',
                 languages_used: 'Marco/idiomas Usado',
                 top_languages: 'Idioma superior',
                 github_stats: 'Github Stats',
@@ -305,7 +301,6 @@ i18n
             description: 'عني، الإحصاءات، اللغات، إلخ.',
             cards: {
               headings: {
-                about_me: 'عني',
                 languages_used: 'الأطر/الأطر مستخدم',
                 top_languages: 'اللغة الرئيسية',
                 github_stats: 'إحصاءات غيثوب',
@@ -368,7 +363,6 @@ i18n
             description: '关于我,统计学,语言学等等.',
             cards: {
               headings: {
-                about_me: '关于我',
                 languages_used: '框架/语言 已使用',
                 top_languages: '顶端语言',
                 github_stats: 'Github 统计',
