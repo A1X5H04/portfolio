@@ -4,42 +4,53 @@
 
 
 @layer base {
-  h1 {
-    @apply text-2xl font-bold;
+  .aboutme h1 {
+    @apply text-2xl font-bold border-b border-slate-100 dark:border-gray-1000 w-full pb-2;
   }
 
-  h2 {
-    @apply text-xl font-bold;
+  .aboutme h2 {
+    @apply text-xl font-bold border-b border-slate-100 dark:border-gray-1000 w-full pb-2;
   }
 
-  h3 {
+  .aboutme h3 {
     @apply text-lg font-bold;
   }
 
-  h4 {
+  .aboutme h4 {
     @apply text-base font-bold;
   }
 
-  h5 {
+  .aboutme h5 {
     @apply text-sm font-bold;
   }
 
-  h6 {
+  .aboutme h6 {
     @apply text-xs font-bold;
   }
-  em {
-    @apply italic;
+  .aboutme em {
+    @apply italic underline;
   }
 
-  image {
+  .aboutme image {
     @apply max-w-full bg-contain bg-center
   }
 
-  blockquote {
-    @apply border-l-2 border-gray-400 pl-3 my-3
+  .aboutme ul {
+    @apply list-disc list-inside
   }
 
-  a {
+  .aboutme ol {
+    @apply list-decimal list-inside
+  }
+  .aboutme p {
+    @apply my-2 font-medium
+  }
+
+  .aboutme blockquote {
+    @apply border-l-2 border-slate-400 dark:border-gray-400 pl-3 my-3 text-gray-700  dark:text-slate-400
+  }
+
+  .aboutme a {
     @apply border-b border-transparent hover:opacity-75 duration-100 hover:border-current
   }
 }

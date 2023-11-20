@@ -50,29 +50,27 @@ function Dashboard() {
       </div>
       <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4">
         <CardSpotlightEffect className="border rounded-lg bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000  duration-200 ease-in-out row-span-2">
-          <div className="flex p-5 items-center justify-between border-b border-slate-100 dark:border-gray-1000">
-            <div>
-              <h1 className="font-bold text-xl">
-                {t("dashboard.cards.headings.about_me")}
-              </h1>
-              <p className="text-sm font-mono">A1X5H04</p>
-            </div>
+          <div className="flex px-5 pt-5 items-center font-medium">
             <a href="https://github.com/a1x5h04">
               <img
+                className="w-5 h-5 mr-2 mb-1 rounded-full"
                 src="https://avatars.githubusercontent.com/u/78891448?v=4"
-                alt="Github Profile"
-                className="w-10 h-10 rounded-full"
+                alt="Alish"
               />
             </a>
+            <div className="flex gap-1 items-center justify-center text-xs font-mono">
+              <p className="">A1X5H04</p>
+              <span className="text-gray-800">/</span>
+              <h1 className="inline-flex font-mono">
+                ABOUTME
+                <span className="text-gray-800">.md</span>
+              </h1>
+            </div>
           </div>
-          <div className="p-5">
-            <ul style={{ listStyle: "circle" }} className="ml-3">
-              {aboutArray?.map((text) => (
-                <li className="my-2 font-medium">
-                  <p className="text-sm">{parse(snarkdown(text))}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="px-5 py-3 aboutme">
+            {aboutArray?.map((text) => (
+              <p className="text-sm">{parse(snarkdown(text))}</p>
+            ))}
           </div>
         </CardSpotlightEffect>
 
