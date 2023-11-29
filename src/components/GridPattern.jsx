@@ -1,23 +1,17 @@
-
 import { useId } from "react";
-import { twMerge } from "tailwind-merge";
-import { clsx } from "clsx";
-
-function cn(...inputs) {
-    return twMerge(clsx(inputs));
-  }
+import { cn } from "../libs/utils";
 
 function GridPattern({
   width = 30,
   height = 30,
   x = -1,
   y = -1,
-  strokeDasharray="2 3",
+  strokeDasharray = "2 3",
   squares,
   className,
   ...props
 }) {
-  const id = useId()
+  const id = useId();
 
   return (
     <svg
@@ -60,7 +54,7 @@ function GridPattern({
         </svg>
       )}
     </svg>
-  )
+  );
 }
 
-export default GridPattern
+export default GridPattern;

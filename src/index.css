@@ -2,56 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-  .aboutme h1 {
+  .markdown h1 {
     @apply text-2xl font-bold border-b border-slate-100 dark:border-gray-1000 w-full pb-2;
   }
 
-  .aboutme h2 {
+  .markdown h2 {
     @apply text-xl font-bold border-b border-slate-100 dark:border-gray-1000 w-full pb-2;
   }
 
-  .aboutme h3 {
+  .markdown h3 {
     @apply text-lg font-bold;
   }
 
-  .aboutme h4 {
-    @apply text-base font-bold;
+  .markdown h4 {
+    @apply text-base font-semibold;
   }
 
-  .aboutme h5 {
-    @apply text-sm font-bold;
+  .markdown h5 {
+    @apply text-sm font-medium;
   }
 
-  .aboutme h6 {
-    @apply text-xs font-bold;
+  .markdown h6 {
+    @apply text-xs font-normal;
   }
-  .aboutme em {
-    @apply italic underline;
-  }
-
-  .aboutme image {
-    @apply max-w-full bg-contain bg-center
+  .markdown em {
+    @apply italic;
   }
 
-  .aboutme ul {
-    @apply list-disc list-inside
+  .markdown image {
+    @apply max-w-full bg-contain bg-center;
   }
 
-  .aboutme ol {
-    @apply list-decimal list-inside
-  }
-  .aboutme p {
-    @apply my-2 font-medium
+  .markdown ul {
+    @apply list-disc list-inside;
   }
 
-  .aboutme blockquote {
-    @apply border-l-2 border-slate-400 dark:border-gray-400 pl-3 my-3 text-gray-700  dark:text-slate-400
+  .markdown ol {
+    @apply list-decimal list-inside;
+  }
+  .markdown p {
+    @apply my-2 font-medium;
   }
 
-  .aboutme a {
-    @apply border-b border-transparent hover:opacity-75 duration-100 hover:border-current
+  .markdown blockquote {
+    @apply border-l-2 border-slate-400 dark:border-gray-400 pl-3 my-3 text-gray-700  dark:text-slate-400;
+  }
+
+  .markdown a {
+    @apply border-b border-transparent hover:opacity-75 duration-100 hover:border-current;
   }
 }
 
@@ -67,7 +66,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
 html {
   --bg-color: #fff;
   --text-color: #000;
@@ -75,6 +73,9 @@ html {
   --border-animated-color-inner: #acb4be;
   --border-color: #c1cad6;
   --border-color-inner: #dfe7f1;
+  --area-point: #595959;
+  --area-line: #a3a3a3;
+  --area-fill: #a5a5a5;
 }
 
 html.dark {
@@ -83,7 +84,10 @@ html.dark {
   --border-animated-color: #6c757dff;
   --border-animated-color-inner: #40464b;
   --border-color: #343a40ff;
-  --border-color-inner: #212529ff; 
+  --border-color-inner: #212529ff;
+  --area-point: #eeeeee;
+  --area-line: #a5a5a5;
+  --area-fill: #242424;
 }
 
 body {
@@ -122,6 +126,53 @@ body {
   animation: border-pulse-inner 1s ease-in forwards 250ms;
 }
 
+.ct-grids line {
+  stroke-dasharray: "1 4";
+  stroke: var(--border-animated-color-inner);
+}
+
+.ct-labels span {
+  color: var(--border-animated-color);
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.ct-area {
+  fill-opacity: 0.25;
+}
+
+.ct-series-a .ct-area {
+  fill: #a5a5a5;
+}
+
+.ct-series-a .ct-line {
+  stroke: var(--area-line);
+}
+.ct-series-a .ct-point {
+  stroke: var(--area-point);
+}
+
+.ct-bar {
+  stroke-width: 7px;
+}
+
+.ct-series:first-child .ct-bar {
+  stroke: #595959;
+  stroke-linecap: round;
+}
+
+.ct-series:last-child .ct-bar {
+  stroke: #a5a5a5;
+  stroke-linecap: round;
+  z-index: -2;
+}
+
+.ct-chart-bar {
+  color: var(--border-animated-color);
+  font-weight: bolder;
+  font-size: 10px;
+}
+
 @keyframes bg-span {
   0%,
   100% {
@@ -130,14 +181,14 @@ body {
   }
 
   50% {
-   background-position: 100% 50%;
+    background-position: 100% 50%;
     background-size: 400%;
   }
 }
 
 @keyframes border-pulse {
   0% {
-    border-color: var(--bg-color)
+    border-color: var(--bg-color);
   }
   50% {
     border-color: var(--border-animated-color);
@@ -149,7 +200,7 @@ body {
 
 @keyframes border-pulse-inner {
   0% {
-    border-color: var(--bg-color)
+    border-color: var(--bg-color);
   }
   50% {
     border-color: var(--border-animated-color-inner);

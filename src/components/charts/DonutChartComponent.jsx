@@ -1,6 +1,12 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import { PieChart } from "chartist";
+import { roundToTwo } from "../../libs/utils";
+
+const calculatePercentage = (partialValue, totalValue) => {
+  let percentage = (partialValue / totalValue) * 100;
+  return Math.min(percentage, 100);
+};
 
 const DonutChartComponent = ({ dataArray }) => {
   const pieChart = useCallback(() => {
@@ -10,11 +16,11 @@ const DonutChartComponent = ({ dataArray }) => {
         series: [
           {
             value: dataArray[0],
-            color: "#9b5de5",
+            color: "#ffcdb2",
           },
           {
             value: dataArray[1],
-            color: "#f15bb5",
+            color: "#b5838d",
           },
         ],
       },
@@ -39,7 +45,7 @@ const DonutChartComponent = ({ dataArray }) => {
   return (
     <div id="donut-chart" ref={pieChart} className="relative">
       <h1 className="absolute bottom-1/2 right-1/2 translate-x-1/2 translate-y-1/2 font-extrabold text-xl">
-        100%
+        {roundToTwo(calculatePercentage(dataArray[0], dataArray[1]))}%
       </h1>
     </div>
   );
@@ -48,9 +54,5 @@ const DonutChartComponent = ({ dataArray }) => {
 export default DonutChartComponent;
 
 DonutChartComponent.propTypes = {
-  languageArray: PropTypes.arrayOf(
-    PropTypes.shape({
-      percent: PropTypes.number,
-    })
-  ),
+  dataArray: PropTypes.arrayOf(PropTypes.number),
 };

@@ -1,11 +1,5 @@
-
 import { useId } from "react";
-import { twMerge } from "tailwind-merge";
-import { clsx } from "clsx";
-
-function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
+import { cn } from "../libs/utils";
 
 function DotPattern({
   width = 16,
@@ -19,10 +13,11 @@ function DotPattern({
   className,
   ...props
 }) {
-  const id = useId()
+  const id = useId();
 
   return (
-    <svg aria-hidden="true"
+    <svg
+      aria-hidden="true"
       className={cn(
         "pointer-events-none -z-10 absolute inset-0 h-full w-full fill-slate-400/30 dark:fill-gray-500/30 stroke-slate-400/30 dark:stroke-gray-500/30 ",
         className
@@ -30,7 +25,8 @@ function DotPattern({
       {...props}
     >
       <defs>
-        <pattern id={id}
+        <pattern
+          id={id}
           width={width}
           height={height}
           patternUnits="userSpaceOnUse"
@@ -38,16 +34,20 @@ function DotPattern({
           x={x}
           y={y}
         >
-          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} fill={!outline ? "inherit" : "none"}  stroke={outline ? "inherit" : "none"}></circle>
+          <circle
+            id="pattern-circle"
+            cx={cx}
+            cy={cy}
+            r={cr}
+            fill={!outline ? "inherit" : "none"}
+            stroke={outline ? "inherit" : "none"}
+          ></circle>
         </pattern>
       </defs>
 
       <rect x={x} y={y} width="100%" height="100%" fill={`url(#${id})`}></rect>
-
-
     </svg>
-
-  )
+  );
 }
 
-export default DotPattern
+export default DotPattern;

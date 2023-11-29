@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { List, Moon, Sun, Translate, X } from "@phosphor-icons/react";
 import { Fade } from "react-awesome-reveal";
@@ -38,14 +39,11 @@ const languages = [
   },
 ];
 
-function Header() {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const [dark, setDark] = React.useState(prefersDark.matches);
+function Header({ toggleTheme, themeIcon }) {
   const [language, setLanguage] = React.useState("en");
-  const [themeIcon, setThemeIcon] = React.useState("dark");
   const [showLangPicker, setShowLangPicker] = React.useState(false);
   const [showNav, setShowNav] = React.useState(false);
-  const htmlElm = document.querySelector("html");
+
   const { t } = useTranslation();
 
   const handleLangSelectChange = (e) => {
@@ -66,24 +64,6 @@ function Header() {
     console.log(language);
   }, [language]);
 
-  React.useEffect(() => {
-    if (dark) {
-      htmlElm.classList.add("dark");
-      setThemeIcon("dark");
-    } else {
-      htmlElm.classList.remove("dark");
-      setThemeIcon("light");
-    }
-  }, [dark, htmlElm]);
-
-  prefersDark.addEventListener("change", (e) => {
-    setDark(e.matches);
-  });
-
-  const toggleTheme = () => {
-    setDark((prev) => !prev);
-  };
-
   return (
     <header
       className={`w-full ${
@@ -92,7 +72,7 @@ function Header() {
     >
       <div className="flex items-center justify-between px-8">
         <div className="flex gap-8">
-          <p className="font-bold">『A1X5H04』</p>
+          <p className="font-bold ">『A1X5H04』</p>
           <nav className="hidden sm:block">
             <ul className="flex gap-5 text-sm">
               <li>
@@ -240,11 +220,11 @@ function LanguagePicker(props) {
       <div className="antialiased z-20 overflow-hidden overflow-y-scroll absolute top-10 -right-6 border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out rounded-md py-2 px-4">
         <div role="radiogroup" className="w-44 h-60">
           {languages.map((lang) => (
-            <div className="w-full inline-flex gap-2 justify-between items-center border-b border-slate-200 dark:border-gray-900 py-2">
-              <label
-                htmlForfor={`radio_${lang.code}`}
-                className="cursor-pointer"
-              >
+            <div
+              key={lang.code}
+              className="w-full inline-flex gap-2 justify-between items-center border-b border-slate-200 dark:border-gray-900 py-2"
+            >
+              <label htmlFor={`radio_${lang.code}`} className="cursor-pointer">
                 <h3 className="text-sm font-extrabold ">{lang.name}</h3>
                 <p className="text-xs font-normal">{lang.nativeName}</p>
               </label>
@@ -266,5 +246,19 @@ function LanguagePicker(props) {
     </Fade>
   );
 }
+
+LanguagePicker.propTypes = {
+  selectedLanguage: PropTypes.string,
+  handleChange: PropTypes.func,
+};
+
+Header.propTypes = {
+  toggleTheme: PropTypes.func,
+  themeIcon: PropTypes.string,
+};
+
+MobileNavbar.propTypes = {
+  t: PropTypes.func,
+};
 
 export default Header;
