@@ -60,7 +60,7 @@ function WakaTimeStats({ data }) {
                 <DonutChartComponent
                   dataArray={[
                     stats.data.daily_average,
-                    stats.data.total_seconds,
+                    stats.data.total_seconds / 2,
                   ]}
                 />
               </div>

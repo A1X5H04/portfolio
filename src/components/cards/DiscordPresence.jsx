@@ -77,7 +77,7 @@ function DiscordPresence({ data }) {
                     <img
                       src={
                         `https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity?.assets?.large_image}.png` ||
-                        "https://cdn.discordapp.com/attachments/881194435658668288/881194466962606336.png"
+                        "https://img.icons8.com/?size=24&id=8ySYAfKvuEw9&format=png"
                       }
                       alt="Activity Icon"
                       className="w-9 h-9 rounded"
