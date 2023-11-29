@@ -55,8 +55,8 @@ function Dashboard() {
         <AboutMeCard data={aboutData} />
         <WakaTimeTotalHours data={wakaAllTime} />
         <WakaTimeStats data={wakaStats} />
-        <AnimeDataCard data={animeData} />
         <LastFMCard data={{ lastFMRecentTracks, lastFMTopTracks }} />
+        <AnimeDataCard data={animeData} />
         <DiscordPresence data={discordPresence} />
         <WakaTimeDuration data={wakaDurations} />
         <WakaTimeActivity theme={theme} data={wakaCodingActivity} />
