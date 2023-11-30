@@ -44,9 +44,9 @@ function WakaTimeStats({ data, theme }) {
                   </span>
                 </div>
                 <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Percent Calculated</p>
+                  <p>Languages Used</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
-                    {stats.data.percent_calculated}%
+                    {stats.data.languages.length} languages
                   </span>
                 </div>
                 <div className="inline-flex justify-between w-52 text-sm font-semibold">
@@ -58,10 +58,12 @@ function WakaTimeStats({ data, theme }) {
               </div>
               <div className="lg:mr-8">
                 <DonutChartComponent
-                  dataArray={[
-                    stats.data.daily_average,
-                    stats.data.total_seconds / 2,
-                  ]}
+                  percentData={{
+                    average_time: stats.data.daily_average / 60,
+                    holidays: 0,
+                    total_time: stats.data.total_seconds / 60,
+                    number_of_language: stats.data.languages.length,
+                  }}
                 />
               </div>
             </div>

@@ -112,15 +112,14 @@ function LastFMCard({ data, theme }) {
           foregroundColor={theme ? "#9a9996" : "#deddda"}
         >
           <rect x="20" y="19" rx="6" ry="6" width="64" height="67" />
-          <rect x="36" y="57" rx="0" ry="0" width="16" height="0" />
           <rect x="100" y="22" rx="5" ry="5" width="216" height="20" />
           <rect x="100" y="48" rx="3" ry="3" width="156" height="14" />
           <rect x="101" y="72" rx="3" ry="3" width="114" height="11" />
-          <rect x="72" y="109" rx="0" ry="0" width="70" height="16" />
+          <rect x="72" y="107" rx="0" ry="0" width="70" height="18" />
           <rect x="20" y="106" rx="0" ry="0" width="15" height="21" />
           <rect x="180" y="102" rx="0" ry="0" width="80" height="23" />
           <rect x="302" y="108" rx="0" ry="0" width="54" height="18" />
-          <rect x="432" y="107" rx="0" ry="0" width="29" height="17" />
+          <rect x="432" y="107" rx="0" ry="0" width="29" height="23" />
           <rect x="20" y="99" rx="0" ry="0" width="441" height="10" />
           <rect x="20" y="124" rx="0" ry="0" width="441" height="10" />
           <rect x="21" y="159" rx="0" ry="0" width="439" height="1" />
