@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
-import { CodeBlock } from "@phosphor-icons/react";
 import ContentLoader from "react-content-loader";
 import {
   calculateTimeElapsed,
   convertSecsToHrsAndMins,
 } from "../../libs/utils";
+import { PiCodeBlockDuotone } from "react-icons/pi";
 
 function WakaTimeDuration({ data, theme }) {
   const [wakaTimeData, setWakaTimeData] = useState("");
@@ -38,7 +38,7 @@ function WakaTimeDuration({ data, theme }) {
                 >
                   <div className="grid place-items-start gap-y-1">
                     <div className="inline-flex items-center">
-                      <CodeBlock
+                      <PiCodeBlockDuotone
                         size="18px"
                         className="mr-1.5 text-blue-600 dark:text-blue-400"
                       />

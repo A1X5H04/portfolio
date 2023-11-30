@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
-import { MusicNotes } from "@phosphor-icons/react";
 import { calculateTimeElapsed } from "../../libs/utils";
 import ContentLoader from "react-content-loader";
+import { PiMusicNote } from "react-icons/pi";
 
 function LastFMCard({ data, theme }) {
   const [recentTracks, setRecentTracks] = useState("");
@@ -70,7 +70,7 @@ function LastFMCard({ data, theme }) {
                 </div>
               </div>
             </div>
-            <MusicNotes weight="duotone" size={24} className="mx-2" />
+            <PiMusicNote size={24} className="mx-2" />
           </div>
           {topTracks && (
             <table className="w-full text-sm table-auto border-spacing-y-2 h-28 overflow-scroll">

@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import { List, Moon, Sun, Translate, X } from "@phosphor-icons/react";
 import { Fade } from "react-awesome-reveal";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+import {
+  PiList,
+  PiMoonDuotone,
+  PiSunDuotone,
+  PiTranslate,
+  PiX,
+} from "react-icons/pi";
 
 const languages = [
   {
@@ -131,19 +137,23 @@ function Header({ toggleTheme, themeIcon }) {
               "border-slate-200 bg-slate-50 dark:bg-gray-1000 dark:border-gray-700"
             } hover:border-slate-200 hover:bg-slate-50 dark:hover:bg-gray-1000 dark:hover:border-gray-700 duration-300 rounded-md`}
           >
-            <Translate size={20} />
+            <PiTranslate size={20} />
           </button>
           <button
             onClick={() => toggleTheme()}
             className="p-1 border border-transparent hover:border-slate-200 hover:bg-slate-50 dark:hover:bg-gray-1000 dark:hover:border-gray-700 duration-300 rounded-md"
           >
-            {themeIcon === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            {themeIcon === "dark" ? (
+              <PiSunDuotone size={20} />
+            ) : (
+              <PiMoonDuotone size={20} />
+            )}
           </button>
           <button
             onClick={() => setShowNav((prev) => !prev)}
             className="sm:hidden p-1 border border-transparent hover:border-slate-200 dark:hover:border-gray-700 duration-300 rounded-md"
           >
-            {showNav ? <X size={20} /> : <List size={20} />}
+            {showNav ? <PiX size={20} /> : <PiList size={20} />}
           </button>
           {showLangPicker && (
             <LanguagePicker
