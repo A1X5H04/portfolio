@@ -1,648 +1,374 @@
 {
-    "data": [
-      {
-        "color": "#fd27bc",
-        "name": "Adobe XD"
-        
-      },
-      {
-        "color": "#99cd00",
-        "name": "Andriod Studio"
-        
-      },
-      {
-        "color": "#04dbde",
-        "name": "AppCode"
-        
-      },
-      {
-        "color": "#ec8623",
-        "name": "Aptana"
-        
-      },
-      {
-        "color": "#3ae868",
-        "name": "Aqua"
-        
-      },
-      {
-        "color": "#048184",       
-        "name": "Arduino IDE"
-        
-      },
-      {
-        "color": "#49b77e",
-        "name": "Atom"
-        
-      },
-      {
-        "color": "#0271c6",
-        "name": "Azure Data Studio",
-        
-      },
-      {
-        "color": "#fb8007",
-        "name": "Blender",
-        
-      },
-      {
-        "color": "#067dc3",
-        "name": "Brackets",
-        
-      },
-      {
-        "color": "#8a1922",
-        "name": "C++ Builder",
-        
-      },
-      {
-        "color": "#288bda",
-        "name": "Canva",
-      },
-      {
-        "color": "#fdd308",
-        "name": "Chrome",
-        
-        
-        
-        
-      },
-      {
-        "color": "#14c9a5",
-        "name": "CLion",
-     
-      },
-      {
-        "color": "#25a6d9",
-        "name": "Cloud9",
-      
-      },
-      {
-        "color": "#3e8e1c",
-        "name": "Coda",
-      
-      },
-      {
-        "color": "#7368a8",
-        "name": "CodeTasty",
-      
-      },
-      {
-        "color": "#907cf2",
-        "name": "DataGrip",
-        
-      },
-      {
-        "color": "#087cfa",
-        "name": "DataSpell",
-       
-      },
-      {
-        "color": "#897363",
-        "name": "DBeaver"
-      },
-      {
-        "color": "#db2129",
-        "name": "Delphi"
-  
-      
-      },
-      {
-        "color": "#443582",
-        "name": "Eclipse"
-      
-      },
-
-      {
-        "color": "#8c76c3",
-        "name": "Emacs"
-       
-      },
-      {
-        "color": "#423f13",
-        "name": "Eric",
-      },
-      {
-        "color": "#0f753c",
-        "name": "Excel",
-        
-      },
-      {
-        "color": "#c7b9ff",
-        "name": "Figma",
-       
-        
-      },
-      {
-        "color": "#d96527",
-        "name": "Firefox",
-        
-        
-      },
-      {
-        "color": "#aca3a4",
-        "name": "Flash Builder",
-    
-        
-      },
-      {
-        "color": "#872114",
-        "name": "Gedit",
-        
-      },
-      {
-        "color": "#bd4ffc",
-        "name": "GoLand",
-        
-      },
-      {
-        "color": "#1ba334",
-        "name": "HBuilder X",
-        
-      },
-      {
-        "color": "#35c4c0",
-        "name": "IDA Pro",
-
-        
-      },
-      {
-        "color": "#2876e1",
-        "name": "IntelliJ IDEA",
-        
-        
-        
-        
-      },
-      {
-        "color": "#dd5f4a",
-        "name": "Kakoune",
-        
-        
-        
-        
-      },
-      {
-        "color": "#0b7aef",
-        "name": "Kate",
-        
-        
-        
-        
-      },
-      {
-        "color": "#fcb414",
-        "name": "Komodo",
-        
-        
-        
-        
-      },
-      {
-        "color": "#2c3494",
-        "name": "Micro",
-        
-        
-        
-        
-      },
-      {
-        "color": "#12a8d5",
-        "name": "MPS",
-        
-        
-        
-        
-      },
-      {
-        "color": "#068304",
-        "name": "Neovim",
-        
-        
-        
-        
-      },
-      {
-        "color": "#aed43a",
-        "name": "NetBeans",
-        
-        
-        
-        
-      },
-      {
-        "color": "#9ecf54",
-        "name": "Notepad++",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ff054a",
-        "name": "Nova",
-        
-        
-        
-        
-      },
-      {
-        "color": "#4a38a0",
-        "name": "Obsidian",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ee848e",
-        "name": "Onivim",
-        
-        
-        
-        
-      },
-      {
-        "color": "#d93ac1",
-        "name": "PhpStorm",
-        
-        
-        
-        
-      },
-      {
-        "color": "#fc6b33",
-        "name": "Postman",
-        
-        
-        
-        
-      },
-      {
-        "color": "#c6421f",
-        "name": "PowerPoint",
-        
-        
-        
-        
-      },
-      {
-        "color": "#6a7152",
-        "name": "Processing",
-        
-        
-        
-        
-      },
-      {
-        "color": "#662d91",
-        "name": "Pulsar",
-        
-        
-        
-        
-      },
-      {
-        "color": "#d2ee5c",
-        "name": "PyCharm",
-        
-        
-        
-        
-      },
-      {
-        "color": "#323d4f",
-        "name": "Pymakr",
-        
-        
-        
-        
-      },
-      {
-        "color": "#B6C2E4",
-        "name": "ReClassEx",
-        
-        
-        
-        
-      },
-      {
-        "color": "#f7a415",
-        "name": "Rider",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ff6336",
-        "name": "RubyMine",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ff2f52",
-        "name": "RustRover",
-        
-        
-        
-        
-      },
-      {
-        "color": "#da3939",
-        "name": "SiYuan",
-        
-        
-        
-        
-      },
-      {
-        "color": "#fdad00",
-        "name": "Sketch",
-        
-        
-        
-        
-      },
-      {
-        "color": "#57ca57",
-        "name": "SlickEdit",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ffb901",
-        "name": "SQL Server Management Studio",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ff9800",
-        "name": "Sublime Text",
-        
-        
-        
-        
-      },
-      {
-        "color": "#133f1c",
-        "name": "Terminal",
-        
-        
-        
-        
-      },
-      {
-        "color": "#652d96",
-        "name": "TeXstudio",
-        
-        
-        
-        
-      },
-      {
-        "color": "#822b7a",
-        "name": "TextMate",
-        
-        
-        
-        
-      },
-      {
-        "color": "#222d36",
-        "name": "Unity",
-        
-        
-        
-        
-      },
-      {
-        "color": "#068304",
-        "name": "Vim",
-        
-        
-        
-        
-      },
-      {
-        "color": "#9460cd",
-        "name": "Visual Studio",
-        
-        
-        
-        
-      },
-      {
-        "color": "#6185b3",
-        "name": "Visual Studio for Mac",
-        
-        
-        
-        
-      },
-      {
-        "color": "#027acd",
-        "name": "VS Code",
-        
-        
-        
-        
-      },
-      {
-        "color": "#00c6d7",
-        "name": "WebStorm",
-        
-        
-        
-        
-      },
-      {
-        "color": "#b3b3b3",
-        "name": "Wing",
-        
-        
-        
-        
-      },
-      {
-        "color": "#0f4091",
-        "name": "Word",
-        
-        
-        
-        
-      },
-      {
-        "color": "#3598db",
-        "name": "Xamarin",
-        
-        
-        
-        
-      },
-      {
-        "color": "#3fa7e4",
-        "name": "Xcode",
-        
-        
-        
-        
-      },
-      {
-        "color": "#00a1db",
-        "name": "Aqua Data Studio",
-        
-        
-        
-        
-      },
-      {
-        "color": "#5d89af",
-        "name": "BlueJ",
-        
-        
-        
-        
-      },
-      {
-        "color": "#d0ce71",
-        "name": "Code::Blocks",
-        
-        
-        
-        
-      },
-      {
-        "color": "#1892e5",
-        "name": "CodeLite",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ed3103",
-        "name": "EmEditor",
-        
-        
-        
-        
-      },
-      {
-        "color": "#fbec75",
-        "name": "Geany",
-        
-        
-        
-        
-      },
-      {
-        "color": "#8d76cc",
-        "name": "Helix",
-        
-        
-        
-        
-      },
-      {
-        "color": "#22a273",
-        "name": "KDevelop",
-        
-        
-        
-        
-      },
-      {
-        "color": "#007ac1",
-        "name": "Light Table",
-        
-        
-        
-        
-      },
-      {
-        "color": "#4da0df",
-        "name": "Espresso",
-        
-        
-        
-        
-      },
-      {
-        "color": "#245279",
-        "name": "MySQL Workbench",
-        
-        
-        
-        
-      },
-      {
-        "color": "#0a0054",
-        "name": "Photoshop",
-        
-        
-        
-        
-      },
-      {
-        "color": "#7fc342",
-        "name": "QtCreator",
-        
-        
-        
-        
-      },
-      {
-        "color": "#2369c7",
-        "name": "RStudio",
-        
-        
-        
-        
-      },
-      {
-        "color": "#ee181e",
-        "name": "Spyder",
-      },
-      {
-        "color": "#aeaeae",
-        "name": "WebMatrix",
-        
-        
-        
-        
-      },
-      {
-        "color": "#fc6143",
-        "name": "WPS Office",
-        
-        
-        
-        
-      },
-      {
-        "color": "#9200ba",
-        "name": "Zed",
-        
-        
-        
-        
-      },
-      {
-        "color": "#c12625",
-        "name": "Zotero",
-        
-        
-        
-        
-      }
-    ],
-    "total": 93,
-    "total_pages": 1
-  }
+  "data": [
+    {
+      "color": "#fd27bc",
+      "name": "Adobe XD"
+    },
+    {
+      "color": "#99cd00",
+      "name": "Andriod Studio"
+    },
+    {
+      "color": "#04dbde",
+      "name": "AppCode"
+    },
+    {
+      "color": "#ec8623",
+      "name": "Aptana"
+    },
+    {
+      "color": "#3ae868",
+      "name": "Aqua"
+    },
+    {
+      "color": "#048184",
+      "name": "Arduino IDE"
+    },
+    {
+      "color": "#49b77e",
+      "name": "Atom"
+    },
+    {
+      "color": "#0271c6",
+      "name": "Azure Data Studio"
+    },
+    {
+      "color": "#fb8007",
+      "name": "Blender"
+    },
+    {
+      "color": "#067dc3",
+      "name": "Brackets"
+    },
+    {
+      "color": "#8a1922",
+      "name": "C++ Builder"
+    },
+    {
+      "color": "#288bda",
+      "name": "Canva"
+    },
+    {
+      "color": "#fdd308",
+      "name": "Chrome"
+    },
+    {
+      "color": "#14c9a5",
+      "name": "CLion"
+    },
+    {
+      "color": "#25a6d9",
+      "name": "Cloud9"
+    },
+    {
+      "color": "#3e8e1c",
+      "name": "Coda"
+    },
+    {
+      "color": "#7368a8",
+      "name": "CodeTasty"
+    },
+    {
+      "color": "#907cf2",
+      "name": "DataGrip"
+    },
+    {
+      "color": "#087cfa",
+      "name": "DataSpell"
+    },
+    {
+      "color": "#897363",
+      "name": "DBeaver"
+    },
+    {
+      "color": "#db2129",
+      "name": "Delphi"
+    },
+    {
+      "color": "#443582",
+      "name": "Eclipse"
+    },
+    {
+      "color": "#8c76c3",
+      "name": "Emacs"
+    },
+    {
+      "color": "#423f13",
+      "name": "Eric"
+    },
+    {
+      "color": "#0f753c",
+      "name": "Excel"
+    },
+    {
+      "color": "#c7b9ff",
+      "name": "Figma"
+    },
+    {
+      "color": "#d96527",
+      "name": "Firefox"
+    },
+    {
+      "color": "#aca3a4",
+      "name": "Flash Builder"
+    },
+    {
+      "color": "#872114",
+      "name": "Gedit"
+    },
+    {
+      "color": "#bd4ffc",
+      "name": "GoLand"
+    },
+    {
+      "color": "#1ba334",
+      "name": "HBuilder X"
+    },
+    {
+      "color": "#35c4c0",
+      "name": "IDA Pro"
+    },
+    {
+      "color": "#2876e1",
+      "name": "IntelliJ IDEA"
+    },
+    {
+      "color": "#dd5f4a",
+      "name": "Kakoune"
+    },
+    {
+      "color": "#0b7aef",
+      "name": "Kate"
+    },
+    {
+      "color": "#fcb414",
+      "name": "Komodo"
+    },
+    {
+      "color": "#2c3494",
+      "name": "Micro"
+    },
+    {
+      "color": "#12a8d5",
+      "name": "MPS"
+    },
+    {
+      "color": "#068304",
+      "name": "Neovim"
+    },
+    {
+      "color": "#aed43a",
+      "name": "NetBeans"
+    },
+    {
+      "color": "#9ecf54",
+      "name": "Notepad++"
+    },
+    {
+      "color": "#ff054a",
+      "name": "Nova"
+    },
+    {
+      "color": "#4a38a0",
+      "name": "Obsidian"
+    },
+    {
+      "color": "#ee848e",
+      "name": "Onivim"
+    },
+    {
+      "color": "#d93ac1",
+      "name": "PhpStorm"
+    },
+    {
+      "color": "#fc6b33",
+      "name": "Postman"
+    },
+    {
+      "color": "#c6421f",
+      "name": "PowerPoint"
+    },
+    {
+      "color": "#6a7152",
+      "name": "Processing"
+    },
+    {
+      "color": "#662d91",
+      "name": "Pulsar"
+    },
+    {
+      "color": "#d2ee5c",
+      "name": "PyCharm"
+    },
+    {
+      "color": "#323d4f",
+      "name": "Pymakr"
+    },
+    {
+      "color": "#B6C2E4",
+      "name": "ReClassEx"
+    },
+    {
+      "color": "#f7a415",
+      "name": "Rider"
+    },
+    {
+      "color": "#ff6336",
+      "name": "RubyMine"
+    },
+    {
+      "color": "#ff2f52",
+      "name": "RustRover"
+    },
+    {
+      "color": "#da3939",
+      "name": "SiYuan"
+    },
+    {
+      "color": "#fdad00",
+      "name": "Sketch"
+    },
+    {
+      "color": "#57ca57",
+      "name": "SlickEdit"
+    },
+    {
+      "color": "#ffb901",
+      "name": "SQL Server Management Studio"
+    },
+    {
+      "color": "#ff9800",
+      "name": "Sublime Text"
+    },
+    {
+      "color": "#133f1c",
+      "name": "Terminal"
+    },
+    {
+      "color": "#652d96",
+      "name": "TeXstudio"
+    },
+    {
+      "color": "#822b7a",
+      "name": "TextMate"
+    },
+    {
+      "color": "#222d36",
+      "name": "Unity"
+    },
+    {
+      "color": "#068304",
+      "name": "Vim"
+    },
+    {
+      "color": "#9460cd",
+      "name": "Visual Studio"
+    },
+    {
+      "color": "#6185b3",
+      "name": "Visual Studio for Mac"
+    },
+    {
+      "color": "#027acd",
+      "name": "VS Code"
+    },
+    {
+      "color": "#00c6d7",
+      "name": "WebStorm"
+    },
+    {
+      "color": "#b3b3b3",
+      "name": "Wing"
+    },
+    {
+      "color": "#0f4091",
+      "name": "Word"
+    },
+    {
+      "color": "#3598db",
+      "name": "Xamarin"
+    },
+    {
+      "color": "#3fa7e4",
+      "name": "Xcode"
+    },
+    {
+      "color": "#00a1db",
+      "name": "Aqua Data Studio"
+    },
+    {
+      "color": "#5d89af",
+      "name": "BlueJ"
+    },
+    {
+      "color": "#d0ce71",
+      "name": "Code::Blocks"
+    },
+    {
+      "color": "#1892e5",
+      "name": "CodeLite"
+    },
+    {
+      "color": "#ed3103",
+      "name": "EmEditor"
+    },
+    {
+      "color": "#fbec75",
+      "name": "Geany"
+    },
+    {
+      "color": "#8d76cc",
+      "name": "Helix"
+    },
+    {
+      "color": "#22a273",
+      "name": "KDevelop"
+    },
+    {
+      "color": "#007ac1",
+      "name": "Light Table"
+    },
+    {
+      "color": "#4da0df",
+      "name": "Espresso"
+    },
+    {
+      "color": "#245279",
+      "name": "MySQL Workbench"
+    },
+    {
+      "color": "#0a0054",
+      "name": "Photoshop"
+    },
+    {
+      "color": "#7fc342",
+      "name": "QtCreator"
+    },
+    {
+      "color": "#2369c7",
+      "name": "RStudio"
+    },
+    {
+      "color": "#ee181e",
+      "name": "Spyder"
+    },
+    {
+      "color": "#aeaeae",
+      "name": "WebMatrix"
+    },
+    {
+      "color": "#fc6143",
+      "name": "WPS Office"
+    },
+    {
+      "color": "#9200ba",
+      "name": "Zed"
+    },
+    {
+      "color": "#c12625",
+      "name": "Zotero"
+    }
+  ],
+  "total": 93,
+  "total_pages": 1
+}

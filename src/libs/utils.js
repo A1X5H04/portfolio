@@ -1,8 +1,10 @@
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 import languageColors from "../data/languages.json";
+import editorColors from "../data/editors.json";
 
 const languageColorCache = {};
+const editorColorCache = {};
 
 export function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -64,6 +66,23 @@ export function getLanguageColor(language) {
     if (data[i].name === language) {
       const color = data[i].color || "#dadada";
       languageColorCache[language] = color;
+      return color;
+    }
+  }
+
+  return "#dadada";
+}
+
+export function getEditorColor(editor) {
+  if (editorColorCache[editor]) {
+    return editorColorCache[editor];
+  }
+
+  const { data } = editorColors;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].name === editor) {
+      const color = data[i].color || "#dadada";
+      editorColorCache[editor] = color;
       return color;
     }
   }
