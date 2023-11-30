@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { calculateTimeElapsed } from "../../libs/utils";
-import LoadingSpinner from "../LoadingSpinner";
+import ContentLoader from "react-content-loader";
 
-function AnimeDataCard({ data }) {
+function AnimeDataCard({ data, theme }) {
   const [animeData, setAnimeData] = React.useState("");
 
   React.useEffect(() => {
@@ -46,7 +46,20 @@ function AnimeDataCard({ data }) {
           />
         </div>
       ) : (
-        <LoadingSpinner svgWidth="30" svgHeight="30" className="p-20" />
+        <ContentLoader
+          speed={2}
+          width="100%"
+          height="100%"
+          viewBox="0 0 481 184"
+          backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
+          foregroundColor={theme ? "#9a9996" : "#deddda"}
+        >
+          <rect x="18" y="27" rx="5" ry="5" width="152" height="25" />
+          <rect x="19" y="58" rx="3" ry="3" width="41" height="14" />
+          <rect x="20" y="119" rx="3" ry="3" width="117" height="19" />
+          <rect x="20" y="144" rx="4" ry="4" width="93" height="11" />
+          <rect x="363" y="16" rx="15" ry="15" width="102" height="151" />
+        </ContentLoader>
       )}
     </CardSpotlightEffect>
   );
@@ -56,4 +69,5 @@ export default AnimeDataCard;
 
 AnimeDataCard.propTypes = {
   data: PropTypes.array,
+  theme: PropTypes.bool,
 };

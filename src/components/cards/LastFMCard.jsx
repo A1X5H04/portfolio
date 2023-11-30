@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { MusicNotes } from "@phosphor-icons/react";
 import { calculateTimeElapsed } from "../../libs/utils";
-import LoadingSpinner from "../LoadingSpinner";
+import ContentLoader from "react-content-loader";
 
-function LastFMCard({ data }) {
+function LastFMCard({ data, theme }) {
   const [recentTracks, setRecentTracks] = useState("");
   const [topTracks, setTopTracks] = useState("");
 
@@ -103,7 +103,42 @@ function LastFMCard({ data }) {
           )}
         </div>
       ) : (
-        <LoadingSpinner svgWidth="30" svgHeight="30" className="p-20" />
+        <ContentLoader
+          speed={2}
+          width="100%"
+          height="100%"
+          viewBox="0 0 481 236"
+          backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
+          foregroundColor={theme ? "#9a9996" : "#deddda"}
+        >
+          <rect x="20" y="19" rx="6" ry="6" width="64" height="67" />
+          <rect x="36" y="57" rx="0" ry="0" width="16" height="0" />
+          <rect x="100" y="22" rx="5" ry="5" width="216" height="20" />
+          <rect x="100" y="48" rx="3" ry="3" width="156" height="14" />
+          <rect x="101" y="72" rx="3" ry="3" width="114" height="11" />
+          <rect x="72" y="109" rx="0" ry="0" width="70" height="16" />
+          <rect x="20" y="106" rx="0" ry="0" width="15" height="21" />
+          <rect x="180" y="102" rx="0" ry="0" width="80" height="23" />
+          <rect x="302" y="108" rx="0" ry="0" width="54" height="18" />
+          <rect x="432" y="107" rx="0" ry="0" width="29" height="17" />
+          <rect x="20" y="99" rx="0" ry="0" width="441" height="10" />
+          <rect x="20" y="124" rx="0" ry="0" width="441" height="10" />
+          <rect x="21" y="159" rx="0" ry="0" width="439" height="1" />
+          <rect x="21" y="186" rx="0" ry="0" width="439" height="1" />
+          <rect x="20" y="213" rx="0" ry="0" width="439" height="1" />
+          <rect x="45" y="139" rx="3" ry="3" width="14" height="17" />
+          <rect x="45" y="165" rx="3" ry="3" width="14" height="17" />
+          <rect x="45" y="191" rx="3" ry="3" width="14" height="17" />
+          <rect x="131" y="139" rx="3" ry="3" width="64" height="15" />
+          <rect x="249" y="139" rx="3" ry="3" width="64" height="15" />
+          <rect x="385" y="139" rx="3" ry="3" width="17" height="15" />
+          <rect x="130" y="165" rx="3" ry="3" width="64" height="15" />
+          <rect x="129" y="191" rx="3" ry="3" width="68" height="15" />
+          <rect x="249" y="166" rx="3" ry="3" width="64" height="15" />
+          <rect x="249" y="192" rx="3" ry="3" width="64" height="15" />
+          <rect x="385" y="165" rx="3" ry="3" width="17" height="15" />
+          <rect x="385" y="193" rx="3" ry="3" width="17" height="15" />
+        </ContentLoader>
       )}
     </CardSpotlightEffect>
   );
@@ -113,4 +148,5 @@ export default LastFMCard;
 
 LastFMCard.propTypes = {
   data: PropTypes.object,
+  theme: PropTypes.bool,
 };

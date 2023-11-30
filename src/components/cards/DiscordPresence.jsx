@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { calculateTimeElapsed } from "../../libs/utils";
-import LoadingSpinner from "../LoadingSpinner";
-function DiscordPresence({ data }) {
+import ContentLoader from "react-content-loader";
+function DiscordPresence({ data, theme }) {
   const [discord, setDiscord] = useState("");
 
   useEffect(() => {
@@ -104,7 +104,20 @@ function DiscordPresence({ data }) {
           )}
         </div>
       ) : (
-        <LoadingSpinner />
+        <ContentLoader
+          speed={2}
+          width="100%"
+          height="100%"
+          viewBox="0 0 476 185"
+          backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
+          foregroundColor={theme ? "#9a9996" : "#deddda"}
+        >
+          <circle cx="39" cy="40" r="22" />
+          <rect x="66" y="22" rx="3" ry="3" width="69" height="15" />
+          <rect x="67" y="44" rx="3" ry="3" width="50" height="11" />
+          <rect x="415" y="33" rx="3" ry="3" width="50" height="12" />
+          <rect x="30" y="85" rx="5" ry="5" width="421" height="78" />
+        </ContentLoader>
       )}
     </CardSpotlightEffect>
   );
@@ -114,4 +127,5 @@ export default DiscordPresence;
 
 DiscordPresence.propTypes = {
   data: PropTypes.object.isRequired,
+  theme: PropTypes.bool,
 };

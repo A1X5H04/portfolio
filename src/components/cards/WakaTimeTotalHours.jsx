@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import LoadingSpinner from "../LoadingSpinner";
+import ContentLoader from "react-content-loader";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { roundToTwo } from "../../libs/utils";
 
-export default function WakaTimeTotalHours({ data }) {
+export default function WakaTimeTotalHours({ data, theme }) {
   const [wakaAllTime, setWakaAllTime] = useState("");
 
   useEffect(() => {
@@ -56,7 +56,22 @@ export default function WakaTimeTotalHours({ data }) {
           </div>
         </div>
       ) : (
-        <LoadingSpinner svgWidth="30" svgHeight="30" className="p-20" />
+        <ContentLoader
+          speed={1.5}
+          width="100%"
+          height="100%"
+          viewBox="0 0 481 180"
+          backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
+          foregroundColor={theme ? "#9a9996" : "#deddda"}
+        >
+          <rect x="15" y="20" rx="5" ry="5" width="159" height="29" />
+          <rect x="416" y="28" rx="5" ry="5" width="50" height="13" />
+          <rect x="17" y="73" rx="5" ry="5" width="202" height="37" />
+          <rect x="340" y="91" rx="3" ry="3" width="124" height="16" />
+          <rect x="18" y="121" rx="3" ry="3" width="445" height="8" />
+          <rect x="17" y="145" rx="2" ry="2" width="138" height="11" />
+          <rect x="374" y="144" rx="2" ry="2" width="91" height="13" />
+        </ContentLoader>
       )}
     </CardSpotlightEffect>
   );
@@ -64,4 +79,5 @@ export default function WakaTimeTotalHours({ data }) {
 
 WakaTimeTotalHours.propTypes = {
   data: PropTypes.object,
+  theme: PropTypes.bool,
 };

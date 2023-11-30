@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import DonutChartComponent from "../charts/DonutChartComponent";
-import LoadingSpinner from "../LoadingSpinner";
+import ContentLoader from "react-content-loader";
 import CardSpotlightEffect from "../CardSpotlightEffect";
-import { getLanguageColor } from "../../libs/utils";
+import { getEditorColor, getLanguageColor } from "../../libs/utils";
 
-function WakaTimeStats({ data }) {
+function WakaTimeStats({ data, theme }) {
   const [stats, setStats] = useState("");
 
   useEffect(() => {
@@ -93,7 +93,12 @@ function WakaTimeStats({ data }) {
               {stats.data.editors.map((editor) => (
                 <div key={editor.name}>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mr-1.5"></div>
+                    <div
+                      style={{
+                        backgroundColor: getEditorColor(editor.name),
+                      }}
+                      className="w-2 h-2 rounded-full mr-1.5"
+                    />
                     <p className="text-sm font-semibold">{editor.name}</p>
                   </div>
                   <p className="text-xs font-normal text-slate-400 dark:text-gray-700">
@@ -105,7 +110,54 @@ function WakaTimeStats({ data }) {
           </div>
         </div>
       ) : (
-        <LoadingSpinner svgWidth="30" svgHeight="30" className="p-20" />
+        <ContentLoader
+          speed={2}
+          width="100%"
+          height="100%"
+          viewBox="0 0 481 545"
+          backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
+          foregroundColor={theme ? "#9a9996" : "#deddda"}
+        >
+          <rect x="401" y="27" rx="3" ry="3" width="60" height="13" />
+          <rect x="19" y="22" rx="5" ry="5" width="108" height="29" />
+          <circle cx="373" cy="124" r="60" />
+          <rect x="17" y="213" rx="5" ry="5" width="108" height="25" />
+          <rect x="18" y="428" rx="5" ry="5" width="108" height="25" />
+          <rect x="33" y="259" rx="3" ry="3" width="69" height="15" />
+          <rect x="20" y="280" rx="3" ry="3" width="82" height="10" />
+          <circle cx="24" cy="266" r="5" />
+          <rect x="187" y="259" rx="3" ry="3" width="69" height="15" />
+          <rect x="174" y="280" rx="3" ry="3" width="82" height="10" />
+          <circle cx="178" cy="266" r="5" />
+          <rect x="339" y="259" rx="3" ry="3" width="69" height="15" />
+          <rect x="326" y="280" rx="3" ry="3" width="82" height="10" />
+          <circle cx="330" cy="266" r="5" />
+          <rect x="34" y="306" rx="3" ry="3" width="69" height="15" />
+          <rect x="21" y="327" rx="3" ry="3" width="82" height="10" />
+          <circle cx="25" cy="313" r="5" />
+          <rect x="187" y="306" rx="3" ry="3" width="69" height="15" />
+          <rect x="174" y="327" rx="3" ry="3" width="82" height="10" />
+          <circle cx="178" cy="313" r="5" />
+          <rect x="341" y="306" rx="3" ry="3" width="69" height="15" />
+          <rect x="328" y="327" rx="3" ry="3" width="82" height="10" />
+          <circle cx="332" cy="313" r="5" />
+          <rect x="34" y="351" rx="3" ry="3" width="69" height="15" />
+          <rect x="21" y="372" rx="3" ry="3" width="82" height="10" />
+          <circle cx="25" cy="358" r="5" />
+          <rect x="186" y="351" rx="3" ry="3" width="69" height="15" />
+          <rect x="173" y="372" rx="3" ry="3" width="82" height="10" />
+          <circle cx="177" cy="358" r="5" />
+          <rect x="33" y="477" rx="3" ry="3" width="69" height="15" />
+          <rect x="20" y="498" rx="3" ry="3" width="82" height="10" />
+          <circle cx="24" cy="484" r="5" />
+          <rect x="20" y="76" rx="5" ry="5" width="215" height="102" />
+          <rect x="186" y="476" rx="3" ry="3" width="69" height="15" />
+          <rect x="173" y="497" rx="3" ry="3" width="82" height="10" />
+          <circle cx="177" cy="483" r="5" />
+          <rect x="339" y="475" rx="3" ry="3" width="69" height="15" />
+          <rect x="326" y="496" rx="3" ry="3" width="82" height="10" />
+          <circle cx="330" cy="482" r="5" />
+        </ContentLoader>
       )}
     </CardSpotlightEffect>
   );
@@ -115,4 +167,5 @@ export default WakaTimeStats;
 
 WakaTimeStats.propTypes = {
   data: PropTypes.object,
+  theme: PropTypes.bool,
 };
