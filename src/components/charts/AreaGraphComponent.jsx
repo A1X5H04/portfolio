@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import "chartist/dist/index.css";
-import { LineChart, Interpolation } from "chartist";
+import { LineChart, Interpolation, easings } from "chartist";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { roundToTwo } from "../../libs/utils";
 
@@ -37,7 +37,32 @@ const AreaGraphComponent = ({ data }) => {
         },
       }
     ).on("draw", function (data) {
-      if (data.type === "point") {
+      if (data.type === "line") {
+        let pathLength = data.element._node.getTotalLength();
+        data.element.attr({
+          "stroke-dasharray": pathLength + "px " + pathLength + "px",
+        });
+
+        data.element.animate({
+          "stroke-dashoffset": {
+            id: "anim" + data.index,
+            dur: 2000,
+            from: pathLength + "px",
+            to: "0px",
+            easing: easings.easeInOutElastic,
+            fill: "freeze",
+          },
+        });
+      } else if (data.type === "point") {
+        data.element.animate({
+          opacity: {
+            begin: 300 * data.index, // Delay the start of the point animation until the line has passed through it
+            dur: 500,
+            from: 0,
+            to: 1,
+            easing: "easeInSine",
+          },
+        });
         data.element.attr({
           "data-tooltip-id": "point-tooltip",
           "data-tooltip-float": "true",
@@ -45,10 +70,19 @@ const AreaGraphComponent = ({ data }) => {
           "data-tooltip-delay": "100",
           "data-tooltip-content": roundToTwo(data.value.y) + " minutes",
         });
+      } else if (data.type === "area") {
+        data.element.animate({
+          opacity: {
+            begin: 320 * (data.series.length - 1), // Delay the start of the area animation until all lines have been drawn
+            dur: 1000,
+            from: 0,
+            to: 1,
+            easing: "ease",
+          },
+        });
       }
     });
   }, [data]);
-
   return (
     <div className="w-full h-full col-span-2" ref={chart} id="area-graph">
       <ReactTooltip
