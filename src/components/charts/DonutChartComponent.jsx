@@ -5,7 +5,8 @@ import { roundToTwo } from "../../libs/utils";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 const calculatePercentage = (data) => {
-  let percentage = (data.average_time / data.total_time) * 100 * 1.5;
+  let percentage =
+    (data.average_time / data.total_time) * 100 + data.number_of_language;
   percentage -= data.holidays * 7;
   percentage += parseInt(data.number_of_language) * 5;
   Math.min(percentage, 100);
@@ -109,7 +110,7 @@ const DonutChartComponent = ({ percentData }) => {
         data.element.animate(animationDefinition, false);
       }
     });
-  }, []);
+  }, [percent]);
 
   return (
     <div className="relative">

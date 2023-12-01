@@ -6,15 +6,15 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import { roundToTwo } from "../../libs/utils";
 
 // eslint-disable-next-line react/prop-types
-const AreaGraphComponent = ({ data }) => {
+const AreaGraphComponent = ({ dataArray }) => {
   const chart = useCallback(() => {
     new LineChart(
       "#area-graph",
       {
         // eslint-disable-next-line react/prop-types
-        labels: data.map((item) => item.name.slice(0, 3)),
+        labels: dataArray.map((item) => item.name.slice(0, 3)),
         // eslint-disable-next-line react/prop-types
-        series: [data.map((item) => item.total / 60)],
+        series: [dataArray.map((item) => item.total / 60)],
       },
       {
         axisX: {
@@ -97,7 +97,7 @@ const AreaGraphComponent = ({ data }) => {
         });
       }
     });
-  }, [data]);
+  }, [dataArray]);
   return (
     <div className="w-full h-full col-span-2" ref={chart} id="area-graph">
       <svg viewBox="0 0 0 0" className="h-0 w-0">
@@ -121,5 +121,5 @@ const AreaGraphComponent = ({ data }) => {
 export default AreaGraphComponent;
 
 AreaGraphComponent.propTypes = {
-  data: PropTypes.array.isRequired,
+  dataArray: PropTypes.array.isRequired,
 };

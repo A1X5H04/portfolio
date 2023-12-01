@@ -4,7 +4,7 @@ import { PiSealWarning } from "react-icons/pi";
 function CardError({ error, children }) {
   return error.status ? (
     <div className="py-10 grid place-items-center" role="alert">
-      <div className="border border-slate-400 dark:border-gray-900 p-4 rounded-md bg-slate-300 dark:bg-gray-1000">
+      <div className="border border-slate-300 dark:border-gray-900 p-4 rounded-md bg-slate-100 dark:bg-gray-1000">
         <PiSealWarning size="28" />
       </div>
       <div className="flex flex-col mt-6 items-center gap-1">

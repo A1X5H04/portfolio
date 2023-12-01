@@ -32,7 +32,7 @@ function WakaTimeInsights({ data }) {
             <h5 className="px-3 pb-5 w-full font-bold text-lg">
               Week Insight (In Minutes)
             </h5>
-            <AreaGraphComponent data={insights.data.weekdays} />
+            <AreaGraphComponent dataArray={insights.data.weekdays} />
           </div>
         ) : (
           <LoadingSpinner svgWidth="30" svgHeight="30" className="p-20" />
