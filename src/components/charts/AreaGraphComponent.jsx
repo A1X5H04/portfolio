@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import "chartist/dist/index.css";
-import { LineChart, Interpolation, easings } from "chartist";
+import { LineChart, Interpolation, easings, Svg } from "chartist";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { roundToTwo } from "../../libs/utils";
 
@@ -54,7 +54,19 @@ const AreaGraphComponent = ({ data }) => {
           },
         });
       } else if (data.type === "point") {
-        data.element.animate({
+        if (data.type === "point") {
+          var circle = new Svg(
+            "circle",
+            {
+              cx: [data.x],
+              cy: [data.y],
+              r: [5],
+            },
+            "ct-circle"
+          );
+        }
+        data.element.replace(circle);
+        circle.animate({
           opacity: {
             begin: 300 * data.index, // Delay the start of the point animation until the line has passed through it
             dur: 500,
@@ -63,7 +75,7 @@ const AreaGraphComponent = ({ data }) => {
             easing: "easeInSine",
           },
         });
-        data.element.attr({
+        circle.attr({
           "data-tooltip-id": "point-tooltip",
           "data-tooltip-float": "true",
           "data-tooltip-place": "top",
@@ -80,11 +92,22 @@ const AreaGraphComponent = ({ data }) => {
             easing: "ease",
           },
         });
+        data.element.attr({
+          style: "fill: url(#area_gradient);",
+        });
       }
     });
   }, [data]);
   return (
     <div className="w-full h-full col-span-2" ref={chart} id="area-graph">
+      <svg viewBox="0 0 0 0" className="h-0 w-0">
+        <defs>
+          <linearGradient id="area_gradient" x2="50%" y2="100%">
+            <stop offset="25%" stopColor="var(--area-fill)" />
+            <stop offset="100%" stopColor="transparent" />
+          </linearGradient>
+        </defs>
+      </svg>
       <ReactTooltip
         id="point-tooltip"
         place="bottom"

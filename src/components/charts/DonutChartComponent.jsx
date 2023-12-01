@@ -7,7 +7,7 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 const calculatePercentage = (data) => {
   let percentage = (data.average_time / data.total_time) * 100;
   percentage -= data.holidays * 7;
-  percentage += parseInt(data.number_of_language) * 5; // Multiply by 10 to give more weight to languages
+  percentage += parseInt(data.number_of_language) * 5;
   Math.min(percentage, 100);
   return roundToTwo(percentage);
 };
@@ -31,7 +31,7 @@ const DonutChartComponent = ({ percentData }) => {
       break;
     case percent >= 65:
       gradeText = "B";
-      gradeColor = ["#22c1c3", "#fdbb2d"];
+      gradeColor = ["#11998e", "#38ef7d"];
       break;
     case percent >= 55:
       gradeText = "C";
@@ -47,7 +47,7 @@ const DonutChartComponent = ({ percentData }) => {
       break;
     default:
       gradeText = "F";
-      gradeColor = ["#1e130c", "#9a8478"];
+      gradeColor = ["#bdc3c7", "#2c3e50"];
       break;
   }
 
