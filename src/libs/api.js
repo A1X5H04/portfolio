@@ -108,7 +108,7 @@ export const getLastFMData = {
   recentTracks: async () => {
     try {
       const res = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=a1x5h04&api_key=${
+        `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=a1x5h04&api_key=${
           import.meta.env.VITE_LASTFM_API_KEY
         }&format=json&limit=1`
       );
@@ -121,7 +121,7 @@ export const getLastFMData = {
   topTracks: async () => {
     try {
       const res = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=user.getTopTracks&user=a1x5h04&api_key=${
+        `https://ws.audioscrobbler.com/2.0/?method=user.getTopTracks&user=a1x5h04&api_key=${
           import.meta.env.VITE_LASTFM_API_KEY
         }&format=json&limit=3`
       );
