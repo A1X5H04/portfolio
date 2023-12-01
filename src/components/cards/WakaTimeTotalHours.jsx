@@ -26,7 +26,9 @@ export default function WakaTimeTotalHours({ data, theme }) {
             )}
           </div>
           <div className="flex justify-between items-end my-4">
-            <p className="text-3xl font-bold">{wakaAllTime.data.text}</p>
+            <p className="text-3xl font-bold truncate">
+              {wakaAllTime.data.text}
+            </p>
             <p className="text-sm font-bold text-gray-500">
               {roundToTwo(wakaAllTime.data.total_seconds)}
               &nbsp;<span className="font-light">seconds</span>

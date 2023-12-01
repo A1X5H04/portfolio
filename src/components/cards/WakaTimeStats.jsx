@@ -22,41 +22,41 @@ function WakaTimeStats({ data, theme }) {
             <p className="text-xs">Last 7 Days</p>
           </div>
           <div>
-            <div className="flex items-center justify-between mb-2 pb-4 text-slate-600 dark:text-gray-400 border-b border-slate-200 dark:border-gray-1000">
-              <div className="flex flex-col whitespace-nowrap">
-                <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Stats Range</p>
+            <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between mb-2 pb-4 text-slate-600 dark:text-gray-400 border-b border-slate-200 dark:border-gray-1000">
+              <div className="flex w-full flex-col whitespace-nowrap">
+                <div className="inline-flex justify-between lg:w-56 w-full text-sm font-semibold mb-1">
+                  <p>Stats Range:</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
                     {stats.data.human_readable_range}
                   </span>
                 </div>
-                <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Daily Average</p>
+                <div className="inline-flex justify-between lg:w-56 w-full text-sm font-semibold mb-1">
+                  <p>Daily Average:&nbsp;</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
                     {stats.data.human_readable_daily_average}
                   </span>
                 </div>
-                <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Days Coded</p>
+                <div className="inline-flex justify-between lg:w-56 w-full text-sm font-semibold mb-1">
+                  <p>Days Coded:&nbsp;</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
                     {stats.data.days_minus_holidays} out of&nbsp;
                     {stats.data.days_including_holidays} days
                   </span>
                 </div>
-                <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Languages Used</p>
+                <div className="inline-flex justify-between lg:w-56 w-full text-sm font-semibold mb-1">
+                  <p>Languages Used:</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
-                    {stats.data.languages.length} languages
+                    {stats.data.languages.length}
                   </span>
                 </div>
-                <div className="inline-flex justify-between w-52 text-sm font-semibold">
-                  <p>Total</p>
+                <div className="inline-flex justify-between lg:w-56 w-full text-sm font-semibold mb-1">
+                  <p>Total:</p>
                   <span className="capitalize text-slate-400 dark:text-gray-600">
                     {stats.data.human_readable_total}
                   </span>
                 </div>
               </div>
-              <div className="lg:mr-8">
+              <div className="lg:mr-5 mb-3">
                 <DonutChartComponent
                   percentData={{
                     average_time: stats.data.daily_average / 60,

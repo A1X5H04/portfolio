@@ -71,8 +71,8 @@ const DonutChartComponent = ({ percentData }) => {
         showLabel: false,
         total: 100,
         chartPadding: 0,
-        width: "110px",
-        height: "110px",
+        width: "120px",
+        height: "120px",
       }
     ).on("draw", function (data) {
       if (data.type === "slice") {
