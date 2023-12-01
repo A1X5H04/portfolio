@@ -73,10 +73,10 @@ function LastFMCard({ data, theme }) {
                   )}
                 </div>
                 <div className="inline-flex flex-col justify-between mx-4">
-                  <h4 className="font-bold truncate lg:w-56 w-28">
+                  <h4 className="font-bold truncate lg:w-56 w-44">
                     {recentTracks?.track[0]?.name}
                   </h4>
-                  <p className="text-xs pb-1 text-slate-500 dark:text-gray-500 truncate lg:w-56 w-28">
+                  <p className="text-xs pb-1 text-slate-500 dark:text-gray-500 truncate lg:w-56 w-44">
                     {recentTracks?.track[0]?.artist["#text"]}
                     {recentTracks?.track[0]?.album && (
                       <span> - {recentTracks?.track[0]?.album["#text"]}</span>
