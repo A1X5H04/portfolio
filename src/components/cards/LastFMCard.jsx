@@ -26,7 +26,15 @@ function LastFMCard({ data, theme }) {
         <div className="flex flex-col items-start justify-evenly w-full h-full p-5">
           <div className="flex w-full justify-between border-b border-slate-200 dark:border-gray-900">
             <div className="inline-flex items-center mb-3">
-              <div className="relative">
+              <div className="relative w-full h-full overflow-hidden rounded">
+                {recentTracks?.track[0]["@attr"]?.nowplaying && (
+                  <div className="absolute w-full h-full bg-black bg-opacity-60">
+                    <img
+                      src="audiowaveform.gif"
+                      className="absolute top-2 p-2 w-full h-full"
+                    />
+                  </div>
+                )}
                 {recentTracks?.track[0]?.image[3] ? (
                   <img
                     className="w-16 h-16 aspect-square rounded-md"
