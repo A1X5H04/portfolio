@@ -16,7 +16,8 @@ export async function getPinnedGHRepo() {
       return data;
     }
   } catch (err) {
-    throw new Error("Failed to fetch Projects Data \n" + err);
+    console.log("Pinned Repo" + err);
+    throw new Error("Failed to fetch Pinned Repo");
   }
 }
 
@@ -28,7 +29,8 @@ export async function getAbout() {
     const data = await res.json();
     return data;
   } catch (err) {
-    throw new Error("Failed to fetch About Data \n" + err);
+    console.log("About Data" + err);
+    throw new Error("Failed to fetch About Data");
   }
 }
 
@@ -40,7 +42,8 @@ export async function getDiscordPresence() {
     const data = await res.json();
     return data;
   } catch (err) {
-    throw new Error("Failed to fetch Discord Presence Data \n" + err);
+    console.log("Discord Presence" + err);
+    throw new Error("Failed to fetch Discord Presence");
   }
 }
 
@@ -52,8 +55,9 @@ export const getWakaTimeData = {
       );
       const data = await res.json();
       return data;
-    } catch (error) {
-      throw new Error("Failed to fetch Coding Activity (WakaTime) \n" + error);
+    } catch (err) {
+      console.log("WakaTime Activity" + err);
+      throw new Error("Failed to fetch WakaTime Activity");
     }
   },
   allTime: async () => {
@@ -63,8 +67,9 @@ export const getWakaTimeData = {
       );
       const data = await res.json();
       return data;
-    } catch (error) {
-      throw new Error("Failed to fetch All Time Stats (WakaTime) \n" + error);
+    } catch (err) {
+      console.log("WakaTime Total Time" + err);
+      throw new Error("Failed to fetch WakaTime Total Time");
     }
   },
   insights: async () => {
@@ -74,8 +79,9 @@ export const getWakaTimeData = {
       );
       const data = await res.json();
       return data;
-    } catch (error) {
-      throw new Error("Failed to fetch Insights (WakaTime) \n" + error);
+    } catch (err) {
+      console.log("WakaTime Insights" + err);
+      throw new Error("Failed to fetch WakaTime Insights");
     }
   },
   durations: async () => {
@@ -87,8 +93,9 @@ export const getWakaTimeData = {
       );
       const data = await res.json();
       return data;
-    } catch (error) {
-      throw new Error("Failed to fetch Durations (WakaTime) \n" + error);
+    } catch (err) {
+      console.log("WakaTime Durations" + err);
+      throw new Error("Failed to fetch WakaTime Durations");
     }
   },
   stats: async () => {
@@ -98,8 +105,9 @@ export const getWakaTimeData = {
       );
       const data = await res.json();
       return data;
-    } catch (error) {
-      throw new Error("Failed to fetch Stats (WakaTime) \n" + error);
+    } catch (err) {
+      console.log("WakaTime Statistics" + err);
+      throw new Error("Failed to fetch WakaTime Statistics");
     }
   },
 };
@@ -115,7 +123,8 @@ export const getLastFMData = {
       const data = await res.json();
       return data.recenttracks;
     } catch (err) {
-      throw new Error("Failed to fetch LastFM Data \n" + err);
+      console.log("LastFM Recent Tracks" + err);
+      throw new Error("Failed to fetch LastFM Recent Tracks");
     }
   },
   topTracks: async () => {
@@ -128,7 +137,8 @@ export const getLastFMData = {
       const data = await res.json();
       return data.toptracks;
     } catch (err) {
-      throw new Error("Failed to fetch LastFM Data \n" + err);
+      console.log("LastFM Top Tracks" + err);
+      throw new Error("Failed to fetch LastFM Top Tracks");
     }
   },
 };
@@ -170,6 +180,7 @@ export async function getAnilistData() {
     const data = await res.json();
     return data.data.MediaListCollection.lists[0].entries[0];
   } catch (err) {
-    throw new Error("Failed to fetch Anilist Data \n" + err);
+    console.log("Anilist Data" + err);
+    throw new Error("Failed to fetch Anilist Data");
   }
 }
