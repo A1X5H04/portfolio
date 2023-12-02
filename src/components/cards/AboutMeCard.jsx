@@ -12,18 +12,18 @@ export default function AboutMeCard({ data }) {
     status: false,
     message: "",
   });
-  // useEffect(() => {
-  //   data
-  //     .then((res) => {
-  //       setAboutArray(res);
-  //     })
-  //     .catch((err) => {
-  //       setError({
-  //         status: true,
-  //         message: err.message,
-  //       });
-  //     });
-  // }, [data]);
+  useEffect(() => {
+    data
+      .then((res) => {
+        setAboutArray(res);
+      })
+      .catch((err) => {
+        setError({
+          status: true,
+          message: err.message,
+        });
+      });
+  }, [data]);
 
   return (
     <CardSpotlightEffect className="row-span-2">
