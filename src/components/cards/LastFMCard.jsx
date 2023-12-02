@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { calculateTimeElapsed } from "../../libs/utils";
-import ContentLoader from "react-content-loader";
 import { PiMusicNote } from "react-icons/pi";
 import CardError from "../CardError";
+import CardLoader from "../CardLoader";
 
-function LastFMCard({ data, theme }) {
+function LastFMCard({ data }) {
   const [recentTracks, setRecentTracks] = useState("");
   const [topTracks, setTopTracks] = useState("");
   const [error, setError] = useState({
@@ -133,14 +133,7 @@ function LastFMCard({ data, theme }) {
             )}
           </div>
         ) : (
-          <ContentLoader
-            speed={2}
-            width="100%"
-            height="100%"
-            viewBox="0 0 481 236"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 481 236">
             <rect x="20" y="19" rx="6" ry="6" width="64" height="67" />
             <rect x="100" y="22" rx="5" ry="5" width="216" height="20" />
             <rect x="100" y="48" rx="3" ry="3" width="156" height="14" />
@@ -167,7 +160,7 @@ function LastFMCard({ data, theme }) {
             <rect x="249" y="192" rx="3" ry="3" width="64" height="15" />
             <rect x="385" y="165" rx="3" ry="3" width="17" height="15" />
             <rect x="385" y="193" rx="3" ry="3" width="17" height="15" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -178,5 +171,4 @@ export default LastFMCard;
 
 LastFMCard.propTypes = {
   data: PropTypes.object,
-  theme: PropTypes.bool,
 };

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import DonutChartComponent from "../charts/DonutChartComponent";
-import ContentLoader from "react-content-loader";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { getEditorColor, getLanguageColor } from "../../libs/utils";
 import CardError from "../CardError";
+import CardLoader from "../CardLoader";
 
-function WakaTimeStats({ data, theme }) {
+function WakaTimeStats({ data }) {
   const [stats, setStats] = useState("");
   const [error, setError] = useState({
     status: false,
@@ -124,14 +124,7 @@ function WakaTimeStats({ data, theme }) {
             </div>
           </div>
         ) : (
-          <ContentLoader
-            speed={2}
-            width="100%"
-            height="100%"
-            viewBox="0 0 481 545"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 481 545">
             <rect x="401" y="27" rx="3" ry="3" width="60" height="13" />
             <rect x="19" y="22" rx="5" ry="5" width="108" height="29" />
             <circle cx="373" cy="124" r="60" />
@@ -171,7 +164,7 @@ function WakaTimeStats({ data, theme }) {
             <rect x="339" y="475" rx="3" ry="3" width="69" height="15" />
             <rect x="326" y="496" rx="3" ry="3" width="82" height="10" />
             <circle cx="330" cy="482" r="5" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -182,5 +175,4 @@ export default WakaTimeStats;
 
 WakaTimeStats.propTypes = {
   data: PropTypes.object,
-  theme: PropTypes.bool,
 };

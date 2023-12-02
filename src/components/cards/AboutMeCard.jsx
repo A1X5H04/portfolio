@@ -3,27 +3,27 @@ import CardSpotlightEffect from "../CardSpotlightEffect";
 import snarkdown from "snarkdown";
 import PropTypes from "prop-types";
 import parse from "html-react-parser";
-import ContentLoader from "react-content-loader";
 import CardError from "../CardError";
+import CardLoader from "../CardLoader";
 
-export default function AboutMeCard({ data, theme }) {
+export default function AboutMeCard({ data }) {
   const [aboutArray, setAboutArray] = useState("");
   const [error, setError] = useState({
     status: false,
     message: "",
   });
-  useEffect(() => {
-    data
-      .then((res) => {
-        setAboutArray(res);
-      })
-      .catch((err) => {
-        setError({
-          status: true,
-          message: err.message,
-        });
-      });
-  }, [data]);
+  // useEffect(() => {
+  //   data
+  //     .then((res) => {
+  //       setAboutArray(res);
+  //     })
+  //     .catch((err) => {
+  //       setError({
+  //         status: true,
+  //         message: err.message,
+  //       });
+  //     });
+  // }, [data]);
 
   return (
     <CardSpotlightEffect className="row-span-2">
@@ -56,19 +56,12 @@ export default function AboutMeCard({ data, theme }) {
             </div>
           </>
         ) : (
-          <ContentLoader
-            speed={2}
-            width="100%"
-            height="100%"
-            viewBox="0 0 483 282"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 483 282">
             <rect x="20" y="27" rx="3" ry="3" width="140" height="19" />
             <rect x="18" y="78" rx="10" ry="10" width="446" height="181" />
             <rect x="283" y="198" rx="0" ry="0" width="5" height="13" />
             <circle cx="447" cy="36" r="22" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -77,5 +70,4 @@ export default function AboutMeCard({ data, theme }) {
 
 AboutMeCard.propTypes = {
   data: PropTypes.arrayOf(PropTypes.string),
-  theme: PropTypes.bool,
 };

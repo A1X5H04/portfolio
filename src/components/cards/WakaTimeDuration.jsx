@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
-import ContentLoader from "react-content-loader";
 import {
   calculateTimeElapsed,
   convertSecsToHrsAndMins,
 } from "../../libs/utils";
 import { PiCodeBlockDuotone } from "react-icons/pi";
 import CardError from "../CardError";
+import CardLoader from "../CardLoader";
 
-function WakaTimeDuration({ data, theme }) {
+function WakaTimeDuration({ data }) {
   const [wakaTimeData, setWakaTimeData] = useState("");
   const [error, setError] = useState({
     status: false,
@@ -74,14 +74,7 @@ function WakaTimeDuration({ data, theme }) {
             )}
           </div>
         ) : (
-          <ContentLoader
-            speed={2}
-            width={481}
-            height={194}
-            viewBox="0 0 481 194"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 481 194">
             <rect x="20" y="20" rx="5" ry="5" width="151" height="30" />
             <rect x="425" y="30" rx="3" ry="3" width="40" height="15" />
             <rect x="383" y="136" rx="3" ry="3" width="81" height="16" />
@@ -92,7 +85,7 @@ function WakaTimeDuration({ data, theme }) {
             <rect x="45" y="123" rx="3" ry="3" width="65" height="16" />
             <rect x="20" y="147" rx="3" ry="3" width="95" height="12" />
             <rect x="20" y="123" rx="3" ry="3" width="21" height="16" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -103,5 +96,4 @@ export default WakaTimeDuration;
 
 WakaTimeDuration.propTypes = {
   data: PropTypes.object.isRequired,
-  theme: PropTypes.bool,
 };

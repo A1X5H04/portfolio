@@ -54,18 +54,15 @@ function Dashboard() {
         </Fade>
       </div>
       <div className="my-10 mx-5 md:grid md:grid-cols-2 flex flex-col gap-4">
-        <AboutMeCard data={aboutData} theme={theme} />
-        <WakaTimeTotalHours data={wakaAllTime} theme={theme} />
-        <WakaTimeStats data={wakaStats} theme={theme} />
-        <LastFMCard
-          data={{ lastFMRecentTracks, lastFMTopTracks }}
-          theme={theme}
-        />
-        <AnimeDataCard data={animeData} theme={theme} />
-        <DiscordPresence data={discordPresence} theme={theme} />
-        <WakaTimeDuration data={wakaDurations} theme={theme} />
-        <WakaTimeActivity theme={theme} data={wakaCodingActivity} />
-        <WakaTimeInsights data={wakaInsights} theme={theme} />
+        <AboutMeCard data={aboutData} />
+        <WakaTimeTotalHours data={wakaAllTime} />
+        <WakaTimeStats data={wakaStats} />
+        <LastFMCard data={{ lastFMRecentTracks, lastFMTopTracks }} />
+        <AnimeDataCard data={animeData} />
+        <DiscordPresence data={discordPresence} />
+        <WakaTimeDuration data={wakaDurations} />
+        <WakaTimeActivity data={wakaCodingActivity} />
+        <WakaTimeInsights data={wakaInsights} />
       </div>
     </div>
   );

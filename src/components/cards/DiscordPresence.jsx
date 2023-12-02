@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { calculateTimeElapsed } from "../../libs/utils";
-import ContentLoader from "react-content-loader";
 import CardError from "../CardError";
-function DiscordPresence({ data, theme }) {
+import CardLoader from "../CardLoader";
+function DiscordPresence({ data }) {
   const [discord, setDiscord] = useState("");
   const [error, setError] = useState({
     status: false,
@@ -119,20 +119,13 @@ function DiscordPresence({ data, theme }) {
             )}
           </div>
         ) : (
-          <ContentLoader
-            speed={2}
-            width="100%"
-            height="100%"
-            viewBox="0 0 476 185"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 476 185">
             <circle cx="39" cy="40" r="22" />
             <rect x="66" y="22" rx="3" ry="3" width="69" height="15" />
             <rect x="67" y="44" rx="3" ry="3" width="50" height="11" />
             <rect x="415" y="33" rx="3" ry="3" width="50" height="12" />
             <rect x="30" y="85" rx="5" ry="5" width="421" height="78" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -141,7 +134,6 @@ function DiscordPresence({ data, theme }) {
 
 DiscordPresence.propTypes = {
   data: PropTypes.object.isRequired,
-  theme: PropTypes.bool,
 };
 
 export default DiscordPresence;

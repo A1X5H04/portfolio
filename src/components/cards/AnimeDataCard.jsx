@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { calculateTimeElapsed } from "../../libs/utils";
-import ContentLoader from "react-content-loader";
 import CardError from "../CardError";
+import CardLoader from "../CardLoader";
 
-function AnimeDataCard({ data, theme }) {
+function AnimeDataCard({ data }) {
   const [animeData, setAnimeData] = React.useState("");
   const [error, setError] = React.useState({
     status: false,
@@ -60,20 +60,13 @@ function AnimeDataCard({ data, theme }) {
             />
           </div>
         ) : (
-          <ContentLoader
-            speed={2}
-            width="100%"
-            height="100%"
-            viewBox="0 0 481 184"
-            backgroundColor={theme ? "#1e1e1e" : "#f6f5f4"}
-            foregroundColor={theme ? "#9a9996" : "#deddda"}
-          >
+          <CardLoader viewBox="0 0 481 184">
             <rect x="18" y="27" rx="5" ry="5" width="152" height="25" />
             <rect x="19" y="58" rx="3" ry="3" width="41" height="14" />
             <rect x="20" y="119" rx="3" ry="3" width="117" height="19" />
             <rect x="20" y="144" rx="4" ry="4" width="93" height="11" />
             <rect x="363" y="16" rx="15" ry="15" width="102" height="151" />
-          </ContentLoader>
+          </CardLoader>
         )}
       </CardError>
     </CardSpotlightEffect>
@@ -82,7 +75,6 @@ function AnimeDataCard({ data, theme }) {
 
 AnimeDataCard.propTypes = {
   data: PropTypes.array,
-  theme: PropTypes.bool,
 };
 
 export default AnimeDataCard;

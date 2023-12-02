@@ -82,6 +82,7 @@ html.dark {
   --border-animated-color-inner: #40464b;
   --border-color: #343a40ff;
   --border-color-inner: #212529ff;
+  --hello: #f8fafc;
 }
 
 body {

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import ThemeContext from "../../contexts/ThemeContext";
 import PropTypes from "prop-types";
 import { parseValueforHeatMap } from "../../libs/utils";
 import LoadingSpinner from "../LoadingSpinner";
@@ -6,7 +7,8 @@ import HeatMap from "@uiw/react-heat-map";
 import CardSpotlightEffect from "../CardSpotlightEffect";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
-function WakaTimeActivity({ data, theme }) {
+function WakaTimeActivity({ data }) {
+  const { theme } = useContext(ThemeContext);
   const [activity, setActivity] = useState("");
   useEffect(() => {
     data.then((data) => {
