@@ -60,8 +60,8 @@ ProjectTile.propTypes = {
   description: PropTypes.string,
   link: PropTypes.string.isRequired,
   website: PropTypes.string,
-  language: PropTypes.string.isRequired,
-  languageColor: PropTypes.string.isRequired,
+  language: PropTypes.string,
+  languageColor: PropTypes.string,
   stars: PropTypes.number.isRequired,
   forks: PropTypes.number.isRequired,
 };

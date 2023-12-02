@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import PropTypes from "prop-types";
 import "chartist/dist/index.css";
+import "./chart.css";
 import { LineChart, Interpolation, easings, Svg } from "chartist";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { roundToTwo } from "../../libs/utils";

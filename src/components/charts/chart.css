@@ -1,0 +1,66 @@
+html {
+  --area-circle-fill: #8e9eab;
+  --area-circle-stroke: #d5e4e7;
+  --area-line: #727d81;
+  --area-fill: #011827;
+}
+
+html.dark {
+  --area-circle-fill: #283048;
+  --area-circle-stroke: #859398;
+  --area-line: #bfcace;
+  --area-fill: #d9e6eb;
+}
+
+.ct-grids line {
+  stroke-dasharray: "1 4";
+  stroke: var(--border-animated-color-inner);
+}
+
+.ct-labels span {
+  color: var(--border-animated-color);
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.ct-area {
+  fill-opacity: 0.25;
+}
+
+.ct-series-a .ct-area {
+  fill: #a5a5a5;
+}
+
+.ct-series-a .ct-line {
+  stroke: var(--area-line);
+}
+.ct-series-a .ct-point {
+  stroke: var(--area-point);
+}
+
+.ct-bar {
+  stroke-width: 7px;
+}
+
+.ct-series:first-child .ct-bar {
+  stroke: #595959;
+  stroke-linecap: round;
+}
+
+.ct-series:last-child .ct-bar {
+  stroke: #a5a5a5;
+  stroke-linecap: round;
+  z-index: -2;
+}
+
+.ct-chart-bar {
+  color: var(--border-animated-color);
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.ct-circle {
+  fill: var(--area-circle-fill);
+  stroke-width: 3;
+  stroke: var(--area-circle-stroke);
+}

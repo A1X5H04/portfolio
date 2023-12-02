@@ -1,5 +1,5 @@
+import ThemeContext from "../contexts/ThemeContext";
 import GridPattern from "../components/GridPattern";
-import { useOutletContext } from "react-router-dom";
 import { cn } from "../libs/utils";
 import { Fade } from "react-awesome-reveal";
 import {
@@ -7,17 +7,19 @@ import {
   LastFMCard,
   AnimeDataCard,
   WakaTimeActivity,
+  WakaTimeDuration,
+  WakaTimeInsights,
+  WakaTimeStats,
+  WakaTimeTotalHours,
 } from "../components/cards/index";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import WakaTimeTotalHours from "../components/cards/WakaTimeTotalHours";
-import WakaTimeInsights from "../components/cards/WakaTimeInsights";
-import WakaTimeDuration from "../components/cards/WakaTimeDuration";
-import WakaTimeStats from "../components/cards/WakaTimeStats";
 import DiscordPresence from "../components/cards/DiscordPresence";
+import DataContext from "../contexts/DataContext";
 
 function Dashboard() {
+  const { theme } = useContext(ThemeContext);
   const {
-    theme,
     aboutData,
     animeData,
     discordPresence,
@@ -28,7 +30,7 @@ function Dashboard() {
     wakaDurations,
     wakaInsights,
     wakaStats,
-  } = useOutletContext();
+  } = useContext(DataContext);
 
   const { t } = useTranslation();
 

@@ -139,9 +139,9 @@ function DiscordPresence({ data, theme }) {
   );
 }
 
-export default DiscordPresence;
-
 DiscordPresence.propTypes = {
   data: PropTypes.object.isRequired,
   theme: PropTypes.bool,
 };
+
+export default DiscordPresence;

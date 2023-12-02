@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useId } from "react";
 import { cn } from "../libs/utils";
 
@@ -56,5 +57,17 @@ function GridPattern({
     </svg>
   );
 }
+
+GridPattern.propTypes = {
+  className: PropTypes.any,
+  height: PropTypes.number,
+  squares: PropTypes.shape({
+    map: PropTypes.func,
+  }),
+  strokeDasharray: PropTypes.string,
+  width: PropTypes.number,
+  x: PropTypes.number,
+  y: PropTypes.number,
+};
 
 export default GridPattern;

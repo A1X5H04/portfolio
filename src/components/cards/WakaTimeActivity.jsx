@@ -8,7 +8,6 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 
 function WakaTimeActivity({ data, theme }) {
   const [activity, setActivity] = useState("");
-
   useEffect(() => {
     data.then((data) => {
       setActivity(data);
@@ -71,7 +70,7 @@ function WakaTimeActivity({ data, theme }) {
                 );
               }}
               panelColors={
-                theme
+                theme === "dark"
                   ? {
                       0: "#0c0c0c",
                       1: "#121212",
@@ -97,9 +96,10 @@ function WakaTimeActivity({ data, theme }) {
                 rx: "1.5",
               }}
               style={{
-                color: theme ? "#EBEDF0" : "#121212",
-                "--rhm-rect-active": theme ? "#fff" : "#000",
-                "--rhm-rect-hover-stroke": theme ? "#343a40" : "#cbd5e1",
+                color: theme === "dark" ? "#EBEDF0" : "#121212",
+                "--rhm-rect-active": theme === "dark" ? "#fff" : "#000",
+                "--rhm-rect-hover-stroke":
+                  theme === "dark" ? "#343a40" : "#cbd5e1",
               }}
               weekLabels={["", "Mon", "", "Wed", "", "Fri", ""]}
               startDate={new Date(activity.days[0].date)}
@@ -116,8 +116,8 @@ function WakaTimeActivity({ data, theme }) {
 }
 
 WakaTimeActivity.propTypes = {
-  data: PropTypes.string,
-  theme: PropTypes.bool,
+  data: PropTypes.object,
+  theme: PropTypes.string,
 };
 
 export default WakaTimeActivity;

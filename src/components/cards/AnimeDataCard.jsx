@@ -32,8 +32,9 @@ function AnimeDataCard({ data, theme }) {
           <div className="flex p-5 justify-between">
             <div className="inline-flex flex-col justify-between my-2">
               <div>
-                <h4 className="font-bold">
-                  {animeData.media?.title.english} (
+                <h4 className="font-bold truncate w-48 sm:w-full md:w-60 lg:w-72">
+                  {animeData.media?.title.english}
+                  &nbsp;(
                   {animeData.media?.title.native})
                 </h4>
                 <p className="text-sm text-gray-500">
@@ -79,9 +80,9 @@ function AnimeDataCard({ data, theme }) {
   );
 }
 
-export default AnimeDataCard;
-
 AnimeDataCard.propTypes = {
   data: PropTypes.array,
   theme: PropTypes.bool,
 };
+
+export default AnimeDataCard;

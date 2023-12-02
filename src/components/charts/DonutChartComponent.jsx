@@ -5,10 +5,14 @@ import { roundToTwo } from "../../libs/utils";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 
 const calculatePercentage = (data) => {
+  const average_time = data.average_time / 60;
+  const total_time = data.total_time / 60;
   let percentage =
-    (data.average_time / data.total_time) * 100 + data.number_of_language;
+    (average_time / total_time) * 100 + data.number_of_language / 2;
   percentage -= data.holidays * 7;
   percentage += parseInt(data.number_of_language) * 5;
+  if (isNaN(percentage)) percentage = 0;
+  Math.max(percentage, 0);
   Math.min(percentage, 100);
   return roundToTwo(percentage);
 };

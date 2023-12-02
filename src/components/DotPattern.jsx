@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useId } from "react";
 import { cn } from "../libs/utils";
 
@@ -49,5 +50,17 @@ function DotPattern({
     </svg>
   );
 }
+
+DotPattern.propTypes = {
+  className: PropTypes.string,
+  cr: PropTypes.number,
+  cx: PropTypes.number,
+  cy: PropTypes.number,
+  height: PropTypes.number,
+  outline: PropTypes.bool,
+  width: PropTypes.number,
+  x: PropTypes.number,
+  y: PropTypes.number,
+};
 
 export default DotPattern;

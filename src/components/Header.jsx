@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import ThemeContext from "../contexts/ThemeContext";
 import { NavLink } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import i18next from "i18next";
@@ -45,10 +46,11 @@ const languages = [
   },
 ];
 
-function Header({ toggleTheme, themeIcon }) {
-  const [language, setLanguage] = React.useState("en");
-  const [showLangPicker, setShowLangPicker] = React.useState(false);
-  const [showNav, setShowNav] = React.useState(false);
+function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [language, setLanguage] = useState("en");
+  const [showLangPicker, setShowLangPicker] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
   const { t } = useTranslation();
 
@@ -57,16 +59,16 @@ function Header({ toggleTheme, themeIcon }) {
     setShowLangPicker(false);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     i18next.changeLanguage(language);
   }, [language]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const dir = i18next.dir(i18next.language);
     document.documentElement.dir = dir;
   }, [i18next, i18next.language]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log(language);
   }, [language]);
 
@@ -143,7 +145,7 @@ function Header({ toggleTheme, themeIcon }) {
             onClick={() => toggleTheme()}
             className="p-1 border border-transparent hover:border-slate-200 hover:bg-slate-50 dark:hover:bg-gray-1000 dark:hover:border-gray-700 duration-300 rounded-md"
           >
-            {themeIcon === "dark" ? (
+            {theme === "dark" ? (
               <PiSunDuotone size={20} />
             ) : (
               <PiMoonDuotone size={20} />
@@ -260,11 +262,6 @@ function LanguagePicker(props) {
 LanguagePicker.propTypes = {
   selectedLanguage: PropTypes.string,
   handleChange: PropTypes.func,
-};
-
-Header.propTypes = {
-  toggleTheme: PropTypes.func,
-  themeIcon: PropTypes.string,
 };
 
 MobileNavbar.propTypes = {
