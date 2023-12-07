@@ -1,9 +1,8 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import DataContext from "../contexts/DataContext";
-import LoadingSpinner from "../components/LoadingSpinner";
 import GridPattern from "../components/GridPattern";
-import ProjectTile from "../components/ProjectTile";
 import DotPattern from "../components/DotPattern";
+import ProjectSection from "../components/ProjectSection";
 import { gradientColors, gradientTypes } from "../data/gradients";
 import { useTranslation } from "react-i18next";
 import { Fade, Slide } from "react-awesome-reveal";
@@ -13,6 +12,8 @@ import { clsx } from "clsx";
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
+
+console.log("rendered");
 
 function generateRandomTailwindGradients() {
   let randomGradients =
@@ -34,7 +35,6 @@ const headingStyle = {
 export default function Home() {
   const { projectData } = useContext(DataContext);
   const { t } = useTranslation();
-  const [projectArray, setProjectArray] = useState([]);
 
   const headingTextArray = [
     t("home.title.headings.web_designer"),
@@ -59,16 +59,6 @@ export default function Home() {
     const randomIndex = Math.floor(Math.random() * headingTextArray.length);
     return headingTextArray[randomIndex];
   }
-
-  useEffect(() => {
-    projectData
-      .then((data) => {
-        setProjectArray(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [projectData]);
 
   return (
     <div className="w-full overflow-hidden">
@@ -230,36 +220,7 @@ export default function Home() {
             <p className="text-gray-500">{t("home.project.description")}</p>
           </Fade>
         </div>
-        <div className="mt-8 px-5">
-          {projectArray.length === 0 ? (
-            <LoadingSpinner className="p-4" svgWidth={30} svgHeight={30} />
-          ) : (
-            <div className="h-min grid md:grid-cols-2 gap-4 grid-cols-1 ">
-              {projectArray?.map((item) => {
-                return (
-                  <ProjectTile
-                    key={item.repo}
-                    title={item.repo}
-                    description={item.description}
-                    link={item.link}
-                    language={item.language}
-                    website={item.website}
-                    languageColor={item.languageColor}
-                    stars={item.stars}
-                    forks={item.forks}
-                  />
-                );
-              })}
-            </div>
-          )}
-
-          <a
-            href="https://github.com/A1X5H04?tab=repositories"
-            className="block w-full my-4 text-center hover:bg-slate-100 dark:hover:bg-gray-1000 text-sm font-bold py-2 rounded-md"
-          >
-            {t("home.project.show_more")}
-          </a>
-        </div>
+        <ProjectSection projectData={projectData} t={t} />
       </div>
     </div>
   );

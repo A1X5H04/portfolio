@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import { PieChart, easings } from "chartist";
 import { roundToTwo } from "../../libs/utils";
@@ -18,7 +18,10 @@ const calculatePercentage = (data) => {
 };
 
 const DonutChartComponent = ({ percentData }) => {
-  const percent = calculatePercentage(percentData);
+  const percent = useMemo(
+    () => calculatePercentage(percentData),
+    [percentData]
+  );
   let gradeText, gradeColor;
 
   switch (true) {
@@ -138,8 +141,8 @@ const DonutChartComponent = ({ percentData }) => {
         <svg viewBox="0 0 0 0" className="h-0 w-0">
           <defs>
             <linearGradient id="stroke_gradient" x2="50%" y2="100%">
-              <stop offset="0%" stopColor={gradeColor[0]} />
-              <stop offset="100%" stopColor={gradeColor[1]} />
+              <stop offset="0%" stopColor={gradeColor.at(0)} />
+              <stop offset="100%" stopColor={gradeColor.at(1)} />
             </linearGradient>
           </defs>
         </svg>
