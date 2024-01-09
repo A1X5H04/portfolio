@@ -1,7 +1,5 @@
 # My Portfolio Website
 
-**This Portfolio will be migrated to NEXT.JS**
-
 Welcome to the GitHub repository for my personal portfolio website! This repository contains all the code and assets for my online portfolio, where I showcase my projects, skills, and experiences.
 
 ## About
