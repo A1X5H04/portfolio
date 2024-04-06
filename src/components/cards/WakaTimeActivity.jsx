@@ -33,7 +33,7 @@ function WakaTimeActivity({ data }) {
             disableStyleInjection="true"
             className="text-black dark:text-white bg-slate-100 dark:bg-gray-1000 border border-slate-300 dark:border-gray-800 p-1.5 rounded text-xs font-semibold shadow-lg "
           />
-          <div className="overflow-x-scroll whitespace-nowrap">
+          <div className="overflow-x-scroll whitespace-nowrap no-scrollbar">
             <HeatMap
               className="h-full w-full p-5 "
               value={parseValueforHeatMap(activity.days)}

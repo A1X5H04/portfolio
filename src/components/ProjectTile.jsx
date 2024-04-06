@@ -19,7 +19,14 @@ export default function ProjectTile({
           <a href={link}>
             <h3 className="font-extrabold ">{title}</h3>
           </a>
-          <a href={website || "#"}>
+          <a
+            className={
+              website
+                ? "text-black dark:text-white cursor-pointer"
+                : "text-gray-500 dark:text-gray-700 cursor-not-allowed"
+            }
+            href={website}
+          >
             <PiArrowSquareOut size={20} />
           </a>
         </div>

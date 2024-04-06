@@ -3,11 +3,12 @@ import DataContext from "../contexts/DataContext";
 import GridPattern from "../components/GridPattern";
 import DotPattern from "../components/DotPattern";
 import ProjectSection from "../components/ProjectSection";
-import { gradientColors, gradientTypes } from "../data/gradients";
+
 import { useTranslation } from "react-i18next";
 import { Fade, Slide } from "react-awesome-reveal";
 import { twMerge } from "tailwind-merge";
 import { clsx } from "clsx";
+import HeroText from "../components/HeroText";
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -15,50 +16,9 @@ function cn(...inputs) {
 
 console.log("rendered");
 
-function generateRandomTailwindGradients() {
-  let randomGradients =
-    "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500";
-  const randomColor =
-    gradientColors[Math.floor(Math.random() * gradientColors.length)];
-  const randomType =
-    gradientTypes[Math.floor(Math.random() * gradientTypes.length)];
-  randomGradients = `${randomType} ${randomColor}`;
-
-  return randomGradients;
-}
-
-const headingStyle = {
-  filter: "url(#glitch)",
-  animationDelay: "700ms",
-};
-
 export default function Home() {
   const { projectData } = useContext(DataContext);
   const { t } = useTranslation();
-
-  const headingTextArray = [
-    t("home.title.headings.web_designer"),
-    t("home.title.headings.react_developer"),
-    t("home.title.headings.nextjs_developer"),
-    t("home.title.headings.cs_student"),
-    t("home.title.headings.android_developer"),
-    t("home.title.headings.oss_contributor"),
-    t("home.title.headings.linux_enthusiast"),
-    t("home.title.headings.frontend_developer"),
-  ];
-
-  function generateRandomValues(maxValue, numberOfValues) {
-    let randomValues = [];
-    for (let i = 0; i < numberOfValues; i++) {
-      randomValues.push(Math.floor(Math.random() * maxValue));
-    }
-    return randomValues;
-  }
-
-  function getRandomText() {
-    const randomIndex = Math.floor(Math.random() * headingTextArray.length);
-    return headingTextArray[randomIndex];
-  }
 
   return (
     <div className="w-full overflow-hidden">
@@ -96,65 +56,7 @@ export default function Home() {
             />
             <div className="overflow-hidden select-none cursor-default duration-200">
               <Slide direction="up" triggerOnce>
-                <div
-                  style={headingStyle}
-                  className={`${generateRandomTailwindGradients()} bg-clip-text animate-bg-span `}
-                >
-                  <h1 className="font-extrabold sm:inline-flex gap-5 tracking-wider h-full py-2 mb-2 mx-6 lg:text-7xl text-5xl text-transparent">
-                    {getRandomText()}
-                  </h1>
-
-                  <svg className="absolute h-1 w-1 overflow-hidden">
-                    <defs>
-                      <filter id="glitch">
-                        <feTurbulence
-                          id="turbulence"
-                          type="fractalNoise"
-                          baseFrequency="0 .3275"
-                          numOctaves="12"
-                          result="NOISE"
-                        >
-                          <animate
-                            attributeName="seed"
-                            dur="20s"
-                            values="10;20;30;40;50;60;70;80;90;100;110;120;130;140;150;160;170;180;190;200;210;220;230;240;250;260;270;280"
-                            repeatCount="indefinite"
-                          />
-                        </feTurbulence>
-                        <feGaussianBlur
-                          in="SourceGraphic"
-                          result="BLURRED"
-                          stdDeviation="0"
-                        >
-                          <animate
-                            attributeName="stdDeviation"
-                            dur="0.5s"
-                            values="5;2.5;0.15"
-                            repeatCount="1"
-                          />
-                        </feGaussianBlur>
-                        <feDisplacementMap
-                          id="displacer"
-                          in2="NOISE"
-                          in="BLURRED"
-                          scale="2"
-                          xChannelSelector="R"
-                          yChannelSelector="R"
-                          result="DISPLACED"
-                        >
-                          <animate
-                            attributeName="scale"
-                            dur="10s"
-                            values={generateRandomValues(12, 5)
-                              .join(";")
-                              .toString()}
-                            repeatCount="indefinite"
-                          />
-                        </feDisplacementMap>
-                      </filter>
-                    </defs>
-                  </svg>
-                </div>
+                <HeroText />
               </Slide>
             </div>
           </div>
@@ -189,7 +91,7 @@ export default function Home() {
           >
             <Slide direction="up" triggerOnce>
               <a
-                href="https://drive.google.com/uc?export=download&id=1GHO62v01Qutsa03e-PBYm-RHl9vBgGw-"
+                href="https://drive.google.com/uc?export=download&id=1ERDHUdbq2uhECwT1XPvVyCBFiXlr0ndU"
                 className="bg-black dark:bg-white px-3 py-1.5 text-white dark:text-black rounded-md font-semibold hover:bg-gray-900 dark:hover:bg-slate-200 cursor-pointer"
               >
                 {t("home.buttons.download_cv")}

@@ -229,7 +229,7 @@ function MobileNavbar({ t }) {
 function LanguagePicker(props) {
   return (
     <Fade duration={500}>
-      <div className="antialiased z-20 overflow-hidden overflow-y-scroll absolute top-10 -right-6 border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out rounded-md py-2 px-4">
+      <div className="antialiased z-20 overflow-hidden overflow-y-scroll absolute top-10 -right-6 border bg-white dark:bg-black hover:bg-gradient-to-t dark:from-gray-1000 dark:to-black from-slate-100 to-white  dark:hover:border-gray-800 dark:border-gray-900 border-slate-200 hover:border-slate-300 shadow-lg shadow-slate-100 dark:shadow-gray-1000 duration-200 ease-in-out rounded-md py-2 px-4 no-scrollbar">
         <div role="radiogroup" className="w-44 h-60">
           {languages.map((lang) => (
             <div

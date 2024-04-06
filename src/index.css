@@ -66,6 +66,17 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 html {
   --bg-color: #fff;
   --text-color: #000;
