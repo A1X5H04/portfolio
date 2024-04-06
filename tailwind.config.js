@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Inter Tight", "display", "sans-serif"],
+      },
       colors: {
         "gray-100": "#f8f9fa",
         "gray-200": "#e9ecef",
