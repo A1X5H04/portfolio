@@ -115,12 +115,9 @@ export async function wakatimeFetcher(url) {
         Authorization: `Basic ${btoa(import.meta.env.VITE_WAKATIME_API_KEY)}`,
       },
     });
-  return await fetch(
-    import.meta.env.VITE_PROXY_SERVER_URL + encodeURIComponent(url),
-    {
-      headers: {
-        Authorization: `Basic ${btoa(import.meta.env.VITE_WAKATIME_API_KEY)}`,
-      },
-    }
-  );
+  return await fetch(import.meta.env.VITE_PROXY_SERVER_URL + url, {
+    headers: {
+      Authorization: `Basic ${btoa(import.meta.env.VITE_WAKATIME_API_KEY)}`,
+    },
+  });
 }
